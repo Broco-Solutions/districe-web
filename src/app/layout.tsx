@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "Districe | Distribución automotor", template: "%s | Districe" },
-  description: "Distribución mayorista de repuestos y accesorios automotor.",
-  robots: { index: false, follow: false },
+  title: { default: "Districe | Repuestos y accesorios automotor", template: "%s | Districe" },
+  description: "Distribución mayorista de repuestos y accesorios automotor desde 1987.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

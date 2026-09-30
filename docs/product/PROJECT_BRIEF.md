@@ -6,7 +6,7 @@ Nueva presencia digital B2B para la distribución mayorista de repuestos y acces
 
 ## Evidencia relevada (30-09-2026)
 
-- Sitio institucional: Districe declara actividad desde 1987, distribución mayorista y foco inicial en filtros de línea liviana y pesada. Sus atributos declarados son atención personal, stock, calidad, puntualidad de entrega y estructura financiera.
+- Sitio institucional: Districe declara actividad desde 1987, distribución mayorista y foco inicial en filtros de línea liviana y pesada. Sus diferenciales declarados son atención personalizada, stock permanente, calidad de productos, puntualidad en las entregas, relación precio/calidad y adaptación a cambios del mercado automotor. Son conceptos de comunicación, no métricas verificadas.
 - Tiendanube: se tomó como fuente rectora de taxonomía. Expone seis familias principales y sus subfamilias de estética.
 - Referencia Distrimar: la idea útil es una entrada visual y ágil a familias, no su interfaz, identidad ni arquitectura.
 
@@ -26,4 +26,4 @@ Nueva presencia digital B2B para la distribución mayorista de repuestos y acces
 
 ## Decisiones pendientes de validación
 
-La cobertura, métricas, fotos, catálogos, clientes, testimonios y canales comerciales se publicarán sólo tras recibir evidencia/aprobación del cliente.
+La cobertura, métricas, fotos, catálogos, clientes, testimonios, redes sociales y canales comerciales definitivos se publicarán sólo tras recibir evidencia/aprobación del cliente. Los contactos relevados se consideran vigentes según el sitio actual, pendientes de confirmación final.

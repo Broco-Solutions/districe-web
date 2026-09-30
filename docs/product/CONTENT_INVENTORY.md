@@ -44,6 +44,7 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 - Propuesta declarada: distribución mayorista de repuestos y accesorios automotor.
 - Contacto publicado: `districe@hotmail.com`; teléfono `(0351) 4895039`; móviles `(351) 7532201` y `(351) 7532203`.
 - El enlace de ayuda de Tiendanube apunta al WhatsApp `+54 9 351 753-2201`.
+- Todos los contactos anteriores son vigentes según el sitio actual y pendientes de confirmación final para el nuevo sitio.
 
 ## Recursos disponibles en fuentes
 
@@ -51,6 +52,7 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 - El cotizador histórico local conserva logo Districe y algunos logos de marcas; se preservó sin integrarlo a la nueva UI.
 - No se identificaron catálogos PDF enlazados públicamente durante el relevamiento.
 - No se identificaron fotografías institucionales, logísticas ni de equipo aptas para confirmar uso en esta iteración.
+- No se identificaron fuentes públicas suficientemente confiables para redes sociales oficiales, catálogo PDF general, testimonios, logos de clientes, métricas comerciales o cobertura geográfica exacta.
 
 ## Estructura actual relevante
 

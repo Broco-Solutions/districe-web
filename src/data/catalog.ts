@@ -1,43 +1,25 @@
-export type ProductFamily = {
-  slug: string;
-  name: string;
-  children?: string[];
-};
+export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink" };
+export type Brand = { slug: string; name: string; description: string; lines: string[] };
+export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea"; detail: string; target: string };
 
-export type Brand = {
-  slug: string;
-  name: string;
-  lines: string[];
-};
-
-// Source of truth for the initial catalog. Values are deliberately content-only:
-// UI components consume these types rather than owning product taxonomy.
 export const productFamilies: ProductFamily[] = [
-  { slug: "estetica-vehicular", name: "Estética vehicular", children: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado"] },
-  { slug: "aditivos-lubricantes-fluidos", name: "Aditivos, lubricantes y fluidos" },
-  { slug: "higiene-seguridad", name: "Higiene y seguridad" },
-  { slug: "repuestos-accesorios", name: "Repuestos y accesorios" },
-  { slug: "anaerobicos-automotor", name: "Anaeróbicos automotor" },
-  { slug: "cintas-films", name: "Cintas y films" },
+  { slug: "estetica-vehicular", name: "Estética vehicular", index: "01", description: "Cuidado, terminación y presentación del vehículo.", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado", "Lubricantes", "Aromatizantes", "Renovadores", "Lustre y pulido"], tone: "blue" },
+  { slug: "aditivos-lubricantes-fluidos", name: "Aditivos, lubricantes y fluidos", index: "02", description: "Familia disponible para explorar y cotizar.", lines: [], tone: "lime" },
+  { slug: "higiene-seguridad", name: "Higiene y seguridad", index: "03", description: "Familia disponible para explorar y cotizar.", lines: [], tone: "orange" },
+  { slug: "repuestos-accesorios", name: "Repuestos y accesorios", index: "04", description: "Familia disponible para explorar y cotizar.", lines: [], tone: "silver" },
+  { slug: "anaerobicos-automotor", name: "Anaeróbicos automotor", index: "05", description: "Familia disponible para explorar y cotizar.", lines: [], tone: "red" },
+  { slug: "cintas-films", name: "Cintas y films", index: "06", description: "Familia disponible para explorar y cotizar.", lines: [], tone: "ink" },
 ];
 
+// Only brands confirmed in both current public sources are public in Home V1.
 export const brands: Brand[] = [
-  { slug: "anken", name: "Anken", lines: ["Absorbentes industriales"] },
-  { slug: "cruzmaster", name: "Crossmaster", lines: ["Herramientas"] },
-  { slug: "extrima", name: "Extrima", lines: ["Aceites para motor"] },
-  { slug: "gen-rod", name: "Gen Rod", lines: ["Fusibles"] },
-  { slug: "hella", name: "Hella", lines: ["Escobillas limpiaparabrisas"] },
-  { slug: "jarama", name: "Jarama", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Lubricantes"] },
-  { slug: "k78", name: "K78", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado"] },
-  { slug: "loctite", name: "Loctite", lines: ["Adhesivos y selladores"] },
-  { slug: "maxfil", name: "Maxfil", lines: ["Filtros línea liviana y pesada"] },
-  { slug: "perfecto", name: "Abrazaderas Perfecto", lines: ["Abrazaderas"] },
-  { slug: "pertrak", name: "Pertrak", lines: ["Filtros para motores Perkins"] },
-  { slug: "philips", name: "Philips", lines: ["Lámparas"] },
-  { slug: "pitts", name: "Pitts", lines: ["Aditivos"] },
-  { slug: "ran", name: "Ran", lines: ["Limpiadores y auxiliares automotor"] },
-  { slug: "revigal", name: "Revigal", lines: ["Cosmética automotor"] },
-  { slug: "sol-tec", name: "Sol Tec", lines: ["Crema limpiamanos", "Limpia inyectores", "Desoxidantes automotor"] },
-  { slug: "team-hnos", name: "Team Hnos", lines: ["Fundas y accesorios"] },
-  { slug: "tribuno", name: "Tribuno", lines: ["Líquidos de freno", "Refrigerantes", "Limpia contactos", "Aditivos"] }
+  { slug: "k78", name: "K78", description: "Estética vehicular", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado"] },
+  { slug: "jarama", name: "Jarama", description: "Estética vehicular", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Lubricantes"] },
+  { slug: "revigal", name: "Revigal", description: "Estética vehicular", lines: ["Productos para lavado", "Aromatizantes", "Renovadores", "Lustre y pulido"] },
+];
+
+export const searchEntries: SearchEntry[] = [
+  ...productFamilies.map((family) => ({ id: `family-${family.slug}`, label: family.name, type: "Familia" as const, detail: "Productos", target: "#familias" })),
+  ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: "#marcas" })),
+  ...Array.from(new Set(brands.flatMap((brand) => brand.lines))).map((line) => ({ id: `line-${line.toLowerCase().replaceAll(" ", "-")}`, label: line, type: "Línea" as const, detail: "Estética vehicular", target: "#familias" })),
 ];
