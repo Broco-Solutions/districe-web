@@ -9,7 +9,7 @@ Todo contenido público vive como módulos TypeScript/MDX y activos versionados 
 | Entidad | Campos mínimos | Relaciones |
 | --- | --- | --- |
 | `ProductFamily` | `slug`, `name`, `description`, `image`, `children[]` | Tiene muchas líneas/subfamilias y marcas relacionadas. |
-| `ProductLine` | `slug`, `name`, `familySlug`, `brandSlugs[]`, `synonyms[]` | Pertenece a una familia; puede aparecer en varias marcas. |
+| `ProductLine` | `slug`, `name`, `familySlug`, `brandSlug`, `synonyms[]` | La identidad pública es compuesta: familia + marca + línea. |
 | `Brand` | `slug`, `name`, `logo`, `description`, `lineSlugs[]`, `featured` | Tiene muchas líneas; se relaciona con familias a través de ellas. |
 | `CatalogAsset` | `title`, `file`, `brandSlug?`, `familySlug?`, `updatedAt` | PDF local opcional; indexable y descargable. |
 | `ProofPoint` | `label`, `value`, `source`, `approved` | Sólo se publica con `approved: true`. |

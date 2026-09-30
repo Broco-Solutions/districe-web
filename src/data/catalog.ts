@@ -22,7 +22,10 @@ export const brands: Brand[] = [
 export const catalogLines: CatalogLine[] = brands.flatMap((brand) => brand.lines.map((name) => ({ slug: name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "-"), name, familySlug: "estetica-vehicular", brandSlug: brand.slug })));
 
 export const searchEntries: SearchEntry[] = [
-  ...productFamilies.map((family) => ({ id: `family-${family.slug}`, label: family.name, type: "Familia" as const, detail: "Productos", target: "#familias" })),
-  ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: "#marcas" })),
+  ...productFamilies.map((family) => ({ id: `family-${family.slug}`, label: family.name, type: "Familia" as const, detail: "Productos", target: `/productos/${family.slug}` })),
+  ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: `/marcas/${brand.slug}` })),
   ...catalogLines.map((line) => ({ id: `line-${line.brandSlug}-${line.slug}`, label: line.name, type: "Línea" as const, detail: `${brands.find((brand) => brand.slug === line.brandSlug)?.name} · Estética vehicular`, target: `/marcas/${line.brandSlug}` })),
 ];
+
+export const getFamily = (slug: string) => productFamilies.find((family) => family.slug === slug);
+export const getBrand = (slug: string) => brands.find((brand) => brand.slug === slug);
