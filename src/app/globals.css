@@ -1,0 +1,11 @@
+:root { color-scheme: dark; --ink: #f4f1ea; --surface: #121a1b; --accent: #d5ff4f; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+main { min-height: 100svh; }
+.site-header { display: flex; justify-content: space-between; padding: 1.25rem; border-bottom: 1px solid #ffffff26; font-size: .75rem; letter-spacing: .08em; }
+.wordmark { font-weight: 800; letter-spacing: .14em; }.status { color: #a8b0ae; }
+.hero, .families { padding: 4.5rem 1.25rem; max-width: 76rem; margin: auto; }.hero { min-height: 54svh; display: grid; align-content: center; gap: 1.5rem; }
+.eyebrow { color: var(--accent); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 0; }
+h1 { font-size: clamp(2.6rem, 8vw, 6.8rem); line-height: .94; letter-spacing: -.06em; max-width: 12ch; margin: 0; } h2 { font-size: clamp(2rem, 5vw, 4rem); margin: .5rem 0 2rem; letter-spacing: -.05em; }
+.hero > p:last-child { color: #bac4c1; max-width: 40rem; line-height: 1.55; margin: 0; }.families { border-top: 1px solid #ffffff26; }.families ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid #ffffff26; }.families li { padding: 1rem 0; border-bottom: 1px solid #ffffff26; font-size: clamp(1.15rem, 3vw, 1.6rem); }
+@media (min-width: 768px) { .site-header { padding-inline: 3rem; }.hero, .families { padding-inline: 3rem; } }
