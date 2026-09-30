@@ -1,22 +1,56 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import { motion, useReducedMotion } from "motion/react";
 import { useRef } from "react";
-import { brands, productFamilies } from "@/data/catalog";
+import { brands, brandUrl, familyUrl, productFamilies } from "@/data/catalog";
 import { company } from "@/data/company";
 import { Header } from "./header";
 
-function ArrowIcon() { return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg>; }
+const brandAssets: Record<string, string> = {
+  k78: "/images/brands/k78-source.png",
+  jarama: "/images/brands/jarama-source.jpg",
+  revigal: "/images/brands/revigal-source.png",
+};
+
+function Arrow() { return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg>; }
 
 export function Home() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const scrollFamilies = (direction: number) => trackRef.current?.scrollBy({ left: direction * 340, behavior: "smooth" });
-  return <main id="inicio"><Header />
-    <section className="hero section-shell" aria-labelledby="hero-title"><div className="hero-copy"><p className="eyebrow"><span /> Distribución mayorista · Desde {company.founded}</p><h1 id="hero-title">Repuestos y accesorios <i>para avanzar.</i></h1><p className="hero-description">Districe acompaña al mercado automotor con una selección especializada de productos, marcas y líneas para el canal profesional.</p><div className="hero-actions"><a className="button button-primary" href="#familias">Explorar productos <ArrowIcon /></a><a className="text-link" href="#contacto">Hacer una consulta <ArrowIcon /></a></div></div><div className="hero-stage" aria-label="Composición gráfica de producto automotor"><div className="stage-grid" /><div className="stage-ring ring-one" /><div className="stage-ring ring-two" /><div className="stage-label label-top">DISTRICE / 1987—</div><div className="stage-label label-bottom">CANAL PROFESIONAL</div><div className="product-object"><div className="product-cap" /><div className="product-band">DISTRICE</div><div className="product-mark">D</div></div><div className="hero-stat"><b>Desde<br />1987</b><span>en el mercado de repuestos y accesorios automotor</span></div></div></section>
-    <section id="familias" className="families-section" aria-labelledby="familias-title"><div className="section-shell"><div className="section-heading"><div><p className="eyebrow"><span /> Explorar por necesidad</p><h2 id="familias-title">Familias que mueven<br /><i>tu operación.</i></h2></div><div className="track-controls"><p>Deslizá para recorrer</p><button onClick={() => scrollFamilies(-1)} aria-label="Ver familias anteriores">←</button><button onClick={() => scrollFamilies(1)} aria-label="Ver familias siguientes">→</button></div></div></div><div className="family-track" ref={trackRef} tabIndex={0} aria-label="Familias de producto">{productFamilies.map((family) => <a className={`family-card tone-${family.tone}`} href="#contacto" key={family.slug}><div className="card-top"><span>{family.index}</span><ArrowIcon /></div><div className="family-art"><i /><i /><i /></div><div><h3>{family.name}</h3><p>{family.description}</p>{family.lines.length > 0 && <small>{family.lines.slice(0, 3).join(" · ")}</small>}</div></a>)}</div><div className="section-shell family-foot"><p>Las familias surgen de la taxonomía pública actual de Districe.</p><a className="text-link" href="#contacto">No encontrás lo que buscás <ArrowIcon /></a></div></section>
-    <section id="marcas" className="brands section-shell" aria-labelledby="marcas-title"><div className="brand-intro"><p className="eyebrow"><span /> Selección de marcas</p><h2 id="marcas-title">Conocé las líneas<br />que distribuimos.</h2><p>Presentamos marcas confirmadas en las fuentes públicas actuales. La selección se ampliará con validación comercial.</p><a className="text-link" href="#contacto">Consultar por una marca <ArrowIcon /></a></div><div className="brand-list">{brands.map((brand, index) => <article className="brand-row" key={brand.slug}><span>0{index + 1}</span><div><h3>{brand.name}</h3><p>{brand.description}</p></div><ul>{brand.lines.slice(0, 3).map((line) => <li key={line}>{line}</li>)}</ul><a href="#contacto" aria-label={`Consultar por ${brand.name}`}><ArrowIcon /></a></article>)}</div></section>
-    <section id="empresa" className="trust-section"><div className="section-shell trust-grid"><div className="trust-statement"><p className="eyebrow"><span /> La experiencia detrás del suministro</p><h2>Una trayectoria construida <i>en movimiento.</i></h2><p>Districe comenzó su actividad en 1987 con distribución mayorista de filtros para línea liviana y pesada. Con el tiempo amplió su oferta para acompañar las necesidades del mercado automotor.</p></div><div className="trust-points">{company.differentiators.map((item, index) => <div key={item}><span>0{index + 1}</span><p>{item}</p></div>)}<small>Conceptos declarados en el sitio actual; sin métricas no verificadas.</small></div></div></section>
-    <section className="coverage section-shell"><div><p className="eyebrow"><span /> Operación</p><h2>La respuesta correcta empieza con una buena conversación.</h2></div><div className="coverage-card"><div className="coverage-lines"><i /><i /><i /><i /><i /></div><p>La cobertura y las condiciones logísticas serán comunicadas cuando estén confirmadas.</p><span>Información en actualización</span></div></section>
-    <section id="contacto" className="contact-section"><div className="section-shell contact-grid"><div><p className="eyebrow"><span /> Contacto comercial</p><h2>¿Buscás una línea<br />para tu negocio?</h2></div><div className="contact-action"><p>Contanos qué necesitás. El equipo comercial te orientará hacia la familia, marca o línea adecuada.</p><a className="button button-light" href={company.whatsappHref} target="_blank" rel="noreferrer">Consultar por WhatsApp <ArrowIcon /></a><a className="contact-email" href={`mailto:${company.email}`}>{company.email} <ArrowIcon /></a></div></div></section>
-    <footer className="site-footer"><div className="section-shell footer-top"><a href="#inicio" className="footer-brand">DISTRICE<span>Repuestos y Accesorios Automotor</span></a><div className="footer-links"><a href="#familias">Productos</a><a href="#marcas">Marcas</a><a href="#empresa">Empresa</a><a href="#contacto">Contacto</a></div><div className="footer-contact"><a href={`mailto:${company.email}`}>{company.email}</a><a href="tel:+543514895039">{company.phone}</a><a href={company.whatsappHref} target="_blank" rel="noreferrer">WhatsApp comercial ↗</a></div></div><div className="section-shell footer-bottom"><span>© {new Date().getFullYear()} Districe</span><span>{company.contactStatus}</span><span>Desarrollo por Broco Solutions</span></div></footer>
-  </main>;
+  const reduced = useReducedMotion();
+  const scrollFamilies = (direction: number) => trackRef.current?.scrollBy({ left: direction * 380, behavior: reduced ? "auto" : "smooth" });
+
+  return <><Header /><main id="main-content">
+    <section className="hero-v3" aria-labelledby="hero-title">
+      <div className="hero-v3-grid" aria-hidden="true" />
+      <div className="section-shell hero-v3-inner">
+        <motion.div className="hero-v3-copy" initial={reduced ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.56 }}>
+          <p className="eyebrow"><span /> Distribución mayorista automotor</p>
+          <h1 id="hero-title">Producto, marcas y respuesta para el <i>canal profesional.</i></h1>
+          <p>Desde {company.founded}, Districe acompaña al mercado automotor con una propuesta especializada de repuestos, accesorios y líneas de consumo.</p>
+          <div className="hero-actions"><Link className="button button-primary" href="/productos">Explorar productos <Arrow /></Link><Link className="text-link" href="/contacto">Hacer una consulta <Arrow /></Link></div>
+          <Link className="hero-search-link" href="/productos"><span>⌕</span> Buscá una familia, marca o línea <b>/</b></Link>
+        </motion.div>
+        <motion.div className="hero-v3-product" initial={reduced ? false : { opacity: 0, scale: 0.96, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.7, delay: 0.12 }}>
+          <span className="hero-v3-tag">DISTRICE / DESDE {company.founded}</span>
+          <div className="hero-v3-orbit orbit-one" /><div className="hero-v3-orbit orbit-two" />
+          <Image src="/images/products/jarama-lava-coches.webp" width={480} height={720} priority sizes="(max-width: 700px) 54vw, 420px" alt="Producto Jarama para lavado vehicular" />
+          <div className="hero-v3-caption"><b>Productos para el canal profesional</b><span>Imagen real de línea disponible</span></div>
+        </motion.div>
+      </div>
+    </section>
+
+    <section className="families-v3" aria-labelledby="familias-title">
+      <div className="section-shell"><div className="section-heading"><div><p className="eyebrow"><span /> Catálogo por necesidad</p><h2 id="familias-title">Seis familias. Una forma más directa de <i>encontrar.</i></h2></div><div className="track-controls"><p>Arrastrá o deslizá para recorrer</p><button onClick={() => scrollFamilies(-1)} aria-label="Ver familias anteriores">←</button><button onClick={() => scrollFamilies(1)} aria-label="Ver familias siguientes">→</button></div></div></div>
+      <div className="families-v3-track" ref={trackRef} role="region" aria-labelledby="familias-title" tabIndex={0}>{productFamilies.map((family) => <Link className={`family-v3-card tone-${family.tone}`} href={familyUrl(family.slug)} key={family.slug}><div className="family-v3-top"><span>{family.index}</span><Arrow /></div>{family.slug === "estetica-vehicular" ? <Image src="/images/products/jarama-espuma-activa.webp" width={437} height={800} alt="Producto Jarama para estética vehicular" sizes="(max-width: 700px) 58vw, 330px" /> : <div className="family-v3-graphic" aria-hidden="true"><i /><i /><i /></div>}<div className="family-v3-content"><h3>{family.name}</h3><p>{family.description}</p>{family.lines.length > 0 && <small>{family.lines.slice(0, 3).join(" · ")}</small>}</div></Link>)}</div>
+      <div className="section-shell families-v3-foot"><p>Las familias responden a la taxonomía pública actual de Districe.</p><Link className="text-link" href="/productos">Ver todo el catálogo <Arrow /></Link></div>
+    </section>
+
+    <section className="brands-v3 section-shell" aria-labelledby="marcas-title"><div className="brands-v3-intro"><p className="eyebrow"><span /> Marcas confirmadas</p><h2 id="marcas-title">Líneas que suman valor a <i>tu operación.</i></h2><p>Presentamos las marcas verificadas en las fuentes públicas actuales. El catálogo está preparado para crecer con validación comercial.</p><Link className="text-link" href="/marcas">Explorar marcas <Arrow /></Link></div><div className="brands-v3-list">{brands.map((brand, index) => <Link className="brand-v3-row" href={brandUrl(brand.slug)} key={brand.slug}><span>0{index + 1}</span><div className="brand-v3-logo"><Image src={brandAssets[brand.slug]} width={brand.slug === "jarama" ? 1285 : 360} height={brand.slug === "jarama" ? 256 : 280} alt={`Logo ${brand.name}`} /></div><div><h3>{brand.name}</h3><p>{brand.lines.slice(0, 3).join(" · ")}</p></div><Arrow /></Link>)}</div></section>
+
+    <section className="story-v3"><div className="section-shell story-v3-grid"><div><p className="eyebrow"><span /> Una empresa en movimiento</p><h2>La experiencia empieza antes de que el producto llegue a destino.</h2></div><div><p>Districe inició su actividad en 1987 con distribución mayorista de filtros para línea liviana y pesada. Su propuesta fue ampliándose para acompañar los cambios del mercado automotor.</p><ul>{company.differentiators.map((item) => <li key={item}>{item}</li>)}</ul><Link className="text-link" href="/empresa">Conocé Districe <Arrow /></Link></div></div></section>
+
+    <section className="contact-v3" id="contacto"><div className="section-shell contact-v3-inner"><div><p className="eyebrow"><span /> Contacto comercial</p><h2>¿Buscás una línea para tu negocio?</h2></div><div><p>Contanos qué necesitás. Podemos orientarte hacia la familia, marca o línea adecuada.</p><Link className="button button-light" href="/contacto">Contactar a Districe <Arrow /></Link><a className="contact-email" href={`mailto:${company.email}`}>{company.email} <Arrow /></a></div></div></section>
+  </main><footer className="site-footer"><div className="section-shell footer-top"><Link href="/" className="footer-brand">DISTRICE<span>Repuestos y Accesorios Automotor</span></Link><nav className="footer-links" aria-label="Navegación de pie"><Link href="/productos">Productos</Link><Link href="/marcas">Marcas</Link><Link href="/empresa">Empresa</Link><Link href="/contacto">Contacto</Link></nav><div className="footer-contact"><a href={`mailto:${company.email}`}>{company.email}</a><a href="tel:+543514895039">{company.phone}</a></div></div><div className="section-shell footer-bottom"><span>© {new Date().getFullYear()} Districe</span><span>{company.contactStatus}</span><span>Desarrollo por Broco Solutions</span></div></footer></>;
 }

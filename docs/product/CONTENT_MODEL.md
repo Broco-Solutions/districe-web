@@ -2,26 +2,27 @@
 
 ## Principio
 
-Todo contenido público vive como módulos TypeScript/MDX y activos versionados en el repositorio. No hay fuente externa de datos ni persistencia.
+El catálogo es estático, tipado y versionado en Git. No requiere base de datos, CMS ni almacenamiento persistente.
 
-## Entidades
+## Entidades públicas
 
-| Entidad | Campos mínimos | Relaciones |
+| Entidad | Identidad | Relación |
 | --- | --- | --- |
-| `ProductFamily` | `slug`, `name`, `description`, `image`, `children[]` | Tiene muchas líneas/subfamilias y marcas relacionadas. |
-| `ProductLine` | `slug`, `name`, `familySlug`, `brandSlug`, `synonyms[]` | La identidad pública es compuesta: familia + marca + línea. |
-| `Brand` | `slug`, `name`, `logo`, `description`, `lineSlugs[]`, `featured` | Tiene muchas líneas; se relaciona con familias a través de ellas. |
-| `CatalogAsset` | `title`, `file`, `brandSlug?`, `familySlug?`, `updatedAt` | PDF local opcional; indexable y descargable. |
-| `ProofPoint` | `label`, `value`, `source`, `approved` | Sólo se publica con `approved: true`. |
-| `ContactChannel` | `type`, `label`, `value`, `href`, `primary` | Alimenta CTA, header, footer y páginas de contacto. |
+| `ProductFamily` | `slug` | Contiene líneas y marcas a través de sus relaciones. |
+| `Brand` | `slug` | Puede pertenecer a una o más familias. |
+| `CatalogLine` | `familySlug/brandSlug/lineSlug` | Pertenece a una marca dentro de una familia. |
 
-## Búsqueda
+La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `estetica-vehicular/jarama/perfumes` son entidades distintas aunque compartan nombre visible. En código, la identidad se conserva en `CatalogLine.id`; los destinos públicos actuales llevan a su marca hasta que exista una página de línea justificada.
 
-Índice derivado en build desde familias, líneas y marcas. Cada documento indexa nombre, sinónimos, descripción y relaciones. Autocompletado local, con grupos “Familias”, “Marcas” y “Líneas”; los resultados llevan a una página de exploración, nunca a compra.
+## Implementación
 
-## Convenciones
+- `src/data/catalog.ts` contiene familias, marcas, líneas y helpers de URL.
+- El índice de búsqueda se deriva de esas entidades y presenta `marca · familia` para desambiguar líneas homónimas.
+- Los assets públicos viven en `public/images/`; no se publican PDFs hasta recibirlos y validarlos.
+- Toda ampliación exige fuente y confirmación comercial en el mismo cambio.
 
-- Slugs estables, ASCII y kebab-case.
-- Imágenes locales en `public/images/`; logos en `public/brands/`; PDFs en `public/catalogs/`.
-- Ningún texto comercial, métrica o logo se agrega sin fuente/confirmación en el commit correspondiente.
-- `src/data/catalog.ts` contiene el primer conjunto tipado y desacoplado de la UI.
+## Reglas
+
+- Slugs ASCII en kebab-case; IDs de línea contextuales y estables.
+- Marcas excluidas nunca ingresan al catálogo, búsqueda, metadata ni sitemap.
+- Claims, métricas y canales de contacto se publican sólo con evidencia vigente.
