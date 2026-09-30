@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./interactions.css";
+import "./catalog.css";
 
 export const metadata: Metadata = {
   title: { default: "Districe | Repuestos y accesorios automotor", template: "%s | Districe" },

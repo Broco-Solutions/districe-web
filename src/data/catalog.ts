@@ -1,6 +1,7 @@
 export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink" };
 export type Brand = { slug: string; name: string; description: string; lines: string[] };
 export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea"; detail: string; target: string };
+export type CatalogLine = { slug: string; name: string; familySlug: string; brandSlug: string };
 
 export const productFamilies: ProductFamily[] = [
   { slug: "estetica-vehicular", name: "Estética vehicular", index: "01", description: "Cuidado, terminación y presentación del vehículo.", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado", "Lubricantes", "Aromatizantes", "Renovadores", "Lustre y pulido"], tone: "blue" },
@@ -18,8 +19,10 @@ export const brands: Brand[] = [
   { slug: "revigal", name: "Revigal", description: "Estética vehicular", lines: ["Productos para lavado", "Aromatizantes", "Renovadores", "Lustre y pulido"] },
 ];
 
+export const catalogLines: CatalogLine[] = brands.flatMap((brand) => brand.lines.map((name) => ({ slug: name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replaceAll(" ", "-"), name, familySlug: "estetica-vehicular", brandSlug: brand.slug })));
+
 export const searchEntries: SearchEntry[] = [
   ...productFamilies.map((family) => ({ id: `family-${family.slug}`, label: family.name, type: "Familia" as const, detail: "Productos", target: "#familias" })),
   ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: "#marcas" })),
-  ...Array.from(new Set(brands.flatMap((brand) => brand.lines))).map((line) => ({ id: `line-${line.toLowerCase().replaceAll(" ", "-")}`, label: line, type: "Línea" as const, detail: "Estética vehicular", target: "#familias" })),
+  ...catalogLines.map((line) => ({ id: `line-${line.brandSlug}-${line.slug}`, label: line.name, type: "Línea" as const, detail: `${brands.find((brand) => brand.slug === line.brandSlug)?.name} · Estética vehicular`, target: `/marcas/${line.brandSlug}` })),
 ];
