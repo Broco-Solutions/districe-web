@@ -7,7 +7,7 @@ Fecha de relevamiento: 30-09-2026. Este inventario describe fuentes, no autoriza
 | Familia | Subfamilias / agrupaciones visibles |
 | --- | --- |
 | Estética vehicular | K78: perfumes, limpiadores, revividores, ceras, accesorios para lavado. Jarama: perfumes, limpiadores, revividores, ceras, lubricantes. Revigal: productos para lavado, aromatizantes, renovadores, lustre y pulido. |
-| Aditivos, lubricantes y fluidos | Sin desglose visible en la navegación relevada. |
+| Aditivos, lubricantes y fluidos | Aditivos: Veslee y Lock, según confirmación del cliente. |
 | Higiene y seguridad | Sin desglose visible en la navegación relevada. |
 | Repuestos y accesorios | Sin desglose visible en la navegación relevada. |
 | Anaeróbicos automotor | Sin desglose visible en la navegación relevada. |
@@ -29,11 +29,9 @@ Fecha de relevamiento: 30-09-2026. Este inventario describe fuentes, no autoriza
 | Abrazaderas Perfecto | Abrazaderas |
 | Pertrak | Filtros para motores Perkins |
 | Philips | Lámparas |
-| Pitts | Aditivos |
 | Ran | Limpiadores y auxiliares automotor |
 | Revigal | Cosmética automotor; en Tiendanube: productos para lavado, aromatizantes, renovadores, lustre y pulido |
 | Sol Tec | Crema limpiamanos, limpia inyectores y desoxidantes automotor |
-| Team Hnos | Fundas y accesorios |
 | Tribuno | Líquidos de freno, refrigerantes, limpia contactos y aditivos |
 
 Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia comercial y activos de cada una requieren confirmación del cliente antes del diseño final.
@@ -50,9 +48,15 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 
 - El sitio institucional contiene logo y tarjetas de distribución (principalmente logotipos/imágenes de 360 × 280) alojados en WordPress; son referencias de inventario, no se copiaron al nuevo proyecto.
 - El cotizador histórico local conserva logo Districe y algunos logos de marcas; se preservó sin integrarlo a la nueva UI.
-- No se identificaron catálogos PDF enlazados públicamente durante el relevamiento.
+- Bioepecuén está confirmado dentro de Estética vehicular; su catálogo local contiene difusores de auto, display expositor de 20 unidades y siete aromas, sin SKU ni precios.
 - No se identificaron fotografías institucionales, logísticas ni de equipo aptas para confirmar uso en esta iteración.
-- No se identificaron fuentes públicas suficientemente confiables para redes sociales oficiales, catálogo PDF general, testimonios, logos de clientes, métricas comerciales o cobertura geográfica exacta.
+- Instagram oficial confirmado: `https://www.instagram.com/accesoriosyrepuestosautomotor?utm_source=qr&stkn=MW9kcWV6MjA2Y3Vraw==`.
+- Cobertura/logística confirmada: “Envíos a todo el país dentro de las 72 hs de recibido el pedido.”
+- Servex fue recibido como fuente complementaria, pero no tiene categoría confirmada y no se publica todavía.
+
+## Exclusiones comerciales
+
+No publicar ni reintroducir desde datos históricos: Trampolímp, Ferrecentro, Cepillos Cariño, Vicuña Seguridad Industrial, Campanita, Tacsa, Pitts y Team fundas.
 
 ## Estructura actual relevante
 

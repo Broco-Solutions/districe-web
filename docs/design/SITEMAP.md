@@ -8,7 +8,7 @@
   - Líneas `/productos/[familia]/[linea]` cuando exista contenido suficiente
 - Marcas `/marcas`
   - Marca `/marcas/[marca]`
-- Catálogos `/catalogos` (sólo al recibir PDFs)
+- Catálogos: CTA dentro de las páginas de marca cuando existe un PDF validado; Bioepecuén enlaza `/catalogos/bioepecuen-difusores-auto.pdf`.
 - Nosotros `/nosotros`
 - Contacto / Solicitar cotización `/contacto`
 

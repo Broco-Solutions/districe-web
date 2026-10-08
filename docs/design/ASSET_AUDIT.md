@@ -8,6 +8,7 @@
 | Productos Jarama, WebP 437–480 px de ancho | Tiendanube actual | Hero/editorial de Estética vehicular y página de marca Jarama. |
 | Logos K78 y Revigal, PNG 360×280 | Institucional actual | Sistema de marcas, respetando área de protección. |
 | Logo Jarama, JPEG 1285×256 | Asset histórico local de Districe | Sistema de marcas; suficiente para presentación horizontal. |
+| Catálogo Bioepecuén, PDF 11 páginas | Drive organizado del proyecto | CTA “Ver catálogo” en la página de Bioepecuén; servido localmente desde `public/catalogos/`. |
 
 ## B — Usables con optimización o recorte
 
@@ -26,4 +27,4 @@
 
 ## Ausencias relevantes
 
-No se encontraron fotos verificables de depósito, equipo, flota, entrega, instalaciones, aplicación de producto, catálogo PDF general, clientes ni cobertura. Se debe solicitar una selección de fotografía real (operación, estanterías, preparación de pedidos y producto) para la siguiente dirección de arte.
+No se encontraron fotos verificables de depósito, equipo, flota, entrega, instalaciones, aplicación de producto, clientes ni cobertura. Se debe solicitar una selección de fotografía real (operación, estanterías, preparación de pedidos y producto) para la siguiente dirección de arte. El catálogo de Bioepecuén se usa como documento descargable, no como fotografía institucional de Districe.
