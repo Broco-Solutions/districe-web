@@ -1,30 +1,34 @@
-# Auditoría de assets — 30-09-2026
+# Auditoría de assets — 08-10-2026
 
-## A — Usables directamente
+## Activos publicados y uso
 
-| Asset | Origen | Uso |
+| Ruta canónica | Fuente / tratamiento | Uso |
 | --- | --- | --- |
-| Logo Districe, PNG 266×77 | Institucional actual | Header y referencias de marca; se conserva local en `public/images/districe/`. |
-| Productos Jarama, WebP 437–480 px de ancho | Tiendanube actual | Hero/editorial de Estética vehicular y página de marca Jarama. |
-| Logos K78 y Revigal, PNG 360×280 | Institucional actual | Sistema de marcas, respetando área de protección. |
-| Logo Jarama, JPEG 1285×256 | Asset histórico local de Districe | Sistema de marcas; suficiente para presentación horizontal. |
-| Catálogo Bioepecuén, PDF 11 páginas | Drive organizado del proyecto | CTA “Ver catálogo” en la página de Bioepecuén; servido localmente desde `public/catalogos/`. |
+| `public/logos/districe/primary.png` | Logo Districe institucional de 2161 × 728 px, limpiado desde el JPEG de mayor resolución y exportado con transparencia | Header, menú móvil, footer y shell de páginas |
+| `public/logos/brands/jarama.png` | Logo histórico local recortado y limpiado; conservar borde/contorno del arte original | Home, marcas y rail editorial |
+| `public/logos/brands/k78-transparent.png` | Logo K78 de la fuente local, recortado y con fondo exterior eliminado; originales blancos internos conservados | Home y página de marcas |
+| `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
+| `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
+| `public/images/hero/jarama-lava-coches-cutout.webp` | Foto real del producto local, con fondo blanco exterior quitado por flood-fill; original conservado | Hero de Home |
+| `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
+| `public/images/products/jarama-*.webp` | Originales de producto de la fuente local existente | Respaldo/originales; no borrar |
+| `public/catalogos/bioepecuen-difusores-auto.pdf` | Catálogo recibido del cliente, copia local | CTA de descarga en Bioepecuén; no tratar como fotografía institucional |
 
-## B — Usables con optimización o recorte
+Los originales de trabajo en `public/brand/` y `public/images/` se conservan como respaldo. El código debe apuntar a las rutas canónicas de `public/logos/` para logos publicados.
 
-- Logo Districe histórico grande (2161×728): útil como respaldo, pero tiene fondo blanco y proporción poco práctica; el PNG institucional actual es preferible.
-- Logos K78 y Revigal: la resolución permite su uso editorial pequeño/mediano, pero contienen bastante espacio blanco; se los ubica en superficies limpias en vez de forzar un recorte que altere la marca.
+## Consistencia y límites
 
-## C — Referencia solamente
+- Los logos se alojan en superficies neutras y se escalan por altura óptica, no por la proporción de sus lienzos originales.
+- El logo Districe se usa a 176 px de ancho o más en escritorio y 144 px o más en móvil; evitar reducirlo por debajo de 128 px.
+- Para fondos oscuros se usa la misma silueta oficial en blanco mediante filtro CSS, sin alterar el dibujo ni guardar una variante divergente.
+- No se creó favicon: el logo disponible es horizontal y no hay un símbolo cuadrado aprobado para abreviarlo.
+- Lock y Bioepecuén no tienen logo de calidad/fuente inequívoca en el repo; se muestran como texto, sin marcas gráficas inventadas.
+- Veslee usa su logo oficial, pero no se amplían sus claims ni se importan imágenes de producto del fabricante.
 
-- Tarjetas de distribución 360×280 del institucional: mayormente son logos de baja resolución, no fotografía editorial.
-- Favicon e imágenes de WordPress: no aportan al sistema visual de la Home.
+## Fotografía y material pendiente
 
-## D — Descartados
-
-- Assets de las marcas excluidas por alcance comercial: no se descargan ni se incorporan al repositorio nuevo.
-- Banners/efectos del WordPress actual y cualquier imagen de competidor: no se reutilizan.
-
-## Ausencias relevantes
-
-No se encontraron fotos verificables de depósito, equipo, flota, entrega, instalaciones, aplicación de producto, clientes ni cobertura. Se debe solicitar una selección de fotografía real (operación, estanterías, preparación de pedidos y producto) para la siguiente dirección de arte. El catálogo de Bioepecuén se usa como documento descargable, no como fotografía institucional de Districe.
+- No hay fotografías verificadas del depósito, equipo, flota, preparación de pedidos ni instalaciones. La composición tipográfica actual se mantiene hasta que el cliente entregue fotos reales.
+- Jarama aporta el único conjunto de fotografía real de producto utilizable para esta pasada. No representa instalaciones ni operación de Districe.
+- No se generaron imágenes con IA ni se incorporó stock.
+- Las familias sin foto disponible siguen usando composición tipográfica y color, no escenas ficticias.
+- Para una futura tanda: pedir originales de depósito/logística y versiones oficiales/vectoriales de logo Districe, Jarama y marcas sin asset confiable.

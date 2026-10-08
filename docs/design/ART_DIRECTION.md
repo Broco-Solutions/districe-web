@@ -2,24 +2,26 @@
 
 ## Idea visual
 
-Distribución mayorista automotor con precisión editorial: el producto real es el protagonista y la interfaz ordena su descubrimiento. Azul Districe, blanco técnico y acento ácido funcionan como señalización, no como decoración.
+Distribución mayorista automotor con precisión editorial: el producto real es protagonista y la interfaz ordena su descubrimiento. Azul Districe/navy, superficies claras y acento lima funcionan como señalización; la jerarquía tipográfica sostiene las páginas sin inventar escenas.
 
 ## Fotografía y producto
 
-- Envases, piezas, texturas y detalles macro reales, con recortes limpios y fondos sobrios.
-- Composiciones asimétricas: producto grande, información concisa y capas de grilla/etiquetas técnicas de baja intensidad.
-- Cuando haya fotos reales, priorizar depósito, preparación, entrega y equipo trabajando sobre poses genéricas.
+- Prioridad: fotos reales del cliente; después material oficial de marcas/catálogos que aporte contexto; IA sólo para imágenes editoriales que no suplanten productos, equipo ni instalaciones reales.
+- Envases, piezas y detalles reales con recorte limpio, escala creíble y fondos sobrios.
+- Si una familia no tiene foto útil, usar color, tipografía e información confirmada. No rellenar con escenas automotrices genéricas.
+- Cuando lleguen fotos reales, priorizar depósito, preparación, entrega y equipo trabajando. Conservar originales y no alterar dimensiones aparentes, stock ni maquinaria.
 
-## Tipografía y color
+## Logotipos y superficies
 
-- Sans de alta legibilidad para información comercial; serif itálica sólo para contraste editorial puntual.
-- Titulares compactos y de alto contraste; labels pequeños con tracking generoso.
-- `navy` para confianza/estructura, `paper` para aire, `acid` para orientación y CTA, tonos de familia controlados sólo en producto/categoría.
+- Usar las rutas canónicas en `public/logos/` y respetar el tamaño/contraste de `LOGO_USAGE.md`.
+- Presentar marcas con fuentes y proporciones distintas dentro de superficies neutras; escalar por altura óptica, sin estirar ni reconstruir el arte.
+- Lock y Bioepecuén se representan como texto hasta recibir o verificar un logo original adecuado.
+- El logo Districe se usa a color sobre fondo claro; en fondos oscuros puede invertirse mediante CSS, sin editar la geometría.
 
 ## Evitar
 
-Stock de talleres o personas actuadas, autos deportivos decorativos, renders ficticios, imágenes IA que simulen productos reales, fondos tecnológicos abstractos y gradients SaaS. Ninguna imagen de competidores.
+Stock de talleres o personas actuadas, autos decorativos, renders ficticios, IA que simule productos reales, fondos tecnológicos abstractos, gradients SaaS y cualquier imagen de competidores. Bioepecuén no se usa como fotografía institucional de Districe.
 
-## Reemplazos futuros necesarios
+## Reemplazos futuros
 
-Hero alternativo con operación Districe; una imagen real por familia; fotografías de logística/depósito; variantes vectoriales oficiales de logo y logos de marcas con autorización vigente.
+Fotos del depósito/operación; material real por familia; vector original del logo Districe; logos oficiales de marcas que hoy sólo se presentan tipográficamente o cuyo asset local es histórico.
