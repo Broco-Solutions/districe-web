@@ -33,7 +33,8 @@ export const brands: Brand[] = [
 // "Perfumes" entries never collapse into one catalogue entity.
 export const catalogLines: CatalogLine[] = brands.flatMap((brand) => brand.lines.map((name) => {
   const slug = toSlug(name);
-  return { id: `estetica-vehicular/${brand.slug}/${slug}`, slug, name, familySlug: "estetica-vehicular", brandSlug: brand.slug };
+  const familySlug = brand.familySlugs[0];
+  return { id: `${familySlug}/${brand.slug}/${slug}`, slug, name, familySlug, brandSlug: brand.slug };
 }));
 
 export const catalogItems = brands.flatMap((brand) => (brand.catalogItems ?? []).map((item) => ({ ...item, brandSlug: brand.slug, familySlug: brand.familySlugs[0] })));
