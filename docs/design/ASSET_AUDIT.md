@@ -5,10 +5,12 @@
 | Ruta canónica | Fuente / tratamiento | Uso |
 | --- | --- | --- |
 | `public/logos/districe/primary.png` | Logo Districe institucional de 2161 × 728 px, limpiado desde el JPEG de mayor resolución y exportado con transparencia | Header, menú móvil, footer y shell de páginas |
+| `public/logos/districe/reversed.png` | Variante blanca generada desde el canal alfa del logo institucional, sin filtro de color ni alteración de la geometría | Footer sobre navy |
 | `public/logos/brands/jarama.png` | Logo histórico local recortado y limpiado; conservar borde/contorno del arte original | Home, marcas y rail editorial |
 | `public/logos/brands/k78-transparent.png` | Logo K78 de la fuente local, recortado y con fondo exterior eliminado; originales blancos internos conservados | Home y página de marcas |
 | `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
 | `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
+| `public/logos/broco/bs-mark-neg.svg` | Mark blanco oficial de Broco Solutions obtenido de su sitio público | Crédito del footer, enlazado a `www.brocosolutions.com` |
 | `public/images/hero/jarama-lava-coches-cutout.webp` | Foto real del producto local, con fondo blanco exterior quitado por flood-fill; original conservado | Hero de Home |
 | `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
 | `public/images/products/jarama-*.webp` | Originales de producto de la fuente local existente | Respaldo/originales; no borrar |
