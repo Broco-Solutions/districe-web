@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.districe.com.ar"),
   title: { default: "Districe | Repuestos y accesorios automotor", template: "%s | Districe" },
   description: "Distribución mayorista de repuestos y accesorios automotor desde 1987.",
-  openGraph: { type: "website", locale: "es_AR", siteName: "Districe" },
+  icons: { icon: "/icons/districe-mark.png", apple: "/icons/apple-touch-icon.png" },
+  openGraph: { type: "website", locale: "es_AR", siteName: "Districe", images: [{ url: "/images/editorial/distribucion-deposito-generated.webp", width: 1536, height: 1024, alt: "Distribución automotor — imagen editorial" }] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

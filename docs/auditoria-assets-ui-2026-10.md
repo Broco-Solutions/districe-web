@@ -21,9 +21,9 @@ Ambas variantes son PNG RGBA/alpha de alta resolución (2163 × 706). No se enco
 
 ## Logos de marcas
 
-Se conservan y normalizan dentro de un marco común: Jarama, K78, Revigal, Veslee y Bioepecuén. Lock es una marca publicada y confirmada en el catálogo, pero no cuenta con logo fuente local ni oficial verificable; se muestra como wordmark editorial, no como un logo inventado.
+Se conservan y normalizan dentro de un marco común: Jarama, K78, Revigal, Veslee y Bioepecuén. K78, Revigal, Veslee y Bioepecuén se actualizaron con archivos descargados de fuentes oficiales durante la segunda pasada. Lock es una marca publicada y confirmada en el catálogo, pero no cuenta con logo fuente local ni oficial verificable; se muestra como wordmark editorial, no como un logo inventado.
 
-La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentina.com`) y Revigal (`revigal.com.ar`), incluidos productos y catálogos públicos. Se usó como validación de calidad/relevancia; no se descargaron ni incorporaron assets externos sin una licencia o permiso explícito.
+La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentina.com`), Revigal (`revigal.com.ar`), Veslee (`vesleeaditivos.com`) y Bioepecuén (`bioepecuenaromas.com.ar`). Se descargó una selección de logos y productos oficiales de esos sitios; cada URL y transformación está en `docs/ASSET_PROVENANCE.md`.
 
 ## Faltantes
 
@@ -55,4 +55,5 @@ La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentin
 ## Inventario de imágenes usado
 
 - Reales existentes: Jarama Lava Coches, Espuma Activa y Brillo; se usan en el hero y la familia Estética vehicular.
-- IA: ninguna.
+- Reales externos: K78 Bug Remover, Revigal Espuma Activa y Veslee Limpia Inyectores se usan en el hero; Veslee Lubricante Multiuso en Aditivos. Se sumaron selecciones adicionales para futuras tarjetas.
+- IA: dos imágenes editoriales de operación/distribución, claramente rotuladas como generadas. Se usan en Home y Empresa; no se atribuyen a instalaciones de Districe.
