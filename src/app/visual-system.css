@@ -49,6 +49,8 @@
 .brand-v3-row:last-child{border-bottom:1px solid #d4d9d6}
 .brand-v3-row:hover{background:#f8f9f6;padding-inline:.55rem}
 .story-v3{background:#e7ece9}
+.story-v3-grid{grid-template-columns:1fr .85fr .72fr;gap:3.5rem;align-items:end}
+.story-v3-image{position:relative;min-height:24rem;overflow:hidden;background:#142436}.story-v3-image img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.story-v3-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(9,24,43,.7))}.story-v3-image small{position:absolute;z-index:1;left:.85rem;bottom:.75rem;color:#fff;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase}
 .contact-v3{background:#d1ed59}
 .site-footer{background:#101c2c}
 .footer-brand{display:block;width:min(16rem,100%);line-height:0}
@@ -92,6 +94,7 @@
 .brand-image{position:relative;overflow:hidden}
 .brand-image-jarama{background:#13213a!important}
 .brand-image-jarama img{filter:drop-shadow(0 1.4rem 1.2rem rgba(0,0,0,.25))}
+.family-product-veslee{background:linear-gradient(135deg,#eef1ee,#d9dfdc)!important}.family-product-veslee img{max-height:27rem!important;filter:drop-shadow(0 1.2rem 1rem rgba(0,0,0,.22))}
 .brand-image-k78 img,.brand-image-revigal img,.brand-image-veslee img{max-width:90%;max-height:11rem;object-fit:contain}
 .brand-image-bioepecuen img{max-width:72%;max-height:18rem;object-fit:contain}
 .brand-image-wordmark{display:flex!important;align-items:flex-start!important;justify-content:center!important;flex-direction:column;gap:.8rem;padding:clamp(2rem,5vw,4rem)!important;background:linear-gradient(145deg,#edf1f1,#f7f7f3)!important;border-left:3px solid #d1ed59}
@@ -107,6 +110,7 @@
 .editorial-copy h2{max-width:16ch;color:#102b53}
 .editorial-copy>p:not(.eyebrow){max-width:47rem;color:#45525d;line-height:1.75}
 .editorial-copy div span{background:#fff;border-color:#dfe4df;padding:.65rem .8rem}
+.company-editorial{display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(2rem,5vw,5rem);align-items:center;margin:2rem auto 7rem}.company-editorial-image{min-height:27rem;overflow:hidden;background:#172526}.company-editorial-image img{width:100%;height:100%;min-height:27rem;object-fit:cover}.company-editorial h2{font-size:clamp(2.2rem,3.8vw,4rem);line-height:.98;color:#102b53}.company-editorial p:not(.eyebrow){color:#45525d;line-height:1.7}.company-editorial small{display:block;color:#5c6763;font-size:.68rem;text-transform:uppercase;letter-spacing:.09em}
 .contact-page{align-items:start;gap:clamp(2rem,6vw,5rem)}
 .contact-page>div:first-child{padding-top:.5rem}
 .contact-page>div:first-child a{font-size:clamp(1.05rem,2vw,1.35rem);padding:1rem 0;border-color:#d7ded9}
@@ -137,6 +141,7 @@
   .mobile-menu .quote-button{width:100%;margin-top:1rem}
 }
 @media(max-width:800px){
+  .story-v3-grid,.company-editorial{grid-template-columns:1fr}.story-v3-image{min-height:20rem}.company-editorial{margin:0 auto 4.5rem}.company-editorial-image,.company-editorial-image img{min-height:20rem}
   .hero-v3-product{min-height:24rem;order:-1}
   .hero-v3-primary img{width:min(48%,17rem)}
   .families-v3{padding-top:5rem}
