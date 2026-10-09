@@ -101,6 +101,17 @@
   .catalog-grid{grid-template-columns:.9fr 1.1fr}
   .brand-v3-row{grid-template-columns:1.7rem 7rem minmax(0,1fr) 1.1rem}
 }
+@media(max-width:1000px) and (min-width:721px){
+  .desktop-quote{display:none}
+  .menu-button{display:block}
+  .mobile-menu{display:block;position:absolute;top:100%;left:0;right:0;padding:1.25rem max(1.5rem,calc((100vw - 760px)/2));background:var(--paper);border-bottom:1px solid var(--line)}
+  .mobile-brand{display:block;width:10.5rem;margin:.25rem 0 1rem;line-height:0}
+  .mobile-brand img{width:100%;height:auto}
+  .mobile-menu nav a{display:flex;align-items:center;gap:.75rem;border-top:1px solid var(--line);padding:1rem .15rem;font-size:1.15rem;font-weight:700}
+  .mobile-menu nav span{font-size:.6rem;color:var(--muted)}
+  .mobile-menu nav b{margin-left:auto}
+  .mobile-menu .quote-button{width:100%;margin-top:1rem}
+}
 @media(max-width:800px){
   .hero-v3-product{min-height:24rem;order:-1}
   .hero-v3-product>img{width:min(48%,17rem)}
