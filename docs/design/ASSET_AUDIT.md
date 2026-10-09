@@ -5,10 +5,13 @@
 | Ruta canónica | Fuente / tratamiento | Uso |
 | --- | --- | --- |
 | `public/logos/districe/primary.png` | Logo Districe institucional de 2161 × 728 px, limpiado desde el JPEG de mayor resolución y exportado con transparencia | Header, menú móvil, footer y shell de páginas |
+| `public/logos/districe/reversed.png` | Variante blanca transparente generada a partir del logo institucional; el fondo y los contraformas internas quedan transparentes | Footer sobre navy |
 | `public/logos/brands/jarama.png` | Logo histórico local recortado y limpiado; conservar borde/contorno del arte original | Home, marcas y rail editorial |
 | `public/logos/brands/k78-transparent.png` | Logo K78 de la fuente local, recortado y con fondo exterior eliminado; originales blancos internos conservados | Home y página de marcas |
 | `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
 | `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
+| `public/logos/brands/bioepecuen.png` | Logo transparente descargado del sitio oficial de Bioepecuén Aromas | Home, marcas y página de Bioepecuén |
+| `public/logos/broco/bs-mark-neg.svg` | Mark blanco oficial de Broco Solutions obtenido de su sitio público | Crédito del footer, enlazado a `www.brocosolutions.com` |
 | `public/images/hero/jarama-lava-coches-cutout.webp` | Foto real del producto local, con fondo blanco exterior quitado por flood-fill; original conservado | Hero de Home |
 | `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
 | `public/images/products/jarama-*.webp` | Originales de producto de la fuente local existente | Respaldo/originales; no borrar |
@@ -20,9 +23,10 @@ Los originales de trabajo en `public/brand/` y `public/images/` se conservan com
 
 - Los logos se alojan en superficies neutras y se escalan por altura óptica, no por la proporción de sus lienzos originales.
 - El logo Districe se usa a 176 px de ancho o más en escritorio y 144 px o más en móvil; evitar reducirlo por debajo de 128 px.
-- Para fondos oscuros se usa la misma silueta oficial en blanco mediante filtro CSS, sin alterar el dibujo ni guardar una variante divergente.
+- Para fondos oscuros se usa la variante canónica transparente `reversed.png`, sin filtros que puedan rellenar los contraformas internas.
 - No se creó favicon: el logo disponible es horizontal y no hay un símbolo cuadrado aprobado para abreviarlo.
-- Lock y Bioepecuén no tienen logo de calidad/fuente inequívoca en el repo; se muestran como texto, sin marcas gráficas inventadas.
+- Lock se mantiene como denominación tipográfica: no se incorporó el logo de una empresa homónima de seguridad porque no hay evidencia de que corresponda a la línea de aditivos confirmada.
+- Bioepecuén usa el logo transparente disponible en su sitio oficial; no se incorporaron claims ni productos fuera del catálogo confirmado.
 - Veslee usa su logo oficial, pero no se amplían sus claims ni se importan imágenes de producto del fabricante.
 
 ## Fotografía y material pendiente

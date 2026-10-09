@@ -10,6 +10,7 @@ const images: Record<string, { src: string; alt: string; width: number; height: 
   k78: { src: "/logos/brands/k78-transparent.png", alt: "Logo K78", width: 299, height: 124 },
   revigal: { src: "/logos/brands/revigal.png", alt: "Logo Revigal", width: 500, height: 123 },
   veslee: { src: "/logos/brands/veslee.webp", alt: "Logo Veslee", width: 545, height: 344 },
+  bioepecuen: { src: "/logos/brands/bioepecuen.png", alt: "Logo Bioepecuén", width: 512, height: 484 },
 };
 
 export function generateStaticParams() { return brands.map((brand) => ({ slug: brand.slug })); }
