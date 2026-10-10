@@ -8,6 +8,7 @@ import { familyUrl, productFamilies } from "@/data/catalog";
 import { familyAssets } from "@/data/assets";
 import { company } from "@/data/company";
 import { BrandCards } from "@/components/brand-cards";
+import { CountUp } from "@/components/editorial-motion";
 import { Header } from "./header";
 import { BrocoCredit, InstagramIcon } from "../brand-icons";
 
@@ -75,7 +76,7 @@ export function Home() {
       </div>
     </section>
 
-    <section className="v7-facts section-shell" aria-label="Districe en cifras"><div><strong>{company.founded}</strong><p>El inicio de nuestra trayectoria en distribución automotor.</p></div><div><strong>{String(productFamilies.length).padStart(2, "0")}</strong><p>Familias para organizar tu búsqueda.</p></div><div><strong>72 <span>hs</span></strong><p>{company.logistics}</p></div></section>
+    <section className="v7-facts section-shell" aria-label="Districe en cifras"><div><strong><CountUp value={Number(company.founded)} duration={760} /></strong><p>El inicio de nuestra trayectoria en distribución automotor.</p></div><div><strong><CountUp value={productFamilies.length} minimumDigits={2} /></strong><p>Familias para organizar tu búsqueda.</p></div><div><strong><CountUp value={72} /><span> hs</span></strong><p>{company.logistics}</p></div></section>
 
     <section className="families-v3" aria-labelledby="familias-title">
       <div className="section-shell"><div className="section-heading"><div><p className="eyebrow"><span /> Catálogo por necesidad</p><h2 id="familias-title">Seis familias. Una forma más directa de <i>encontrar.</i></h2></div><div className="track-controls"><p>Arrastrá o deslizá para recorrer</p>{!reduced && <button className="motion-toggle" onClick={() => setFamiliesStopped(!familiesStopped)} aria-label={familiesStopped ? "Reanudar familias automáticas" : "Pausar familias automáticas"}>{familiesStopped ? "Reanudar" : "Pausar"}</button>}<button onClick={() => scrollFamilies(-1)} aria-label="Ver familias anteriores">←</button><button onClick={() => scrollFamilies(1)} aria-label="Ver familias siguientes">→</button></div></div></div>
