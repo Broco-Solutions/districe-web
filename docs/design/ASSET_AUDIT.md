@@ -6,7 +6,8 @@
 | --- | --- | --- |
 | `public/logos/districe/primary.png` | Logo Districe institucional de 2161 × 728 px, limpiado desde el JPEG de mayor resolución y exportado con transparencia | Header, menú móvil, footer y shell de páginas |
 | `public/logos/districe/reversed.png` | Variante blanca transparente generada a partir del logo institucional; el fondo y los contraformas internas quedan transparentes | Footer sobre navy |
-| `public/logos/brands/jarama.png` | Logo histórico local recortado y limpiado; conservar borde/contorno del arte original | Home, marcas y rail editorial |
+| `public/images/brands/jarama-logo.png` | Master transparente RGBA de 2400 × 397 px entregado para uso principal | Home, hub/listado de marcas, familias y página Jarama sobre superficies claras |
+| `public/images/brands/jarama-logo-white.png` | Variante transparente RGBA de 2400 × 397 px para contraste invertido | Página Jarama sobre superficie navy; no se usa sobre fondos claros |
 | `public/logos/brands/k78-transparent.png` | Logo K78 de la fuente local, recortado y con fondo exterior eliminado; originales blancos internos conservados | Home y página de marcas |
 | `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
 | `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
@@ -25,6 +26,7 @@ Los originales de trabajo en `public/brand/` y `public/images/` se conservan com
 ## Consistencia y límites
 
 - Los logos se alojan en superficies neutras y se escalan por altura óptica, no por la proporción de sus lienzos originales.
+- Los raster históricos `public/logos/brands/jarama.png` y `public/images/brands/jarama-source.jpg` se retiraron al quedar sin referencias; no existe fallback publicado para Jarama.
 - El logo Districe se usa a 176 px de ancho o más en escritorio y 144 px o más en móvil; evitar reducirlo por debajo de 128 px.
 - Para fondos oscuros se usa la variante canónica transparente `reversed.png`, sin filtros que puedan rellenar los contraformas internas.
 - No se creó favicon: el logo disponible es horizontal y no hay un símbolo cuadrado aprobado para abreviarlo.

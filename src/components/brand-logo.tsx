@@ -6,10 +6,12 @@ type BrandLogoProps = {
   decorative?: boolean;
   priority?: boolean;
   sizes?: string;
+  variant?: "default" | "white";
 };
 
-export function BrandLogo({ slug, decorative = false, priority = false, sizes }: BrandLogoProps) {
+export function BrandLogo({ slug, decorative = false, priority = false, sizes, variant = "default" }: BrandLogoProps) {
   const asset = brandAssets[slug];
+  const src = variant === "white" && asset.darkSrc ? asset.darkSrc : asset.src;
 
-  return <Image className={`brand-logo-asset brand-logo-asset-${slug}`} src={asset.src} width={asset.width} height={asset.height} alt={decorative ? "" : asset.alt} priority={priority} sizes={sizes} />;
+  return <Image className={`brand-logo-asset brand-logo-asset-${slug} brand-logo-asset-${slug}-${variant}`} src={src} width={asset.width} height={asset.height} alt={decorative ? "" : asset.alt} priority={priority} sizes={sizes} />;
 }

@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- |
 | Districe primary and reversed logos | READY | Existing client/current assets | High, transparent 2163×706 PNG | Keep current assets; request master SVG only if available |
 | Districe favicon and Apple icon | READY | Derived from current logo | Good at intended icon sizes | Replace only if client supplies an approved symbol/monogram |
-| Jarama logo | PARTIAL | Existing local `jarama.png` | Good raster but no official vector located in this pass | Request official PNG/SVG from Jarama; keep current non-deformed presentation |
+| Jarama logo | READY | Client-provided transparent masters in `public/images/brands/jarama-logo.png` and `jarama-logo-white.png` | High-resolution RGBA 2400×397; red and reversed variants | Use red master on light surfaces and white master only on dark surfaces; legacy raster removed |
 | K78 logo | READY | k78argentina.com | High enough for web; official transparent PNG | Normalized in logo system |
 | Revigal logo | READY | revigal.com.ar | High transparent PNG | Normalized in logo system |
 | Veslee logo | READY | vesleeaditivos.com | Good official WebP | Normalized in logo system |

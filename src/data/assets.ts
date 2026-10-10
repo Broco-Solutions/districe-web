@@ -3,11 +3,12 @@ export type ImageAsset = {
   width: number;
   height: number;
   alt: string;
+  darkSrc?: string;
 };
 
 export const brandAssets: Record<string, ImageAsset> = {
   k78: { src: "/logos/brands/k78-transparent.png", width: 299, height: 124, alt: "Logo K78" },
-  jarama: { src: "/logos/brands/jarama.png", width: 1307, height: 220, alt: "Logo Jarama" },
+  jarama: { src: "/images/brands/jarama-logo.png", darkSrc: "/images/brands/jarama-logo-white.png", width: 2400, height: 397, alt: "Logo Jarama" },
   revigal: { src: "/logos/brands/revigal-official.png", width: 500, height: 123, alt: "Logo Revigal" },
   veslee: { src: "/logos/brands/veslee-official.webp", width: 545, height: 344, alt: "Logo Veslee" },
   locx: { src: "/images/brands/locx-logo.png", width: 2172, height: 724, alt: "Logo LOCX" },
