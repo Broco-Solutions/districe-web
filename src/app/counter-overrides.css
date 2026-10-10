@@ -1,0 +1,7 @@
+/* The figures are intentionally editorial-scale, including on small screens. */
+.v7-facts .count-up-value { font-size: inherit !important; letter-spacing: inherit !important; }
+.v7-facts strong > span:last-child { font-size: 1.2rem; letter-spacing: 0; }
+@media (max-width: 520px) {
+  .v7-facts strong { font-size: 3.5rem; }
+  .v7-facts > div:last-child strong { font-size: 3.1rem; }
+}

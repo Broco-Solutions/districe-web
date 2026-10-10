@@ -79,7 +79,7 @@ export function CountUp({ value, minimumDigits = 0, duration = 720 }: { value: n
     };
   }, [duration, minimumDigits, reduced, value]);
 
-  return <><span ref={output} aria-hidden="true">{formatCount(value, minimumDigits)}</span><span className="sr-only">{formatCount(value, minimumDigits)}</span></>;
+  return <span ref={output} className="count-up-value">{formatCount(value, minimumDigits)}</span>;
 }
 
 /** The server-rendered content remains visible without JavaScript. */

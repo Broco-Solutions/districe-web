@@ -117,7 +117,7 @@
 .v7-brand-page ul{margin:1.5rem 0}
 .v7-facts{display:grid;grid-template-columns:1fr 1fr 1.5fr;padding:2.5rem 0;gap:2rem;border-bottom:1px solid var(--v7-line)}
 .v7-facts>div+div{border-left:1px solid var(--v7-line);padding-left:2rem}
-.v7-facts strong{display:block;font-size:clamp(2.8rem,4vw,4.3rem);color:var(--v7-blue);letter-spacing:-.065em;line-height:1.1}
+.v7-facts strong{display:block;font-size:clamp(4rem,7vw,7rem);color:var(--v7-blue);letter-spacing:-.075em;line-height:.98}
 .v7-facts strong span{font-size:1.2rem;letter-spacing:0}
 .v7-facts p{font-size:.79rem;line-height:1.6;color:#536271;max-width:39ch;margin:.75rem 0 0}
 .hero-v3-grid{display:none}

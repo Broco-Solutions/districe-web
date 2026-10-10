@@ -8,6 +8,7 @@ import "./a11y.css";
 import "./visual-system.css";
 import "./refinement.css";
 import "./v7.css";
+import "./counter-overrides.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.districe.com.ar"),
