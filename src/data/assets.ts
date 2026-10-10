@@ -10,8 +10,8 @@ export const brandAssets: Record<string, ImageAsset> = {
   jarama: { src: "/logos/brands/jarama.png", width: 1307, height: 220, alt: "Logo Jarama" },
   revigal: { src: "/logos/brands/revigal-official.png", width: 500, height: 123, alt: "Logo Revigal" },
   veslee: { src: "/logos/brands/veslee-official.webp", width: 545, height: 344, alt: "Logo Veslee" },
-  locx: { src: "/logos/brands/locx-official.png", width: 296, height: 106, alt: "Logo LOCX" },
-  bioepecuen: { src: "/logos/brands/bioepecuen-official.png", width: 512, height: 484, alt: "Logo Bioepecuén" },
+  locx: { src: "/images/brands/locx-logo.png", width: 2172, height: 724, alt: "Logo LOCX" },
+  bioepecuen: { src: "/images/brands/bioepecuen-logo.png", width: 2172, height: 724, alt: "Logo Bioepecuén" },
 };
 
 export const familyAssets: Record<string, ImageAsset> = {

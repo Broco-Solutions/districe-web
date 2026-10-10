@@ -11,7 +11,7 @@
 
 ## Marcas
 
-Usar los archivos canónicos de `public/logos/brands/`. Mantener proporción original y ajustar por altura visible dentro de un contenedor común; no estirar ni reconstruir el arte. Bioepecuén usa su logo oficial transparente. LOCX usa la variante clara oficial de `locx.com.ar` sobre una superficie oscura controlada.
+Los masters canónicos de LOCX y Bioepecuén están en `public/images/brands/`; las demás marcas conservan sus archivos de `public/logos/brands/`. Mantener siempre la proporción original y ajustar por tamaño óptico dentro del componente compartido `BrandLogo`; no estirar ni reconstruir el arte. Las superficies deben permanecer neutras y sólo usar contraste controlado cuando el archivo realmente lo necesite.
 
 ## Créditos
 

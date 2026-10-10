@@ -5,8 +5,9 @@ import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { brands, brandUrl, familyUrl, productFamilies } from "@/data/catalog";
-import { brandAssets, familyAssets } from "@/data/assets";
+import { familyAssets } from "@/data/assets";
 import { company } from "@/data/company";
+import { BrandLogo } from "@/components/brand-logo";
 import { Header } from "./header";
 import { BrocoCredit, InstagramIcon } from "../brand-icons";
 
@@ -75,7 +76,7 @@ export function Home() {
       <div className="section-shell families-v3-foot"><p>Las familias responden a la taxonomía pública actual de Districe.</p><Link className="text-link" href="/productos">Ver todo el catálogo <Arrow /></Link></div>
     </section>
 
-    <section className="brands-v3 section-shell" aria-labelledby="marcas-title"><div className="brands-v3-intro"><p className="eyebrow"><span /> Marcas confirmadas</p><h2 id="marcas-title">Líneas que suman valor a <i>tu operación.</i></h2><p>Presentamos las marcas verificadas en las fuentes públicas actuales. El catálogo está preparado para crecer con validación comercial.</p><Link className="text-link" href="/marcas">Explorar marcas <Arrow /></Link></div><div className="brands-v3-list">{brands.map((brand, index) => { const visual = brandAssets[brand.slug]; return <Link className="brand-v3-row" href={brandUrl(brand.slug)} key={brand.slug}><span>0{index + 1}</span><div className={`brand-v3-logo brand-surface-${brand.slug}`}><Image src={visual.src} width={visual.width} height={visual.height} alt={visual.alt} /></div><div><h3>{brand.name}</h3><p>{brand.lines.slice(0, 3).join(" · ")}</p></div><Arrow /></Link>; })}</div></section>
+    <section className="brands-v3 section-shell" aria-labelledby="marcas-title"><div className="brands-v3-intro"><p className="eyebrow"><span /> Marcas confirmadas</p><h2 id="marcas-title">Líneas que suman valor a <i>tu operación.</i></h2><p>Presentamos las marcas verificadas en las fuentes públicas actuales. El catálogo está preparado para crecer con validación comercial.</p><Link className="text-link" href="/marcas">Explorar marcas <Arrow /></Link></div><div className="brands-v3-list">{brands.map((brand, index) => <Link className="brand-v3-row" href={brandUrl(brand.slug)} key={brand.slug}><span>0{index + 1}</span><div className={`brand-v3-logo brand-surface-${brand.slug}`}><BrandLogo slug={brand.slug} decorative sizes="128px" /></div><div><h3>{brand.name}</h3><p>{brand.lines.slice(0, 3).join(" · ")}</p></div><Arrow /></Link>)}</div></section>
 
     <section className="story-v3"><div className="section-shell story-v3-grid"><div><p className="eyebrow"><span /> Una empresa en movimiento</p><h2>La experiencia empieza antes de que el producto llegue a destino.</h2></div><div><p>Districe inició su actividad en 1987 con distribución mayorista de filtros para línea liviana y pesada. Su propuesta fue ampliándose para acompañar los cambios del mercado automotor.</p><p className="logistics-note">{company.logistics}</p><ul>{company.differentiators.map((item) => <li key={item}>{item}</li>)}</ul><Link className="text-link" href="/empresa">Conocé Districe <Arrow /></Link></div><div className="story-v3-image"><Image src="/images/editorial/preparacion-pedidos-generated.webp" width={1536} height={1024} sizes="(max-width: 800px) 100vw, 31vw" alt="Preparación de pedidos en una operación de distribución automotor" /></div></div></section>
 

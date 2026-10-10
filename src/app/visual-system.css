@@ -238,3 +238,90 @@
 }
 @media(max-width:800px){.family-editorial-visual{min-height:24rem!important}}
 @media(prefers-reduced-motion:reduce){.family-v3-card>img.family-v3-image{transition:none}.hero-v3-progress button.is-active i:after{animation:none;transform:scaleX(1)}}
+
+/* V6 — unified optical system for partner marks. */
+.brand-logo-asset{display:block;width:auto!important;height:auto!important;max-width:76%;max-height:72%;object-fit:contain;object-position:center}
+.brand-logo-asset-k78{max-width:70%!important;max-height:78%!important}
+.brand-logo-asset-jarama{max-width:84%!important;max-height:58%!important}
+.brand-logo-asset-revigal{max-width:78%!important;max-height:64%!important}
+.brand-logo-asset-veslee{max-width:62%!important;max-height:78%!important}
+.brand-logo-asset-locx{max-width:82%!important;max-height:74%!important}
+.brand-logo-asset-bioepecuen{max-width:88%!important;max-height:76%!important}
+
+.brand-v3-list{border-top:1px solid #d4d9d6}
+.brand-v3-row{grid-template-columns:2rem 9rem minmax(0,1fr) 1.5rem;gap:1.25rem;padding:1.3rem .65rem;border-top:0;border-bottom:1px solid #d4d9d6;transition:background .22s ease,padding .22s ease}
+.brand-v3-row:last-child{border-bottom:1px solid #d4d9d6}
+.brand-v3-row:hover{padding-inline:1rem;background:#eef1ed}
+.brand-v3-row:focus-visible{outline:2px solid #124ebc;outline-offset:3px}
+.brand-v3-logo{width:9rem;height:4rem;padding:.2rem 0;background:transparent!important;border:0;border-radius:0;justify-content:center}
+.brand-v3-logo .brand-logo-asset{max-height:100%}
+.brand-v3-logo .brand-logo-asset-bioepecuen{max-width:96%!important}
+.brand-v3-row h3{font-size:1.5rem}
+.brand-v3-row p{max-width:31rem;margin-top:.3rem;line-height:1.45}
+
+.brand-hub{width:min(1180px,calc(100% - 3rem));grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:4.5rem auto 7rem}
+.brand-tile{min-height:18rem;padding:0;display:grid;grid-template-columns:42% minmax(0,1fr);align-items:stretch;background:#fff;border:1px solid #dde3df;box-shadow:0 .8rem 2rem rgba(18,33,52,.045);transition:transform .28s var(--ease-out),border-color .28s ease,box-shadow .28s ease}
+.brand-tile:hover{transform:translateY(-.3rem);border-color:#aebdc6;box-shadow:0 1.25rem 2.8rem rgba(18,33,52,.1)}
+.brand-tile:focus-visible{outline:2px solid #124ebc;outline-offset:4px}
+.brand-tile-mark{height:auto;min-height:100%;margin:0;padding:1.5rem;background:linear-gradient(145deg,#eef1ed,#f8f8f4)!important;border:0;border-right:1px solid #e0e5e1}
+.brand-tile-mark .brand-logo-asset{max-height:7.5rem}
+.brand-tile-mark .brand-logo-asset-bioepecuen{max-width:94%!important}
+.brand-tile-copy{align-self:center;padding:2rem 3.2rem 2rem 2rem}
+.brand-tile-copy p{display:flex;align-items:center;gap:.65rem;margin:0 0 1rem;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#63706b}
+.brand-tile-copy p span{color:#124ebc;font-size:.59rem}
+.brand-tile h2{margin:0 0 .65rem;font-size:clamp(2rem,3vw,3rem);line-height:.95;color:#102b53}
+.brand-tile-copy small{display:block;max-width:24rem;color:#64716c;font-size:.72rem;line-height:1.5}
+.brand-tile-arrow{right:1.35rem;bottom:1.2rem;width:2rem;height:2rem;display:grid;place-items:center;border:1px solid #cbd4cf;border-radius:50%;font-size:.8rem;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.brand-tile:hover .brand-tile-arrow{background:#102b53;border-color:#102b53;color:#fff}
+
+.brand-image{background:linear-gradient(145deg,#edf1ed,#fafaf6)!important;border:1px solid #e1e6e2}
+.brand-image img{max-width:76%;max-height:13rem}
+.brand-image-jarama{background:#13213a!important;border-color:#13213a}
+.brand-image-jarama .brand-logo-asset{max-width:78%!important;max-height:8rem!important;filter:drop-shadow(0 1.4rem 1.2rem rgba(0,0,0,.25))}
+.brand-image-k78 .brand-logo-asset{max-width:68%!important;max-height:15rem!important}
+.brand-image-revigal .brand-logo-asset{max-width:74%!important;max-height:9rem!important}
+.brand-image-veslee .brand-logo-asset{max-width:56%!important;max-height:15rem!important}
+.brand-image-locx .brand-logo-asset{max-width:76%!important;max-height:12rem!important}
+.brand-image-bioepecuen .brand-logo-asset{max-width:82%!important;max-height:13rem!important}
+
+.family-brand-list{margin:1.6rem 0 2rem;border-bottom:1px solid #d1d7d3}
+.catalog-grid .family-brand-list article{padding:0;border-top:1px solid #d1d7d3}
+.catalog-grid .family-brand-list article a{display:grid;grid-template-columns:6rem minmax(0,1fr) 1.5rem;gap:1rem;align-items:center;padding:.8rem .25rem;transition:background .2s ease,padding .2s ease}
+.catalog-grid .family-brand-list article a:hover{padding-inline:.65rem;background:#eef1ed}
+.family-brand-logo{width:6rem;height:3.8rem;display:flex;align-items:center;justify-content:center;background:transparent!important}
+.family-brand-logo .brand-logo-asset{max-height:3.25rem}
+.family-brand-logo .brand-logo-asset-locx{max-width:90%!important}
+.family-brand-logo .brand-logo-asset-bioepecuen{max-width:96%!important;max-height:3.4rem!important}
+.family-brand-copy{display:grid;gap:.22rem;min-width:0}
+.family-brand-copy b{font-size:1rem;color:#102b53}
+.family-brand-copy small{overflow:hidden;color:#66736e;font-size:.68rem;line-height:1.4;text-overflow:ellipsis;white-space:nowrap}
+.family-brand-arrow{justify-self:end;font-size:.85rem}
+
+@media(max-width:800px){
+  .brand-v3-row{grid-template-columns:1.5rem 7rem minmax(0,1fr) 1rem;gap:.8rem;padding-inline:0}
+  .brand-v3-logo{width:7rem;height:3.5rem}
+  .brand-hub{width:calc(100% - 2rem);grid-template-columns:1fr;gap:.8rem;margin:2.5rem auto 4rem}
+  .brand-tile{min-height:14.5rem;grid-template-columns:38% minmax(0,1fr)}
+  .brand-tile-mark{padding:1rem}
+  .brand-tile-copy{padding:1.5rem 2.5rem 1.5rem 1.4rem}
+}
+@media(max-width:720px){
+  .brand-hub{width:calc(100% - 2rem);grid-template-columns:1fr;gap:.8rem;margin:2.5rem auto 4rem}
+  .brand-tile{min-height:13.5rem;grid-template-columns:39% minmax(0,1fr)}
+  .brand-tile-mark{padding:.8rem}
+  .brand-tile-mark .brand-logo-asset{max-height:5.5rem}
+  .brand-tile-copy{padding:1.35rem 2.25rem 1.35rem 1.15rem}
+  .brand-tile-copy p{margin-bottom:.7rem;font-size:.56rem}
+  .brand-tile h2{font-size:1.85rem}
+  .brand-tile-copy small{font-size:.64rem}
+  .brand-tile-arrow{right:.8rem;bottom:.75rem;width:1.75rem;height:1.75rem}
+  .brand-image{min-height:19rem!important}
+}
+@media(max-width:430px){
+  .brand-v3-row{grid-template-columns:1.3rem 5.3rem minmax(0,1fr) .8rem;gap:.55rem}
+  .brand-v3-logo{width:5.3rem;height:3rem}
+  .brand-v3-row h3{font-size:1.15rem}
+  .brand-v3-row p{font-size:.67rem}
+  .catalog-grid .family-brand-list article a{grid-template-columns:5rem minmax(0,1fr) 1rem;gap:.65rem}
+  .family-brand-logo{width:5rem;height:3.4rem}
+}

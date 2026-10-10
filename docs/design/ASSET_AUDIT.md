@@ -10,8 +10,8 @@
 | `public/logos/brands/k78-transparent.png` | Logo K78 de la fuente local, recortado y con fondo exterior eliminado; originales blancos internos conservados | Home y página de marcas |
 | `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
 | `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
-| `public/logos/brands/bioepecuen.png` | Logo transparente descargado del sitio oficial de Bioepecuén Aromas | Home, marcas y página de Bioepecuén |
-| `public/logos/brands/locx-official.png` | Logo transparente oficial descargado de LOCX; variante clara sin alteración de geometría | Home, marcas, búsqueda y página LOCX sobre soporte oscuro |
+| `public/images/brands/bioepecuen-logo.png` | Nuevo master transparente entregado en el repositorio, 2172 × 724 px | Home, marcas, familias y página de Bioepecuén |
+| `public/images/brands/locx-logo.png` | Nuevo master transparente entregado en el repositorio, 2172 × 724 px | Home, marcas, familias y página LOCX |
 | `public/logos/broco/bs-mark-neg.svg` | Mark blanco oficial de Broco Solutions obtenido de su sitio público | Crédito del footer, enlazado a `www.brocosolutions.com` |
 | `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
 | `public/images/families/editorial/estetica-vehicular.webp` | Escena editorial coherente, sin marcas ficticias | Hero, Home, hub y familia Estética |

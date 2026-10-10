@@ -21,7 +21,7 @@ Ambas variantes son PNG RGBA/alpha de alta resolución (2163 × 706). No se enco
 
 ## Logos de marcas
 
-Se conservan y normalizan dentro de un marco común: Jarama, K78, Revigal, Veslee, LOCX y Bioepecuén. K78, Revigal, Veslee, LOCX y Bioepecuén usan archivos descargados de fuentes oficiales; LOCX reemplaza la denominación provisoria anterior y usa su variante clara oficial sobre soporte oscuro.
+Se conservan y normalizan dentro de un marco óptico común: Jarama, K78, Revigal, Veslee, LOCX y Bioepecuén. LOCX y Bioepecuén usan los nuevos masters transparentes entregados directamente en el repositorio; K78, Revigal y Veslee conservan archivos de fuentes oficiales y Jarama el mejor master local disponible.
 
 La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentina.com`), Revigal (`revigal.com.ar`), Veslee (`vesleeaditivos.com`) y Bioepecuén (`bioepecuenaromas.com.ar`). Se descargó una selección de logos y productos oficiales de esos sitios; cada URL y transformación está en `docs/ASSET_PROVENANCE.md`.
 
