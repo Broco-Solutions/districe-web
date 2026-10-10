@@ -21,7 +21,7 @@ export const brands: Brand[] = [
   { slug: "jarama", name: "Jarama", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Lubricantes"] },
   { slug: "revigal", name: "Revigal", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Productos para lavado", "Aromatizantes", "Renovadores", "Lustre y pulido"] },
   { slug: "veslee", name: "Veslee", description: "Aditivos", familySlugs: ["aditivos-lubricantes-fluidos"], lines: ["Aditivos"] },
-  { slug: "lock", name: "Lock", description: "Aditivos", familySlugs: ["aditivos-lubricantes-fluidos"], lines: ["Aditivos"] },
+  { slug: "locx", name: "LOCX", description: "Aditivos", familySlugs: ["aditivos-lubricantes-fluidos"], lines: ["Aditivos"] },
   { slug: "bioepecuen", name: "Bioepecuén", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: [], catalogUrl: "/catalogos/bioepecuen-difusores-auto.pdf", catalogItems: [
     { id: "bioepecuen-difusores-de-auto", name: "Difusores de auto", kind: "familia de producto" },
     { id: "bioepecuen-display-expositor-20-unidades", name: "Display expositor de 20 unidades", kind: "familia de producto" },

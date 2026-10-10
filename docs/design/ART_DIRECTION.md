@@ -8,14 +8,14 @@ Distribución mayorista automotor con precisión editorial: el producto real es 
 
 - Prioridad: fotos reales del cliente; después material oficial de marcas/catálogos que aporte contexto; IA sólo para imágenes editoriales que no suplanten productos, equipo ni instalaciones reales.
 - Envases, piezas y detalles reales con recorte limpio, escala creíble y fondos sobrios.
-- Si una familia no tiene foto útil, usar color, tipografía e información confirmada. No rellenar con escenas automotrices genéricas.
+- Si una familia no tiene foto útil, se admite una escena editorial sobria y específica del rubro, sin packaging de marca inventado y documentada internamente en provenance.
 - Cuando lleguen fotos reales, priorizar depósito, preparación, entrega y equipo trabajando. Conservar originales y no alterar dimensiones aparentes, stock ni maquinaria.
 
 ## Logotipos y superficies
 
 - Usar las rutas canónicas en `public/logos/` y respetar el tamaño/contraste de `LOGO_USAGE.md`.
 - Presentar marcas con fuentes y proporciones distintas dentro de superficies neutras; escalar por altura óptica, sin estirar ni reconstruir el arte.
-- Lock y Bioepecuén se representan como texto hasta recibir o verificar un logo original adecuado.
+- LOCX y Bioepecuén usan sus assets oficiales verificados, ajustados sólo por escala óptica y superficie de contraste.
 - El logo Districe se usa a color sobre fondo claro; en fondos oscuros puede invertirse mediante CSS, sin editar la geometría.
 
 ## Evitar

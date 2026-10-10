@@ -7,7 +7,7 @@ El hero anterior usaba una única botella aislada sobre una composición con muc
 ## Estándar aplicado
 
 - Logos: se aceptan SVG o PNG con alfa, proporción intacta, borde limpio y tamaño óptico consistente dentro de contenedores neutros.
-- Imágenes: se usan únicamente recortes reales de producto disponibles en el proyecto. No se usan renders ni imágenes IA.
+- Imágenes: los productos del hero son recortes reales; las familias usan una serie editorial generada específicamente para navegación y documentada en provenance.
 - Movimiento: transición suave, pausas de interacción y respeto de `prefers-reduced-motion`; no hay scroll-jacking ni parallax.
 
 ## Logo Districe
@@ -21,7 +21,7 @@ Ambas variantes son PNG RGBA/alpha de alta resolución (2163 × 706). No se enco
 
 ## Logos de marcas
 
-Se conservan y normalizan dentro de un marco común: Jarama, K78, Revigal, Veslee y Bioepecuén. K78, Revigal, Veslee y Bioepecuén se actualizaron con archivos descargados de fuentes oficiales durante la segunda pasada. Lock es una marca publicada y confirmada en el catálogo, pero no cuenta con logo fuente local ni oficial verificable; se muestra como wordmark editorial, no como un logo inventado.
+Se conservan y normalizan dentro de un marco común: Jarama, K78, Revigal, Veslee, LOCX y Bioepecuén. K78, Revigal, Veslee, LOCX y Bioepecuén usan archivos descargados de fuentes oficiales; LOCX reemplaza la denominación provisoria anterior y usa su variante clara oficial sobre soporte oscuro.
 
 La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentina.com`), Revigal (`revigal.com.ar`), Veslee (`vesleeaditivos.com`) y Bioepecuén (`bioepecuenaromas.com.ar`). Se descargó una selección de logos y productos oficiales de esos sitios; cada URL y transformación está en `docs/ASSET_PROVENANCE.md`.
 
@@ -29,7 +29,7 @@ La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentin
 
 ### A. Críticos
 
-- Logo oficial de Lock en vector o PNG transparente.
+- Master vectorial de LOCX, si la marca lo comparte; la versión PNG oficial actual ya es apta para web.
 - SVG oficial de Districe y favicon/app icon autorizado.
 - Fotografías reales de producto para Aditivos, Higiene y seguridad, Repuestos y accesorios, Anaeróbicos, y Cintas y films. Hoy esas familias usan un sistema gráfico, no fotografía.
 
@@ -41,7 +41,7 @@ La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentin
 
 ### C. Resolubles con búsqueda externa
 
-- Logos oficiales de Lock y Veslee en SVG/PNG transparentes.
+- Masters vectoriales de LOCX y Veslee, si estuvieran disponibles.
 - Catálogos públicos actualizados de K78 y Revigal.
 - Press kits o imágenes de producto autorizadas por cada marca.
 
@@ -55,5 +55,5 @@ La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentin
 ## Inventario de imágenes usado
 
 - Reales existentes: Jarama Lava Coches, Espuma Activa y Brillo; se usan en el hero y la familia Estética vehicular.
-- Reales externos: K78 Bug Remover, Revigal Espuma Activa y Veslee Limpia Inyectores se usan en el hero; Veslee Lubricante Multiuso en Aditivos. Se sumaron selecciones adicionales para futuras tarjetas.
-- IA: dos imágenes editoriales de operación/distribución, claramente rotuladas como generadas. Se usan en Home y Empresa; no se atribuyen a instalaciones de Districe.
+- Reales externos: K78 Bug Remover y Veslee Sella Fuga Radiador se usan en el hero junto al producto Jarama provisto; Veslee Lubricante Multiuso continúa en Aditivos. El packshot de Revigal se reservó para páginas internas porque su resolución no sostiene la escala protagonista del hero.
+- IA: dos imágenes editoriales de operación/distribución y seis escenas de familia. Se documentan internamente y el contenido no las atribuye a instalaciones de Districe ni a marcas reales.

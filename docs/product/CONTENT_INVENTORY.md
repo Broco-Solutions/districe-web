@@ -7,7 +7,7 @@ Fecha de relevamiento: 30-09-2026. Este inventario describe fuentes, no autoriza
 | Familia | Subfamilias / agrupaciones visibles |
 | --- | --- |
 | Estética vehicular | K78: perfumes, limpiadores, revividores, ceras, accesorios para lavado. Jarama: perfumes, limpiadores, revividores, ceras, lubricantes. Revigal: productos para lavado, aromatizantes, renovadores, lustre y pulido. |
-| Aditivos, lubricantes y fluidos | Aditivos: Veslee y Lock, según confirmación del cliente. |
+| Aditivos, lubricantes y fluidos | Aditivos: Veslee y LOCX, según confirmación del cliente y fuente oficial de LOCX. |
 | Higiene y seguridad | Sin desglose visible en la navegación relevada. |
 | Repuestos y accesorios | Sin desglose visible en la navegación relevada. |
 | Anaeróbicos automotor | Sin desglose visible en la navegación relevada. |
@@ -52,7 +52,7 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 - No se identificaron fotografías institucionales, logísticas ni de equipo aptas para confirmar uso en esta iteración.
 - Instagram oficial confirmado: `https://www.instagram.com/accesoriosyrepuestosautomotor?utm_source=qr&stkn=MW9kcWV6MjA2Y3Vraw==`.
 - Cobertura/logística confirmada: “Envíos a todo el país dentro de las 72 hs de recibido el pedido.”
-- Servex fue recibido como fuente complementaria, pero no tiene categoría confirmada y no se publica todavía.
+- LOCX está verificada como marca registrada de Servex Argentina S.R.L. y se publica dentro de Aditivos.
 
 ## Exclusiones comerciales
 

@@ -10,6 +10,5 @@
 
 - Fotografías originales de productos, depósito, equipo, flota e instalaciones autorizadas para uso web; las fotos del depósito siguen pendientes.
 - WhatsApp definitivo y contactos finales si fueran distintos de los canales actuales.
-- Denominación comercial exacta de “Lock”, si la fuente definitiva no la verifica.
 - Otros catálogos/materiales todavía no recibidos, además de testimonios/clientes autorizados y métricas verificables.
 - Logo vectorial y lineamientos de identidad, si existen.

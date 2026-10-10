@@ -11,7 +11,7 @@
 
 ## Marcas
 
-Usar los archivos canónicos de `public/logos/brands/`. Mantener proporción original y ajustar por altura visible dentro de un contenedor neutro común; no asignarles fondos o colores que formen parte de un logo que no los tenga. Bioepecuén usa su logo oficial transparente. Lock se presenta tipográficamente hasta contar con una fuente inequívoca de la línea de aditivos; no sustituirlo por otra empresa homónima.
+Usar los archivos canónicos de `public/logos/brands/`. Mantener proporción original y ajustar por altura visible dentro de un contenedor común; no estirar ni reconstruir el arte. Bioepecuén usa su logo oficial transparente. LOCX usa la variante clara oficial de `locx.com.ar` sobre una superficie oscura controlada.
 
 ## Créditos
 

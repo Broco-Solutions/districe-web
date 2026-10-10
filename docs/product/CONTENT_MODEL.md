@@ -27,5 +27,5 @@ La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `esteti
 - Slugs ASCII en kebab-case; IDs de línea contextuales y estables.
 - Marcas excluidas nunca ingresan al catálogo, búsqueda, metadata ni sitemap.
 - Claims, métricas y canales de contacto se publican sólo con evidencia vigente.
-- “Lock” se conserva literalmente hasta confirmar la denominación comercial exacta; no se reemplaza por otra marca.
+- LOCX está confirmada dentro de Aditivos y se publica con identidad oficial obtenida de `locx.com.ar`.
 - Servex permanece fuera de publicación mientras su familia no esté clasificada con evidencia suficiente.

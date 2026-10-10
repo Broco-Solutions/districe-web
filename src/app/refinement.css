@@ -1,0 +1,56 @@
+/* Shared editorial refinements introduced after the first public review. */
+.hub-card {
+  position: relative;
+  isolation: isolate;
+  min-height: 23rem;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 .8rem 1.8rem rgba(18, 33, 52, .08);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.hub-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 18, 31, .12), rgba(6, 18, 31, .9) 82%);
+}
+
+.hub-card > img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.86);
+  transition: transform .6s ease, filter .3s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 1.3rem 2.6rem rgba(18, 33, 52, .16);
+}
+
+.hub-card:hover > img {
+  transform: scale(1.035);
+  filter: saturate(.98);
+}
+
+.hub-card > span {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.hub-card h2 { margin: 0 0 1rem; }
+
+@media (max-width: 720px) {
+  .hub-card { min-height: 20rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub-card,
+  .hub-card > img { transition: none; }
+}

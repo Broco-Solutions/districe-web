@@ -198,3 +198,36 @@
   .catalog-footer-brand{grid-column:auto}
 }
 @media(prefers-reduced-motion:reduce){.brand-tile,.brand-v3-row,.catalog-header nav a{transition:none}}
+
+/* V5 — persistent navigation, editorial family imagery and optical logo system. */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(248,249,248,.96);border-bottom:1px solid rgba(15,35,63,.08);box-shadow:0 .5rem 1.8rem rgba(16,33,55,.025)}
+.brand-v3-logo{width:8rem;height:3.6rem;padding:.48rem .7rem;background:#edf0ec;border:0;justify-content:center;border-radius:.15rem}
+.brand-surface-locx{background:#1b1b20!important}
+.brand-surface-locx img{max-width:82%!important;max-height:72%!important}
+.brand-surface-jarama img{max-width:92%!important;max-height:64%!important}
+.brand-surface-k78 img{max-width:84%!important;max-height:78%!important}
+.brand-surface-revigal img{max-width:84%!important;max-height:68%!important}
+.brand-surface-veslee img{max-width:72%!important;max-height:78%!important}
+.brand-surface-bioepecuen img{max-width:62%!important;max-height:82%!important}
+.hero-v3-primary:before{content:"";position:absolute;width:min(72%,24rem);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.115),rgba(255,255,255,.025) 56%,transparent 72%);filter:blur(2px)}
+.hero-v3-primary.hero-product-veslee img{width:min(49%,16rem)}
+.family-v3-card>img.family-v3-image{inset:0;width:100%;height:100%;object-fit:cover;opacity:.82;filter:saturate(.86) contrast(1.04);transition:transform .7s var(--ease-out),filter .35s var(--ease-out)}
+.family-v3-card:hover>img.family-v3-image{transform:scale(1.035);filter:saturate(.96) contrast(1.05)}
+.family-v3-card:after{content:"";position:absolute;z-index:2;inset:0;background:linear-gradient(180deg,rgba(6,18,31,.12),rgba(6,18,31,.08) 32%,rgba(6,18,31,.92) 86%);pointer-events:none}
+.family-v3-content{background:none}
+.brand-tile-mark.has-logo{border:0;background:#edf0ec}
+.brand-image-k78 img,.brand-image-revigal img,.brand-image-veslee img,.brand-image-locx img{max-width:82%;max-height:11rem;object-fit:contain}
+.family-editorial-visual{position:relative;min-height:33rem!important;padding:0!important;overflow:hidden;background:#16283a!important}
+.family-editorial-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,22,36,.24))}
+.family-editorial-visual img{position:absolute;inset:0;width:100%!important;height:100%!important;max-height:none!important;object-fit:cover!important}
+
+@media(max-width:1260px) and (min-width:1101px){.desktop-quote{display:none}.desktop-nav{gap:1.05rem}}
+@media(max-width:1100px) and (min-width:721px){
+  .desktop-nav{display:none}.desktop-quote{display:none}.menu-button{display:block}
+  .mobile-menu{display:block;position:absolute;top:100%;left:0;right:0;padding:1.25rem max(1.5rem,calc((100vw - 760px)/2));background:var(--paper);border-bottom:1px solid var(--line)}
+  .mobile-brand{display:block;width:10.5rem;margin:.25rem 0 1rem;line-height:0}.mobile-brand img{width:100%;height:auto}
+  .mobile-menu nav a{display:flex;align-items:center;gap:.75rem;border-top:1px solid var(--line);padding:1rem .15rem;font-size:1.15rem;font-weight:700}
+  .mobile-menu nav span{font-size:.6rem;color:var(--muted)}.mobile-menu nav b{margin-left:auto}.mobile-menu .quote-button{width:100%;margin-top:1rem}
+}
+@media(max-width:800px){.family-editorial-visual{min-height:24rem!important}.hero-v3-primary.hero-product-veslee img{width:min(39%,12rem)}}
+@media(prefers-reduced-motion:reduce){.family-v3-card>img.family-v3-image{transition:none}}

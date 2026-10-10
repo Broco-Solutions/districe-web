@@ -1,0 +1,24 @@
+export type ImageAsset = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+export const brandAssets: Record<string, ImageAsset> = {
+  k78: { src: "/logos/brands/k78-transparent.png", width: 299, height: 124, alt: "Logo K78" },
+  jarama: { src: "/logos/brands/jarama.png", width: 1307, height: 220, alt: "Logo Jarama" },
+  revigal: { src: "/logos/brands/revigal-official.png", width: 500, height: 123, alt: "Logo Revigal" },
+  veslee: { src: "/logos/brands/veslee-official.webp", width: 545, height: 344, alt: "Logo Veslee" },
+  locx: { src: "/logos/brands/locx-official.png", width: 296, height: 106, alt: "Logo LOCX" },
+  bioepecuen: { src: "/logos/brands/bioepecuen-official.png", width: 512, height: 484, alt: "Logo Bioepecuén" },
+};
+
+export const familyAssets: Record<string, ImageAsset> = {
+  "estetica-vehicular": { src: "/images/families/editorial/estetica-vehicular.webp", width: 1536, height: 1024, alt: "Productos y herramientas para estética vehicular" },
+  "aditivos-lubricantes-fluidos": { src: "/images/families/editorial/aditivos-lubricantes-fluidos.webp", width: 1536, height: 1024, alt: "Aditivos, lubricantes y fluidos en un entorno de taller" },
+  "higiene-seguridad": { src: "/images/families/editorial/higiene-seguridad.webp", width: 1536, height: 1024, alt: "Elementos de higiene y seguridad para el trabajo" },
+  "repuestos-accesorios": { src: "/images/families/editorial/repuestos-accesorios.webp", width: 1536, height: 1024, alt: "Selección de repuestos y accesorios automotor" },
+  "anaerobicos-automotor": { src: "/images/families/editorial/anaerobicos-automotor.webp", width: 1536, height: 1024, alt: "Selladores anaeróbicos en una mesa de trabajo automotor" },
+  "cintas-films": { src: "/images/families/editorial/cintas-films.webp", width: 1536, height: 1024, alt: "Cintas y films para preparación y protección" },
+};

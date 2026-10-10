@@ -11,6 +11,7 @@
 | `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
 | `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
 | `public/logos/brands/bioepecuen.png` | Logo transparente descargado del sitio oficial de Bioepecuén Aromas | Home, marcas y página de Bioepecuén |
+| `public/logos/brands/locx-official.png` | Logo transparente oficial descargado de LOCX; variante clara sin alteración de geometría | Home, marcas, búsqueda y página LOCX sobre soporte oscuro |
 | `public/logos/broco/bs-mark-neg.svg` | Mark blanco oficial de Broco Solutions obtenido de su sitio público | Crédito del footer, enlazado a `www.brocosolutions.com` |
 | `public/images/hero/jarama-lava-coches-cutout.webp` | Foto real del producto local, con fondo blanco exterior quitado por flood-fill; original conservado | Hero de Home |
 | `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
@@ -25,7 +26,7 @@ Los originales de trabajo en `public/brand/` y `public/images/` se conservan com
 - El logo Districe se usa a 176 px de ancho o más en escritorio y 144 px o más en móvil; evitar reducirlo por debajo de 128 px.
 - Para fondos oscuros se usa la variante canónica transparente `reversed.png`, sin filtros que puedan rellenar los contraformas internas.
 - No se creó favicon: el logo disponible es horizontal y no hay un símbolo cuadrado aprobado para abreviarlo.
-- Lock se mantiene como denominación tipográfica: no se incorporó el logo de una empresa homónima de seguridad porque no hay evidencia de que corresponda a la línea de aditivos confirmada.
+- LOCX reemplaza la denominación provisoria “Lock”: la fuente oficial confirma la identidad y su relación con aditivos automotor.
 - Bioepecuén usa el logo transparente disponible en su sitio oficial; no se incorporaron claims ni productos fuera del catálogo confirmado.
 - Veslee usa su logo oficial, pero no se amplían sus claims ni se importan imágenes de producto del fabricante.
 
@@ -33,6 +34,5 @@ Los originales de trabajo en `public/brand/` y `public/images/` se conservan com
 
 - No hay fotografías verificadas del depósito, equipo, flota, preparación de pedidos ni instalaciones. La composición tipográfica actual se mantiene hasta que el cliente entregue fotos reales.
 - Jarama aporta el único conjunto de fotografía real de producto utilizable para esta pasada. No representa instalaciones ni operación de Districe.
-- No se generaron imágenes con IA ni se incorporó stock.
-- Las familias sin foto disponible siguen usando composición tipográfica y color, no escenas ficticias.
+- Las seis familias usan escenas editoriales generadas específicamente para esta interfaz, sin logos ni marcas ficticias; están documentadas en `docs/ASSET_PROVENANCE.md`.
 - Para una futura tanda: pedir originales de depósito/logística y versiones oficiales/vectoriales de logo Districe, Jarama y marcas sin asset confiable.

@@ -6,6 +6,7 @@ import "./site-pages.css";
 import "./home-v3.css";
 import "./a11y.css";
 import "./visual-system.css";
+import "./refinement.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.districe.com.ar"),
