@@ -1,0 +1,169 @@
+/* V7: editorial compositions. Motion never gates access to content. */
+:root{--v7-blue:#102b53;--v7-line:#cbd3cd;--v7-paper:#f5f5ef;--v7-ease:cubic-bezier(.22,1,.36,1)}
+.catalog-page{background:var(--v7-paper)}
+.editorial-route{display:flow-root}
+.editorial-route h1,.hero-v3-copy h1{animation:v7-title .7s var(--v7-ease) both}
+@keyframes v7-title{from{transform:translateY(12px);clip-path:inset(0 0 8% 0)}to{transform:translateY(0);clip-path:inset(0)}}
+.editorial-route h1 i,.brands-v7 h2 i{font-family:var(--font-serif);font-weight:400}
+.editorial-route h1{letter-spacing:-.055em;line-height:1.02;color:var(--v7-blue);text-wrap:balance}
+.editorial-route .eyebrow{color:#35526f;font-size:.66rem;letter-spacing:.13em;font-weight:700;text-transform:uppercase}
+.editorial-intro{padding-top:4.5rem;padding-bottom:2.8rem}
+.editorial-intro>div{display:grid;grid-template-columns:1.8fr 1fr;align-items:end;gap:3rem}
+.editorial-intro h1{font-size:clamp(2.8rem,4.7vw,4.8rem);margin:1rem 0 0}
+.editorial-intro>div>p{max-width:28rem;font-size:1rem;line-height:1.7;color:#536271;margin-bottom:.3rem}
+.brand-directory{padding-bottom:6rem}
+.brand-collection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--v7-line);border-left:1px solid var(--v7-line)}
+.brand-card{display:flex;flex-direction:column;min-width:0;padding:1.3rem 1.7rem 1.2rem;border-right:1px solid var(--v7-line);border-bottom:1px solid var(--v7-line);background:#fafbf7;transition:background .3s ease}
+.brand-card:hover{background:#fff}
+.brand-card-meta{display:flex;justify-content:space-between;gap:1rem;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#516278}
+.brand-card-logo{height:8rem;display:flex;align-items:center;justify-content:center;padding:1.2rem 1rem}
+.brand-card-logo .brand-logo-asset{transition:transform .45s var(--v7-ease);max-height:4.8rem!important;max-width:85%!important}
+.brand-card-logo .brand-logo-asset-k78{max-width:56%!important}
+.brand-card-logo .brand-logo-asset-veslee{max-width:46%!important}
+.brand-card-logo .brand-logo-asset-locx{max-width:74%!important}
+.brand-card-logo .brand-logo-asset-bioepecuen{max-width:94%!important;max-height:6rem!important}
+.brand-card:hover .brand-logo-asset{transform:translateY(-3px)}
+.brand-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:3rem;border-top:1px solid #e0e5df}
+.brand-card-bottom p{font-size:.73rem;line-height:1.6;color:#526276;margin:.7rem 0;max-width:29ch}
+.brand-card-arrow{display:grid;place-items:center;width:2rem;height:2rem;flex-shrink:0;color:var(--v7-blue);transition:transform .3s ease}
+.brand-card:hover .brand-card-arrow{transform:translate(3px,-3px)}
+.brands-v7{padding-top:5.5rem;padding-bottom:6rem;display:grid;grid-template-columns:.8fr 1.6fr;gap:4rem}
+.brands-v7-intro{align-self:start;position:sticky;top:8rem}
+.brands-v7 h2:not(.sr-only){font-size:clamp(2.6rem,4vw,4.4rem);line-height:1.02;margin:1.5rem 0;color:var(--v7-blue);letter-spacing:-.05em}
+.brands-v7-intro>p:not(.eyebrow){color:#536271;line-height:1.7;max-width:30ch}
+.brand-collection-compact{grid-template-columns:repeat(2,minmax(0,1fr))}
+.brand-collection-compact .brand-card{padding:1rem 1.2rem}
+.brand-collection-compact .brand-card-logo{height:7.5rem}
+.company-opening{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;padding-top:3rem;padding-bottom:5rem}
+.company-opening h1{font-size:clamp(2.8rem,4.8vw,5.1rem);margin:1.5rem 0}
+.company-opening>div>p:not(.eyebrow){font-size:1.1rem;line-height:1.7;max-width:33ch;color:#536271}
+.company-opening figure{position:relative;margin:0;min-width:0}
+.company-opening figure img{width:100%;height:35rem;object-fit:cover;object-position:45% center}
+.company-opening figcaption{position:absolute;bottom:0;left:0;right:0;padding:3rem 1.5rem 1.3rem;color:white;background:linear-gradient(transparent,rgba(8,25,42,.85));font-size:.7rem;letter-spacing:.09em;text-transform:uppercase}
+.company-opening .text-link{margin-top:1.5rem}
+.company-journey{display:grid;grid-template-columns:1fr 1.1fr;gap:8rem;border-top:1px solid var(--v7-line);padding-top:4rem;padding-bottom:4rem}
+.journey-index{position:sticky;top:8rem;align-self:start}
+.journey-index>strong{display:block;font-size:clamp(2rem,3.5vw,4rem);font-weight:400;line-height:1.1;color:var(--v7-blue)}
+.journey-index>strong>span{font-size:clamp(6rem,11vw,11rem);letter-spacing:-.085em;font-weight:700}
+.journey-index nav{margin-top:2rem;max-width:23rem}
+.journey-index nav a{display:flex;align-items:center;gap:1.2rem;padding:1.2rem 0;border-top:1px solid var(--v7-line);color:#5a6775;transition:color .3s ease}
+.journey-index nav a>span{font-size:.65rem}
+.journey-index nav i{margin-left:auto;height:5px;width:5px;border-radius:50%;background:#c2cbd0;transition:transform .3s ease,background .3s ease}
+.journey-index nav a[aria-current]{color:#0d3690;font-weight:700}
+.journey-index nav a[aria-current] i{background:#124ebc;transform:scale(1.6)}
+.journey-chapters>section{padding:2rem 0 5rem;margin-bottom:2rem;border-bottom:1px solid var(--v7-line);scroll-margin-top:8rem}
+.journey-chapters h2{font-size:clamp(2.3rem,3.8vw,4rem);line-height:1.05;letter-spacing:-.05em;color:var(--v7-blue);margin:1.3rem 0}
+.journey-chapters section>p:not(.eyebrow){color:#536271;line-height:1.85;max-width:38rem}
+.journey-photo{margin-top:2rem;overflow:hidden}
+.journey-photo img{display:block;width:100%;height:auto;aspect-ratio:1.45;object-fit:cover}
+.company-principles{padding:5rem 0;background:#102b53;color:#fff}
+.company-principles .eyebrow{color:#cde7ef}
+.company-principles h2{font-size:clamp(2.4rem,4.5vw,4.5rem);line-height:1.05;letter-spacing:-.045em}
+.company-principles ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin:3rem 0 0}
+.company-principles li{border-top:1px solid #4a6180;padding-top:1.2rem;line-height:1.5}
+.company-principles li span{display:block;font-size:.65rem;color:#d0f348;margin-bottom:1rem}
+.contact-opening{display:grid;grid-template-columns:1.1fr 1fr;gap:6rem;padding-top:5rem;padding-bottom:4rem;align-items:start}
+.contact-heading h1{font-size:clamp(3rem,4.8vw,5.1rem);margin:1.5rem 0}
+.contact-heading>p:not(.eyebrow){max-width:33ch;line-height:1.8;color:#536271}
+.contact-channels{border-top:3px solid var(--v7-blue);padding-top:1.2rem}
+.contact-channels a:not(.social-link){position:relative;display:block;padding:1.1rem 2rem 1.1rem 0;border-bottom:1px solid var(--v7-line);color:var(--v7-blue);font-size:1.25rem;font-weight:600}
+.contact-channels a.contact-main-email{font-size:clamp(1.1rem,2vw,1.7rem)}
+.contact-channels a small{display:block;font-size:.61rem;letter-spacing:.09em;text-transform:uppercase;font-weight:400;color:#536271;margin-bottom:.4rem}
+.contact-channels a>span{position:absolute;right:.25rem;bottom:1.3rem}
+.contact-channels .social-link{position:relative;margin-top:1.5rem;min-height:44px;padding-right:2rem}
+.contact-channels .social-link>span{bottom:.8rem}
+.contact-guidance{text-align:center;border-top:1px solid var(--v7-line);padding-top:3.5rem;padding-bottom:4rem}
+.contact-guidance>.eyebrow{justify-content:center}
+.contact-guidance h2{font-size:clamp(2rem,3.7vw,3.5rem);line-height:1.08;letter-spacing:-.04em;color:var(--v7-blue);margin:1.2rem 0}
+.contact-guidance>p:not(.eyebrow){max-width:42rem;margin:1rem auto 1.5rem;color:#536271;line-height:1.7}
+.contact-guidance .contact-shipping{font-size:.82rem;padding-top:1.5rem}
+.products-opening{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center;padding-top:3rem;padding-bottom:3rem}
+.products-opening h1{font-size:clamp(3rem,5vw,5.4rem);margin:1.5rem 0}
+.products-opening>div>p:not(.eyebrow){max-width:36ch;color:#536271;line-height:1.7}
+.products-opening-image{position:relative}
+.products-opening-image img{width:100%;height:24rem;object-fit:cover}
+.products-opening-image>span{position:absolute;bottom:1rem;left:1rem;background:#102b53;color:#fff;padding:.75rem 1rem;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase}
+.v7-product-grid{margin-top:1rem;scroll-margin-top:7rem;grid-template-columns:repeat(3,minmax(0,1fr))}
+.v7-product-grid .hub-card:first-child,.v7-product-grid .hub-card:last-child{grid-column:span 2}
+.v7-product-grid .hub-card{min-height:24rem}
+.v7-product-grid .hub-card h2{max-width:22ch}
+.family-opening{position:relative;min-height:35rem;background:#102b53;color:white;isolation:isolate}
+.family-opening-photo{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.family-opening-photo img{object-fit:cover}
+.family-opening:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,28,49,.96),rgba(9,28,49,.74) 45%,rgba(9,28,49,.08))}
+.family-opening-copy{padding:5rem max(1.5rem,calc((100vw - 1320px)/2));max-width:100%;min-height:35rem;display:flex;flex-direction:column;align-items:start;justify-content:center}
+.family-opening-copy h1{font-size:clamp(3rem,5.5vw,5.8rem);color:#fff;max-width:13ch;margin:1.4rem 0}
+.family-opening-copy>p{max-width:35ch;line-height:1.7;color:#dee7ef}
+.family-opening-copy .eyebrow{color:#d0f348}
+.family-opening-copy .text-link{color:#fff;margin-top:1.3rem}
+.family-opening-split .family-opening-photo{left:46%}
+.family-opening-split:after{background:linear-gradient(90deg,#102b53 32%,rgba(16,43,83,.98) 42%,rgba(16,43,83,0) 67%)}
+.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:clamp(3rem,4.7vw,5rem);max-width:15ch}
+.family-opening-wide .family-opening-copy{min-height:32rem}
+.family-opening-wide{min-height:32rem}
+.family-detail{display:grid;grid-template-columns:.75fr 1.5fr;gap:5rem;padding-top:4rem;padding-bottom:5rem;scroll-margin-top:6rem}
+.family-detail>aside>p:not(.eyebrow){max-width:29ch;line-height:1.7;color:#536271;font-size:1.1rem}
+.family-detail h2{font-size:clamp(2rem,3.5vw,3.3rem);line-height:1.1;color:var(--v7-blue);letter-spacing:-.04em;max-width:23ch}
+.family-detail .family-brand-list article a{display:grid;grid-template-columns:8rem 1fr 1.5rem;align-items:center;gap:1.5rem;padding:1rem 0;border-top:1px solid var(--v7-line)}
+.family-detail .family-brand-logo{width:8rem;height:3.5rem}
+.family-detail .family-brand-copy small{white-space:normal;font-size:.82rem;line-height:1.6}
+.brand-breadcrumb{padding-top:2.5rem;display:flex;gap:1rem;font-size:.7rem;color:#536271}
+.v7-brand-page{margin:2.5rem auto 5rem;align-items:start}
+.v7-brand-page .brand-image{position:relative;background:#edf0e9!important;border:0;min-height:27rem!important}
+.v7-brand-page .brand-feature-category{position:absolute;left:2rem;bottom:2rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#536271}
+.v7-brand-page .brand-image .brand-logo-asset{max-height:11rem!important;max-width:90%!important}
+.v7-brand-page .brand-image .brand-logo-asset-veslee{max-width:60%!important}
+.v7-brand-page h2{margin-top:1rem;color:var(--v7-blue);line-height:1.07;letter-spacing:-.045em;font-size:clamp(2rem,3.5vw,3.5rem)}
+.v7-brand-page ul{margin:1.5rem 0}
+.v7-facts{display:grid;grid-template-columns:1fr 1fr 1.5fr;padding:2.5rem 0;gap:2rem;border-bottom:1px solid var(--v7-line)}
+.v7-facts>div+div{border-left:1px solid var(--v7-line);padding-left:2rem}
+.v7-facts strong{display:block;font-size:clamp(2.8rem,4vw,4.3rem);color:var(--v7-blue);letter-spacing:-.065em;line-height:1.1}
+.v7-facts strong span{font-size:1.2rem;letter-spacing:0}
+.v7-facts p{font-size:.79rem;line-height:1.6;color:#536271;max-width:39ch;margin:.75rem 0 0}
+.hero-v3-grid{display:none}
+.hero-v3{background:linear-gradient(115deg,#091c32,#16385c);min-height:0;padding:0}
+.hero-v3-inner{padding-top:4rem;padding-bottom:4rem;min-height:0;align-items:center}
+.hero-v3-copy h1{font-size:clamp(3.6rem,5.6vw,5.9rem);max-width:12ch}
+.hero-v3-media{border:0;box-shadow:0 2rem 4rem #06162766}
+.hero-v3-showcase-head{border-bottom:1px solid #72849a55;padding-bottom:.9rem}
+.hero-v7-controls{display:flex;align-items:center;gap:1rem;margin-top:.8rem}
+.hero-v7-controls .hero-v3-progress{flex:1;margin:0}
+.motion-toggle{background:transparent;border:1px solid #879aae;color:#fff;min-height:44px;min-width:76px;font:inherit;font-size:.65rem;padding:.5rem .7rem;cursor:pointer}
+.track-controls .motion-toggle{border-color:#8191a0;color:var(--v7-blue)}
+.families-v3 .track-controls{display:flex;gap:.75rem;align-items:center}
+.families-v3 .track-controls button{min-height:44px;min-width:44px}
+.families-v3 .track-controls .motion-toggle{min-width:76px;border-radius:0;width:auto}
+.hero-v3-progress button{min-height:44px}
+.hero-v3-progress.is-paused button i:after{animation-play-state:paused}
+.hero-v3-story{min-height:12rem}
+.hero-v3-copy .hero-search-link{margin-top:2rem}
+.button svg,.text-link svg{transition:transform .25s ease}
+.button:hover svg,.text-link:hover svg{transform:translateX(3px)}
+.brand-card:focus-visible,.journey-index a:focus-visible,.contact-channels a:focus-visible,.motion-toggle:focus-visible{outline:3px solid #2263c3;outline-offset:5px}
+[id]{scroll-margin-top:7rem}
+@media(min-width:801px){.hero-v3-inner{grid-template-columns:1.1fr 1fr}.hero-v3-media{height:31rem}.hero-v3-story h2{font-size:2.25rem}}
+@media(max-width:1100px){.brands-v7{gap:2rem;grid-template-columns:.8fr 1.4fr}.brand-card{padding:1.2rem}.company-opening{gap:2rem}.company-journey{gap:4rem}.contact-opening{gap:3rem}.family-detail{gap:3rem}.brand-card-meta{font-size:.55rem}.hero-v3-copy h1{font-size:clamp(3.1rem,5.4vw,5rem)}}
+@media(max-width:800px){
+ .editorial-intro{padding-top:3rem;padding-bottom:2rem}.editorial-intro>div{grid-template-columns:1fr;gap:1rem}.editorial-intro>div>p{max-width:36rem}
+ .brand-collection{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-directory{padding-bottom:4rem}
+ .brands-v7{display:block;padding-top:3rem;padding-bottom:4rem}.brands-v7-intro{position:static;margin-bottom:2rem}.brands-v7-intro>p:not(.eyebrow){max-width:45ch}
+ .company-opening{grid-template-columns:1fr;gap:2rem;padding-top:3rem;padding-bottom:3rem}.company-opening h1{max-width:17ch}.company-opening figure img{height:25rem}.company-opening>div>p:not(.eyebrow){max-width:42ch}
+ .company-journey{grid-template-columns:1fr;gap:1rem;padding-top:2rem}.journey-index{position:static}.journey-index>strong{font-size:2rem}.journey-index>strong>span{font-size:7rem}.journey-index nav{display:flex;max-width:none;gap:1rem}.journey-index nav a{flex:1;font-size:.75rem;gap:.6rem}.journey-index nav i{display:none}.journey-chapters>section{padding-bottom:3rem}.company-principles ul{grid-template-columns:repeat(2,1fr)}
+ .contact-opening{grid-template-columns:1fr;gap:2rem;padding-top:3rem;padding-bottom:2rem}.contact-heading h1{font-size:clamp(2.7rem,7vw,4rem)}.contact-channels{max-width:none}.contact-phones{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.contact-channels a:not(.social-link){font-size:1rem}.contact-channels a.contact-main-email{font-size:1.4rem}.contact-guidance{padding-top:2.5rem}
+ .products-opening{grid-template-columns:1fr;gap:2rem;padding-top:3rem}.products-opening-image img{height:19rem}.v7-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v7-product-grid .hub-card:first-child,.v7-product-grid .hub-card:last-child{grid-column:auto}
+ .family-opening,.family-opening-copy{min-height:33rem}.family-opening-split .family-opening-photo{left:0}.family-opening:after,.family-opening-split:after{background:linear-gradient(90deg,rgba(9,28,49,.92),rgba(9,28,49,.38))}.family-opening-copy{padding:3rem 1.5rem}.family-opening-copy h1{font-size:3.5rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:3.3rem}
+ .family-detail{grid-template-columns:1fr;gap:2rem;padding-top:2.5rem}.family-detail>aside{border-bottom:1px solid var(--v7-line);padding-bottom:1.5rem}.family-detail>aside>p:not(.eyebrow){display:none}
+ .v7-brand-page .brand-image{min-height:19rem!important}.v7-facts{gap:1rem}.v7-facts>div+div{padding-left:1rem}.hero-v3-inner{padding-top:2.5rem;padding-bottom:3rem}.hero-v3-copy{order:0}.hero-v3-showcase{order:1}.hero-v3-copy h1{max-width:16ch;font-size:clamp(3.2rem,7vw,4.3rem)}
+}
+@media(max-width:520px){
+ .families-v3 .track-controls p{flex-basis:100%;margin:0 0 .35rem}
+ .hero-v3-inner{gap:1.5rem}.hero-v3-copy>p:not(.eyebrow){font-size:1rem}.hero-v3 .hero-actions{margin-top:1.5rem}.hero-v3-copy .hero-search-link{margin-top:1.3rem}
+ .brand-collection{grid-template-columns:1fr}.brand-card{padding:1.1rem 1.5rem}.brand-card-logo{height:8.2rem;padding:1.5rem 2rem}.brand-card-meta{font-size:.62rem}.brand-card-bottom p{font-size:.78rem}.brand-collection-compact .brand-card-logo{height:7.5rem;padding:1.2rem 2.5rem}
+ .company-opening figure img{height:23rem}.company-opening h1{font-size:2.85rem}.journey-index nav a{font-size:.64rem}.company-principles{padding:3rem 0}.company-principles ul{gap:1.5rem}
+ .contact-opening{padding-top:2rem}.contact-heading h1{font-size:2.65rem}.contact-heading>p:not(.eyebrow){font-size:.95rem}.contact-phones{grid-template-columns:1fr;gap:0}.contact-channels a:not(.social-link){font-size:1.1rem}.contact-channels a.contact-main-email{font-size:1.2rem}
+ .products-opening h1{font-size:3rem}.v7-product-grid{grid-template-columns:1fr}.v7-product-grid .hub-card{min-height:22rem}
+ .family-opening,.family-opening-copy{min-height:31rem}.family-opening-copy h1{font-size:3rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:2.9rem}.family-detail .family-brand-list article a{grid-template-columns:6rem 1fr 1rem;gap:1rem}.family-detail .family-brand-logo{width:6rem}.family-detail .family-brand-copy small{font-size:.74rem}
+ .v7-facts{grid-template-columns:1fr 1fr;padding:2rem 0}.v7-facts>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--v7-line);padding:1.5rem 0 0}.v7-facts strong{font-size:3rem}.v7-facts>div:last-child strong{font-size:2.6rem}
+ .hero-v3-copy h1{font-size:3.1rem;max-width:12ch}.hero-v3-media{height:26rem}.hero-v3-story{min-height:13rem}.hero-v3-story h2{font-size:2rem}.hero-v3-showcase{margin-top:1rem}.track-controls{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.editorial-route h1,.hero-v3-copy h1{animation:none}.brand-card,.brand-logo-asset,.brand-card-arrow,.journey-index nav a,.journey-index nav i,.button svg,.text-link svg{transition:none!important}.hero-v3-frame{transform:none!important}.brands-v7-intro,.journey-index{position:static}html{scroll-behavior:auto!important}}

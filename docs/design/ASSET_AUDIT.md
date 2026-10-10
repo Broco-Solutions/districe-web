@@ -7,7 +7,7 @@
 | `public/logos/districe/primary.png` | Logo Districe institucional de 2161 × 728 px, limpiado desde el JPEG de mayor resolución y exportado con transparencia | Header, menú móvil, footer y shell de páginas |
 | `public/logos/districe/reversed.png` | Variante blanca transparente generada a partir del logo institucional; el fondo y los contraformas internas quedan transparentes | Footer sobre navy |
 | `public/images/brands/jarama-logo.png` | Master transparente RGBA de 2400 × 397 px entregado para uso principal | Home, hub/listado de marcas, familias y página Jarama sobre superficies claras |
-| `public/images/brands/jarama-logo-white.png` | Variante transparente RGBA de 2400 × 397 px para contraste invertido | Página Jarama sobre superficie navy; no se usa sobre fondos claros |
+| `public/images/brands/jarama-logo-white.png` | Variante transparente RGBA de 2400 × 397 px para contraste invertido | Variante reservada para superficies oscuras; V7 usa el master rojo en la página Jarama |
 | `public/logos/brands/k78-transparent.png` | Logo K78 de la fuente local, recortado y con fondo exterior eliminado; originales blancos internos conservados | Home y página de marcas |
 | `public/logos/brands/revigal.png` | Archivo de logo del sitio oficial Revigal, conservando el bloque rojo y sus letras blancas | Home y página de marcas |
 | `public/logos/brands/veslee.webp` | Archivo de logo del sitio oficial Veslee | Home y página de marcas |
@@ -17,7 +17,7 @@
 | `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
 | `public/images/families/editorial/estetica-vehicular.webp` | Escena editorial coherente, sin marcas ficticias | Hero, Home, hub y familia Estética |
 | `public/images/families/editorial/aditivos-lubricantes-fluidos.webp` | Escena editorial coherente, sin marcas ficticias | Hero, Home, hub y familia Aditivos |
-| `public/images/editorial/distribucion-deposito-generated.webp` | Escena editorial de distribución; no se presenta como instalación real | Hero, Empresa y Open Graph |
+| `public/images/editorial/distribucion-deposito-generated.webp` | Escena editorial de distribución; no se presenta como instalación real | Hero y Open Graph |
 | `public/images/products/jarama-*.webp` | Originales de producto de la fuente local existente | Respaldo/originales; no borrar |
 | `public/catalogos/bioepecuen-difusores-auto.pdf` | Catálogo recibido del cliente, copia local | CTA de descarga en Bioepecuén; no tratar como fotografía institucional |
 
