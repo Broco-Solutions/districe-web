@@ -11,9 +11,9 @@ import { Header } from "./header";
 import { BrocoCredit, InstagramIcon } from "../brand-icons";
 
 const heroStories = [
-  { image: "/images/hero/jarama-lava-coches-cutout.webp", width: 480, height: 720, alt: "Jarama Lava Coches", brand: "Jarama", product: "Lava Coches", family: "Estética vehicular", detail: "Cuidado y presentación para el vehículo.", accent: "01" },
-  { image: "/images/products/k78/car-wash.png", width: 294, height: 376, alt: "K78 Bug Remover", brand: "K78", product: "Bug Remover", family: "Estética vehicular", detail: "Una selección real para el cuidado automotor.", accent: "02" },
-  { image: "/images/hero/veslee-sella-fuga-cutout-v2.webp", width: 301, height: 680, alt: "Veslee Sella Fuga Radiador", brand: "Veslee", product: "Sella Fuga Radiador", family: "Aditivos, lubricantes y fluidos", detail: "Mantenimiento específico para el canal profesional.", accent: "03" },
+  { image: "/images/families/editorial/estetica-vehicular.webp", alt: "Sector de cuidado y estética vehicular", title: "Cuidado que se ve.", family: "Estética vehicular", detail: "Soluciones para limpieza, terminación y presentación profesional.", context: "Jarama · K78 · Revigal · Bioepecuén", href: "/productos/estetica-vehicular", accent: "01", position: "center" },
+  { image: "/images/families/editorial/aditivos-lubricantes-fluidos.webp", alt: "Productos para mantenimiento mecánico automotor", title: "Rendimiento que acompaña.", family: "Aditivos, lubricantes y fluidos", detail: "Líneas específicas para mantenimiento y operación del vehículo.", context: "Veslee · LOCX", href: "/productos/aditivos-lubricantes-fluidos", accent: "02", position: "center" },
+  { image: "/images/editorial/distribucion-deposito-generated.webp", alt: "Operación de distribución de productos automotores", title: "Una selección que llega.", family: "Distribución mayorista", detail: "Producto, variedad y criterio comercial para el canal profesional.", context: "Desde 1987 · Córdoba", href: "/empresa", accent: "03", position: "center" },
 ] as const;
 
 function Arrow() { return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg>; }
@@ -24,7 +24,6 @@ export function Home() {
   const [heroIndex, setHeroIndex] = useState(0);
   const [trackPaused, setTrackPaused] = useState(false);
   const story = heroStories[heroIndex];
-  const secondaryStory = heroStories[(heroIndex + 1) % heroStories.length];
   const scrollFamilies = (direction: number) => trackRef.current?.scrollBy({ left: direction * 380, behavior: reduced ? "auto" : "smooth" });
 
   useEffect(() => {
@@ -54,18 +53,18 @@ export function Home() {
           <div className="hero-actions"><Link className="button button-primary" href="/productos">Explorar productos <Arrow /></Link><Link className="text-link" href="/contacto">Hacer una consulta <Arrow /></Link></div>
           <Link className="hero-search-link" href="/productos"><span>⌕</span> Buscá una familia, marca o línea <b>/</b></Link>
         </motion.div>
-        <motion.div className="hero-v3-product" initial={reduced ? false : { opacity: 0, scale: 0.96, rotate: 2 }} animate={{ opacity: 1, scale: 1, rotate: 0 }} transition={{ duration: 0.7, delay: 0.12 }}>
-          <span className="hero-v3-tag">SELECCIÓN EN MOVIMIENTO / {story.accent}—0{heroStories.length}</span>
-          <div className="hero-v3-orbit orbit-one" /><div className="hero-v3-orbit orbit-two" /><div className="hero-v3-orbit orbit-three" />
-          <div className="hero-v3-secondary" aria-hidden="true"><Image src={secondaryStory.image} width={secondaryStory.width} height={secondaryStory.height} alt="" sizes="160px" /></div>
-          <AnimatePresence mode="wait">
-            <motion.div className={`hero-v3-primary hero-product-${story.brand.toLowerCase()}`} key={story.product} initial={reduced ? false : { opacity: 0, y: 16, rotate: -3 }} animate={{ opacity: 1, y: 0, rotate: 0 }} exit={reduced ? undefined : { opacity: 0, y: -10, rotate: 3 }} transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1] }}>
-              <Image src={story.image} width={story.width} height={story.height} priority={heroIndex === 0} sizes="(max-width: 700px) 48vw, 410px" alt={story.alt} />
-            </motion.div>
-          </AnimatePresence>
-          <div className="hero-v3-caption"><b>{story.brand} · {story.product}</b><span>{story.detail}</span></div>
-          <div className="hero-v3-progress" aria-label={`Producto destacado ${heroIndex + 1} de ${heroStories.length}`}>{heroStories.map((item, index) => <button key={item.product} onClick={() => setHeroIndex(index)} className={index === heroIndex ? "is-active" : ""} aria-label={`Ver ${item.product}`} aria-current={index === heroIndex ? "true" : undefined}><i /></button>)}</div>
-          <div className="hero-v3-family"><span>Familia activa</span><b>{story.family}</b></div>
+        <motion.div className="hero-v3-showcase" initial={reduced ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.72, delay: 0.12 }}>
+          <div className="hero-v3-showcase-head"><span>CATÁLOGO EN MOVIMIENTO</span><b>{story.accent} / 0{heroStories.length}</b></div>
+          <div className="hero-v3-media">
+            {heroStories.map((item, index) => <motion.div className="hero-v3-frame" key={item.title} aria-hidden={index !== heroIndex} initial={false} animate={reduced ? { opacity: index === heroIndex ? 1 : 0 } : { opacity: index === heroIndex ? 1 : 0, scale: index === heroIndex ? 1 : 1.035, x: index === heroIndex ? 0 : 8 }} transition={{ duration: .9, ease: [0.22, 1, 0.36, 1] }}><Image src={item.image} fill priority={index === 0} sizes="(max-width: 800px) calc(100vw - 2rem), 42vw" alt={index === heroIndex ? item.alt : ""} style={{ objectPosition: item.position }} /></motion.div>)}
+            <div className="hero-v3-media-shade" />
+            <AnimatePresence mode="wait">
+              <motion.div className="hero-v3-story" key={story.title} initial={reduced ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={reduced ? undefined : { opacity: 0, y: -8 }} transition={{ duration: .42 }}>
+                <p>{story.family}</p><h2>{story.title}</h2><span>{story.detail}</span><small>{story.context}</small><Link href={story.href}>Explorar <Arrow /></Link>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+          <div className="hero-v3-progress" aria-label={`Historia destacada ${heroIndex + 1} de ${heroStories.length}`}>{heroStories.map((item, index) => <button key={item.title} onClick={() => setHeroIndex(index)} className={index === heroIndex ? "is-active" : ""} aria-label={`Ver ${item.family}`} aria-current={index === heroIndex ? "true" : undefined}><i /></button>)}</div>
         </motion.div>
       </div>
     </section>

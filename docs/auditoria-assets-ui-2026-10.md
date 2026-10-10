@@ -2,12 +2,12 @@
 
 ## Diagnóstico del hero anterior
 
-El hero anterior usaba una única botella aislada sobre una composición con mucho vacío. El caption funcionaba como una etiqueta separada del producto y no había señal visual de surtido, familias ni navegación editorial. La nueva composición preserva las imágenes reales disponibles y las convierte en una selección: producto principal, producto secundario en profundidad, familia activa, indicador de progreso y cambio lento entre tres referencias de Jarama. Así comunica variedad sin convertirse en un carrusel promocional.
+La primera versión rotativa seguía dependiendo de packshots aislados con transparencias y calidades dispares. A escala hero, los bordes de esos recortes se volvían visibles y la composición se percibía más promocional que editorial. La versión actual rota tres historias completas —Estética, Aditivos y Distribución— con imágenes ambientales consistentes, contexto de marcas y acceso directo a cada sección. Districe conserva la jerarquía principal y el catálogo aparece como amplitud de oferta, no como publicidad de un SKU.
 
 ## Estándar aplicado
 
 - Logos: se aceptan SVG o PNG con alfa, proporción intacta, borde limpio y tamaño óptico consistente dentro de contenedores neutros.
-- Imágenes: los productos del hero son recortes reales; las familias usan una serie editorial generada específicamente para navegación y documentada en provenance.
+- Imágenes: el hero y las familias usan una serie editorial consistente, sin packaging de marca inventado; los packshots reales quedan reservados para contextos donde su resolución es adecuada.
 - Movimiento: transición suave, pausas de interacción y respeto de `prefers-reduced-motion`; no hay scroll-jacking ni parallax.
 
 ## Logo Districe
@@ -54,6 +54,6 @@ La búsqueda externa confirmó fuentes oficiales vigentes para K78 (`k78argentin
 
 ## Inventario de imágenes usado
 
-- Reales existentes: Jarama Lava Coches, Espuma Activa y Brillo; se usan en el hero y la familia Estética vehicular.
-- Reales externos: K78 Bug Remover y Veslee Sella Fuga Radiador se usan en el hero junto al producto Jarama provisto; Veslee Lubricante Multiuso continúa en Aditivos. El packshot de Revigal se reservó para páginas internas porque su resolución no sostiene la escala protagonista del hero.
+- Reales existentes: Jarama Lava Coches, Espuma Activa y Brillo permanecen en la biblioteca de producto; no se fuerzan a escala hero.
+- Reales externos: K78, Revigal y Veslee permanecen en la biblioteca de producto para usos de menor escala. El hero ya no depende de recortes heterogéneos.
 - IA: dos imágenes editoriales de operación/distribución y seis escenas de familia. Se documentan internamente y el contenido no las atribuye a instalaciones de Districe ni a marcas reales.

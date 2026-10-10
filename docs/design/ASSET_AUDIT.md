@@ -13,8 +13,10 @@
 | `public/logos/brands/bioepecuen.png` | Logo transparente descargado del sitio oficial de Bioepecuén Aromas | Home, marcas y página de Bioepecuén |
 | `public/logos/brands/locx-official.png` | Logo transparente oficial descargado de LOCX; variante clara sin alteración de geometría | Home, marcas, búsqueda y página LOCX sobre soporte oscuro |
 | `public/logos/broco/bs-mark-neg.svg` | Mark blanco oficial de Broco Solutions obtenido de su sitio público | Crédito del footer, enlazado a `www.brocosolutions.com` |
-| `public/images/hero/jarama-lava-coches-cutout.webp` | Foto real del producto local, con fondo blanco exterior quitado por flood-fill; original conservado | Hero de Home |
 | `public/images/families/jarama-espuma-activa-cutout.webp` | Foto real de producto Jarama, fondo exterior quitado; original conservado | Card de Estética vehicular |
+| `public/images/families/editorial/estetica-vehicular.webp` | Escena editorial coherente, sin marcas ficticias | Hero, Home, hub y familia Estética |
+| `public/images/families/editorial/aditivos-lubricantes-fluidos.webp` | Escena editorial coherente, sin marcas ficticias | Hero, Home, hub y familia Aditivos |
+| `public/images/editorial/distribucion-deposito-generated.webp` | Escena editorial de distribución; no se presenta como instalación real | Hero, Empresa y Open Graph |
 | `public/images/products/jarama-*.webp` | Originales de producto de la fuente local existente | Respaldo/originales; no borrar |
 | `public/catalogos/bioepecuen-difusores-auto.pdf` | Catálogo recibido del cliente, copia local | CTA de descarga en Bioepecuén; no tratar como fotografía institucional |
 
