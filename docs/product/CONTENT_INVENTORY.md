@@ -40,7 +40,7 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 
 - Año de inicio declarado: 1987.
 - Propuesta declarada: distribución mayorista de repuestos y accesorios automotor.
-- Contacto publicado: `districe@hotmail.com`; teléfono `(0351) 4895039`; móviles `(351) 7532201` y `(351) 7532203`.
+- Contacto publicado: `districe@hotmail.com`; teléfono `(0351) 8826316`; móviles `(351) 7532201` y `(351) 7532203`.
 - El enlace de ayuda de Tiendanube apunta al WhatsApp `+54 9 351 753-2201`.
 - Todos los contactos anteriores son vigentes según el sitio actual y pendientes de confirmación final para el nuevo sitio.
 
