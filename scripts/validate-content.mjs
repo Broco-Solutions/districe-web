@@ -10,6 +10,7 @@ if (!catalog.includes("bioepecuen") || !catalog.includes("difusores de auto") ||
 if (!catalog.includes("jarama") || !catalog.includes("catalogos/catalogo-jarama.pdf")) errors.push("Jarama no está integrada con su catálogo oficial.");
 if (!catalog.includes("k78") || !catalog.includes("catalogos/catalogo-k78-2026.pdf")) errors.push("K78 no está integrada con su catálogo oficial 2026.");
 if (!catalog.includes('slug: "locx"') || !catalog.includes('name: "locx"')) errors.push("LOCX no está integrada como marca confirmada.");
+if (!catalog.includes("catalogos/catalogo-locx.pdf")) errors.push("LOCX no está integrada con su catálogo oficial.");
 if (catalog.includes('slug: "lock"') || catalog.includes('name: "lock"')) errors.push("La identidad provisoria Lock sigue publicada; debe ser LOCX.");
 
 if (errors.length) { console.error(errors.join("\n")); process.exit(1); }
