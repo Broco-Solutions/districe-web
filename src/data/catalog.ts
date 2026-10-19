@@ -18,7 +18,7 @@ export const productFamilies: ProductFamily[] = [
 
 // Only brands confirmed in both current public sources are public in Home V1.
 export const brands: Brand[] = [
-  { slug: "k78", name: "K78", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado"] },
+  { slug: "k78", name: "K78", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado"], catalog: { url: "/catalogos/catalogo-k78-2026.pdf", title: "catálogo K78 2026", heading: "Cosmética automotor y detallado profesional.", summary: "El catálogo 2026 reúne perfumería, siliconas y revividores, limpieza, ceras y brillos, aerosoles especiales, accesorios, neumáticos y cristales, y línea profesional." } },
   { slug: "jarama", name: "Jarama", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Lubricantes"], catalog: { url: "/catalogos/catalogo-jarama.pdf", title: "catálogo Jarama", heading: "Cuidado automotor para cada terminación.", summary: "Líneas principales del catálogo: ceras, lavado, lubricantes, renovadores, limpieza y perfumes." } },
   { slug: "revigal", name: "Revigal", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Productos para lavado", "Aromatizantes", "Renovadores", "Lustre y pulido"] },
   { slug: "veslee", name: "Veslee", description: "Aditivos", familySlugs: ["aditivos-lubricantes-fluidos"], lines: ["Aditivos"] },
