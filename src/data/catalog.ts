@@ -1,6 +1,7 @@
 export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink" };
 export type CatalogItem = { id: string; name: string; kind: "familia de producto" | "aroma" };
-export type Brand = { slug: string; name: string; description: string; familySlugs: string[]; lines: string[]; catalogItems?: CatalogItem[]; catalogUrl?: string };
+export type CatalogDocument = { url: string; title: string; heading: string; summary?: string };
+export type Brand = { slug: string; name: string; description: string; familySlugs: string[]; lines: string[]; catalog?: CatalogDocument; catalogItems?: CatalogItem[] };
 export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea" | "Catálogo"; detail: string; target: string };
 
 const toSlug = (value: string) => value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -18,11 +19,11 @@ export const productFamilies: ProductFamily[] = [
 // Only brands confirmed in both current public sources are public in Home V1.
 export const brands: Brand[] = [
   { slug: "k78", name: "K78", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado"] },
-  { slug: "jarama", name: "Jarama", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Lubricantes"] },
+  { slug: "jarama", name: "Jarama", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Lubricantes"], catalog: { url: "/catalogos/catalogo-jarama.pdf", title: "catálogo Jarama", heading: "Cuidado automotor para cada terminación.", summary: "Líneas principales del catálogo: ceras, lavado, lubricantes, renovadores, limpieza y perfumes." } },
   { slug: "revigal", name: "Revigal", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: ["Productos para lavado", "Aromatizantes", "Renovadores", "Lustre y pulido"] },
   { slug: "veslee", name: "Veslee", description: "Aditivos", familySlugs: ["aditivos-lubricantes-fluidos"], lines: ["Aditivos"] },
   { slug: "locx", name: "LOCX", description: "Aditivos", familySlugs: ["aditivos-lubricantes-fluidos"], lines: ["Aditivos"] },
-  { slug: "bioepecuen", name: "Bioepecuén", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: [], catalogUrl: "/catalogos/bioepecuen-difusores-auto.pdf", catalogItems: [
+  { slug: "bioepecuen", name: "Bioepecuén", description: "Estética vehicular", familySlugs: ["estetica-vehicular"], lines: [], catalog: { url: "/catalogos/bioepecuen-difusores-auto.pdf", title: "catálogo Bioepecuén", heading: "Difusores para el interior del auto." }, catalogItems: [
     { id: "bioepecuen-difusores-de-auto", name: "Difusores de auto", kind: "familia de producto" },
     { id: "bioepecuen-display-expositor-20-unidades", name: "Display expositor de 20 unidades", kind: "familia de producto" },
     ...["Citric Car", "Peras y Flores Blancas", "Vainilla y Azúcar", "Pasión Frutal", "Verbena", "Limón", "Uva y Frutos del Bosque"].map((name) => ({ id: `bioepecuen-${toSlug(name)}`, name, kind: "aroma" as const })),
@@ -43,7 +44,8 @@ export const searchEntries: SearchEntry[] = [
   ...productFamilies.map((family) => ({ id: `family-${family.slug}`, label: family.name, type: "Familia" as const, detail: "Productos", target: `/productos/${family.slug}` })),
   ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: `/marcas/${brand.slug}` })),
   ...catalogLines.map((line) => ({ id: `line-${line.id}`, label: line.name, type: "Línea" as const, detail: `${brands.find((brand) => brand.slug === line.brandSlug)?.name} · ${productFamilies.find((family) => family.slug === line.familySlug)?.name ?? "Catálogo"}`, target: `/marcas/${line.brandSlug}` })),
-  ...catalogItems.map((item) => ({ id: `catalog-${item.id}`, label: item.name, type: "Catálogo" as const, detail: `Bioepecuén · ${item.kind}`, target: "/marcas/bioepecuen" })),
+  ...brands.flatMap((brand) => brand.catalog ? [{ id: `catalog-${brand.slug}`, label: brand.catalog.title, type: "Catálogo" as const, detail: `${brand.name} · PDF oficial`, target: `/marcas/${brand.slug}` }] : []),
+  ...catalogItems.map((item) => ({ id: `catalog-${item.id}`, label: item.name, type: "Catálogo" as const, detail: `${brands.find((brand) => brand.slug === item.brandSlug)?.name} · ${item.kind}`, target: `/marcas/${item.brandSlug}` })),
 ];
 
 export const getFamily = (slug: string) => productFamilies.find((family) => family.slug === slug);

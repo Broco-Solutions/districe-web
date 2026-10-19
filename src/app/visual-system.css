@@ -109,6 +109,7 @@
 .brand-page>div:last-child{padding-top:1.3rem}
 .brand-page h2{font-size:clamp(2.2rem,4vw,3.3rem);line-height:1}
 .brand-page .button{margin:.45rem .5rem .45rem 0}
+.catalog-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.25rem .7rem;margin-top:1.2rem}.catalog-actions .button{margin:.45rem 0}.catalog-download{display:inline-flex;align-items:center;gap:.4rem;min-height:2.8rem;padding:.45rem .25rem;border-bottom:1px solid currentColor;font-size:.74rem;font-weight:700}.catalog-download:hover{color:var(--blue)}.catalog-download:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
 .catalog-grid li{line-height:1.45}
 .catalog-back{color:#43566a}
 .editorial-copy{max-width:1040px;padding:0 clamp(0rem,4vw,3rem)}
