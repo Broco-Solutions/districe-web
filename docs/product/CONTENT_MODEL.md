@@ -12,6 +12,7 @@ El catálogo es estático, tipado y versionado en Git. No requiere base de datos
 | `Brand` | `slug` | Puede pertenecer a una o más familias; puede tener líneas y familias de catálogo respaldadas por fuente. |
 | `CatalogLine` | `familySlug/brandSlug/lineSlug` | Pertenece a una marca dentro de una familia. |
 | `CatalogItem` | `brandSlug/id` | Ítem de catálogo sin SKU ni precio cuando la fuente sólo respalda una familia de producto o aroma. |
+| `FeaturedProduct` | `id` | Selección comercial dentro de una familia; puede declarar fabricante, imagen y datos técnicos verificados sin convertirse en marca pública. |
 
 La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `estetica-vehicular/jarama/perfumes` son entidades distintas aunque compartan nombre visible. En código, la identidad se conserva en `CatalogLine.id`; los destinos públicos actuales llevan a su marca hasta que exista una página de línea justificada.
 
@@ -21,6 +22,7 @@ La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `esteti
 - El índice de búsqueda se deriva de esas entidades y presenta `marca · familia` para desambiguar líneas homónimas.
 - Los assets públicos viven en `public/images/` y `public/catalogos/`. Los PDF de Bioepecuén, Jarama, K78, LOCX y Revigal se registran en `Brand.catalog`, que alimenta el CTA compartido de apertura y descarga en cada página de marca.
 - Los documentos que pertenecen a una familia se registran en `ProductFamily.catalog`. El catálogo de Anken se presenta como fuente técnica de Higiene y seguridad, sin sumar a Anken al directorio de seis marcas.
+- Los productos seleccionados para una familia se registran en `featuredProducts` y se consultan con `productsForFamily()`. Los cinco productos RAN verificados y el kit 5 en 1 solicitado se presentan en Estética vehicular; el kit queda sin fabricante hasta contar con evidencia.
 - Toda ampliación exige fuente y confirmación comercial en el mismo cambio.
 
 ## Reglas

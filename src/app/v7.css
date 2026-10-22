@@ -116,6 +116,34 @@
 .family-document-topics li:nth-child(even){padding-left:.75rem;border-left:1px solid var(--v7-line)}
 .family-document-source{margin:.2rem 0 0;color:#66736e;font-size:.7rem;line-height:1.5}
 .family-document-image{width:100%;height:100%;min-height:22rem;object-fit:cover;background:#fff}
+.family-products{padding-top:1rem;padding-bottom:7rem;scroll-margin-top:6rem}
+.family-products-heading{display:grid;grid-template-columns:1.5fr .5fr;gap:4rem;align-items:end;padding:3.5rem 0 2.5rem;border-top:1px solid var(--v7-line)}
+.family-products-heading h2{max-width:17ch;margin-bottom:1.2rem;color:var(--v7-blue);font-size:clamp(2.8rem,4.6vw,5rem);line-height:.96}
+.family-products-heading>div>p:last-child{max-width:42rem;margin:0;color:#536271;line-height:1.7}
+.family-products-heading figure{justify-self:end;width:min(14rem,100%);margin:0;text-align:right}
+.family-products-heading figure img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.family-products-heading figcaption{margin-top:.7rem;color:#68746f;font-size:.65rem;line-height:1.45}
+.featured-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--v7-line);border-left:1px solid var(--v7-line)}
+.featured-product-card{display:flex;min-width:0;flex-direction:column;border-right:1px solid var(--v7-line);border-bottom:1px solid var(--v7-line);scroll-margin-top:7rem;background:#fafbf7}
+.featured-product-media{position:relative;display:grid;height:24rem;place-items:center;overflow:hidden;padding:2.6rem 2rem 1.5rem;background:linear-gradient(145deg,#e8ece7,#f5f6f1)}
+.featured-product-media>span{position:absolute;top:1rem;left:1rem;color:#6a7670;font-size:.62rem;letter-spacing:.12em}
+.featured-product-media>img{width:auto;height:auto;max-width:72%;max-height:19rem;object-fit:contain;filter:drop-shadow(0 1.2rem 1rem rgba(23,38,45,.15))}
+.featured-product-media-pending{background:#102b53;color:#fff}
+.featured-product-media-pending>span{color:#d1ed59}
+.featured-product-media-pending>div{display:grid;place-items:center;text-align:center}
+.featured-product-media-pending b{font-size:7rem;line-height:.8;letter-spacing:-.09em}
+.featured-product-media-pending b small{font-size:2.2rem;letter-spacing:-.05em}
+.featured-product-media-pending div span{margin-top:1.4rem;font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d8e1ec}
+.featured-product-copy{display:flex;flex:1;flex-direction:column;padding:1.6rem}
+.featured-product-copy>p:first-child{margin:0 0 .85rem;color:#526b66;font-size:.61rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.featured-product-copy h3{min-height:2.4em;margin:0 0 .9rem;color:var(--v7-blue);font-size:1.65rem;line-height:1.08;letter-spacing:-.04em}
+.featured-product-copy>p:not(:first-child){min-height:4.8em;margin:0;color:#5b6864;font-size:.78rem;line-height:1.55}
+.featured-product-copy ul{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 0!important;padding:0;list-style:none}
+.featured-product-copy li{padding:.35rem .5rem;border:1px solid #cbd4ce;color:#435650;font-size:.62rem;font-weight:700}
+.featured-product-link{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:1.4rem;color:var(--v7-blue);font-size:.73rem;font-weight:700}
+.featured-product-link span{transition:transform .2s ease}
+.featured-product-link:hover span{transform:translate(3px,-3px)}
+.featured-product-link:focus-visible{outline:3px solid #2263c3;outline-offset:5px}
 .brand-breadcrumb{padding-top:2.5rem;display:flex;gap:1rem;font-size:.7rem;color:#536271}
 .v7-brand-page{margin:2.5rem auto 5rem;align-items:start}
 .v7-brand-page .brand-image{position:relative;background:#edf0e9!important;border:0;min-height:27rem!important}
@@ -151,7 +179,7 @@
 .brand-card:focus-visible,.journey-index a:focus-visible,.contact-channels a:focus-visible,.motion-toggle:focus-visible{outline:3px solid #2263c3;outline-offset:5px}
 [id]{scroll-margin-top:7rem}
 @media(min-width:801px){.hero-v3-inner{grid-template-columns:1.1fr 1fr}.hero-v3-media{height:31rem}.hero-v3-story h2{font-size:2.25rem}}
-@media(max-width:1100px){.brands-v7{gap:2rem;grid-template-columns:.8fr 1.4fr}.brand-card{padding:1.2rem}.company-opening{gap:2rem}.company-journey{gap:4rem}.contact-opening{gap:3rem}.family-detail{gap:3rem}.brand-card-meta{font-size:.55rem}.hero-v3-copy h1{font-size:clamp(3.1rem,5.4vw,5rem)}}
+@media(max-width:1100px){.brands-v7{gap:2rem;grid-template-columns:.8fr 1.4fr}.brand-card{padding:1.2rem}.company-opening{gap:2rem}.company-journey{gap:4rem}.contact-opening{gap:3rem}.family-detail{gap:3rem}.brand-card-meta{font-size:.55rem}.hero-v3-copy h1{font-size:clamp(3.1rem,5.4vw,5rem)}.featured-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:800px){
  .editorial-intro{padding-top:3rem;padding-bottom:2rem}.editorial-intro>div{grid-template-columns:1fr;gap:1rem}.editorial-intro>div>p{max-width:36rem}
  .brand-collection{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-directory{padding-bottom:4rem}
@@ -163,6 +191,7 @@
  .family-opening,.family-opening-copy{min-height:33rem}.family-opening-split .family-opening-photo{left:0}.family-opening:after,.family-opening-split:after{background:linear-gradient(90deg,rgba(9,28,49,.92),rgba(9,28,49,.38))}.family-opening-copy{padding:3rem 1.5rem}.family-opening-copy h1{font-size:3.5rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:3.3rem}
  .family-detail{grid-template-columns:1fr;gap:2rem;padding-top:2.5rem}.family-detail>aside{border-bottom:1px solid var(--v7-line);padding-bottom:1.5rem}.family-detail>aside>p:not(.eyebrow){display:none}
  .family-document{grid-template-columns:1fr}.family-document-image{height:22rem;min-height:0;order:-1}
+ .family-products{padding-bottom:5rem}.family-products-heading{grid-template-columns:1fr .35fr;gap:2rem;padding-top:2.5rem}.family-products-heading h2{font-size:clamp(2.6rem,7vw,4rem)}.featured-product-media{height:22rem}
  .v7-brand-page .brand-image{min-height:19rem!important}.v7-facts{gap:1rem}.v7-facts>div+div{padding-left:1rem}.hero-v3-inner{padding-top:2.5rem;padding-bottom:3rem}.hero-v3-copy{order:0}.hero-v3-showcase{order:1}.hero-v3-copy h1{max-width:16ch;font-size:clamp(3.2rem,7vw,4.3rem)}
 }
 @media(max-width:520px){
@@ -174,7 +203,8 @@
  .products-opening h1{font-size:3rem}.v7-product-grid{grid-template-columns:1fr}.v7-product-grid .hub-card{min-height:22rem}
  .family-opening,.family-opening-copy{min-height:31rem}.family-opening-copy h1{font-size:3rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:2.9rem}.family-detail .family-brand-list article a{grid-template-columns:6rem 1fr 1rem;gap:1rem}.family-detail .family-brand-logo{width:6rem}.family-detail .family-brand-copy small{font-size:.74rem}
  .family-document{padding:.85rem}.family-document-image{height:18rem}.family-document-topics{grid-template-columns:1fr}.family-document-topics li:nth-child(even){padding-left:.25rem;border-left:0}
+ .family-products-heading{grid-template-columns:1fr}.family-products-heading figure{justify-self:start;width:9rem;text-align:left}.featured-product-grid{grid-template-columns:1fr}.featured-product-media{height:21rem}.featured-product-copy h3,.featured-product-copy>p:not(:first-child){min-height:0}
  .v7-facts{grid-template-columns:1fr 1fr;padding:2rem 0}.v7-facts>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--v7-line);padding:1.5rem 0 0}.v7-facts strong{font-size:3rem}.v7-facts>div:last-child strong{font-size:2.6rem}
  .hero-v3-copy h1{font-size:3.1rem;max-width:12ch}.hero-v3-media{height:26rem}.hero-v3-story{min-height:13rem}.hero-v3-story h2{font-size:2rem}.hero-v3-showcase{margin-top:1rem}.track-controls{flex-wrap:wrap}
 }
-@media(prefers-reduced-motion:reduce){.editorial-route h1,.hero-v3-copy h1{animation:none}.brand-card,.brand-logo-asset,.brand-card-arrow,.journey-index nav a,.journey-index nav i,.button svg,.text-link svg{transition:none!important}.hero-v3-frame{transform:none!important}.brands-v7-intro,.journey-index{position:static}html{scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){.editorial-route h1,.hero-v3-copy h1{animation:none}.brand-card,.brand-logo-asset,.brand-card-arrow,.journey-index nav a,.journey-index nav i,.button svg,.text-link svg,.featured-product-link span{transition:none!important}.hero-v3-frame{transform:none!important}.brands-v7-intro,.journey-index{position:static}html{scroll-behavior:auto!important}}

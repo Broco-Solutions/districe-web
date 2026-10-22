@@ -2,7 +2,18 @@ export type CatalogItem = { id: string; name: string; kind: "familia de producto
 export type CatalogDocument = { url: string; title: string; heading: string; summary?: string; source?: string; topics?: string[]; image?: { src: string; width: number; height: number; alt: string } };
 export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink"; catalog?: CatalogDocument };
 export type Brand = { slug: string; name: string; description: string; familySlugs: string[]; lines: string[]; catalog?: CatalogDocument; catalogItems?: CatalogItem[] };
-export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea" | "Catálogo"; detail: string; target: string };
+export type ProductSource = { label: string };
+export type FeaturedProduct = {
+  id: string;
+  name: string;
+  familySlug: string;
+  manufacturer?: string;
+  description: string;
+  image?: { src: string; width: number; height: number; alt: string };
+  source: ProductSource;
+  technicalData?: string[];
+};
+export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea" | "Catálogo" | "Producto"; detail: string; target: string };
 
 const toSlug = (value: string) => value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 export type CatalogLine = { id: string; slug: string; name: string; familySlug: string; brandSlug: string };
@@ -30,6 +41,66 @@ export const brands: Brand[] = [
   ] },
 ];
 
+export const featuredProducts: FeaturedProduct[] = [
+  {
+    id: "arranca-motores",
+    name: "Arranca motores",
+    familySlug: "estetica-vehicular",
+    manufacturer: "RAN",
+    description: "Facilita el arranque en frío de motores a combustión de 2 y 4 tiempos.",
+    image: { src: "/images/products/ran/arranca-motores.webp", width: 230, height: 1000, alt: "Aerosol RAN Arranca Motores" },
+    source: { label: "Productos RAN" },
+    technicalData: ["Código AM-1", "Aerosol 440 cc"],
+  },
+  {
+    id: "desengrasante-aerosol",
+    name: "Desengrasante en aerosol",
+    familySlug: "estetica-vehicular",
+    manufacturer: "RAN",
+    description: "Para remover grasas, aceites y alquitranes en motores y llantas; se enjuaga con agua.",
+    image: { src: "/images/products/ran/desengrasante-aerosol.webp", width: 106, height: 460, alt: "Aerosol desengrasante RAN para motores y llantas" },
+    source: { label: "Productos RAN" },
+    technicalData: ["Código I-10", "Aerosol 440 cc"],
+  },
+  {
+    id: "niebla-lubricante",
+    name: "Niebla lubricante",
+    familySlug: "estetica-vehicular",
+    manufacturer: "RAN",
+    description: "Aceite lubricante multiuso de gran penetración para mecanismos y zonas de difícil acceso.",
+    image: { src: "/images/products/ran/niebla-lubricante.webp", width: 229, height: 1000, alt: "Aerosol RAN Niebla Lubricante multifunción" },
+    source: { label: "Productos RAN" },
+    technicalData: ["Código NL-2", "Aerosol 440 cc"],
+  },
+  {
+    id: "grasa-litio-aerosol",
+    name: "Grasa de litio en aerosol",
+    familySlug: "estetica-vehicular",
+    manufacturer: "RAN",
+    description: "Lubricante penetrante para piezas móviles, resistente al agua, el calor y la humedad.",
+    image: { src: "/images/products/ran/grasa-litio-aerosol.webp", width: 229, height: 1000, alt: "Aerosol RAN Grasa de Litio" },
+    source: { label: "Productos RAN" },
+    technicalData: ["Código GL-17", "Aerosol 440 cc"],
+  },
+  {
+    id: "kit-proteccion-automotor-5-en-1",
+    name: "Kit de protección automotor 5 en 1",
+    familySlug: "estetica-vehicular",
+    description: "Solución solicitada para proteger el vehículo durante tareas de servicio y mantenimiento.",
+    source: { label: "Selección comercial solicitada por Districe" },
+  },
+  {
+    id: "ya-tapo",
+    name: "Ya Tapó! — sellador de grietas",
+    familySlug: "estetica-vehicular",
+    manufacturer: "RAN",
+    description: "Sellador para grietas, goteras y fisuras del circuito de refrigeración, compatible con refrigerantes y anticongelantes.",
+    image: { src: "/images/products/ran/ya-tapo.webp", width: 378, height: 1000, alt: "Envase RAN Ya Tapó, sellador para block y radiador" },
+    source: { label: "Productos RAN" },
+    technicalData: ["Código SG-9", "Envase 500 cc"],
+  },
+];
+
 // A line belongs to a brand within a family. Its id is contextual, so two
 // "Perfumes" entries never collapse into one catalogue entity.
 export const catalogLines: CatalogLine[] = brands.flatMap((brand) => brand.lines.map((name) => {
@@ -45,12 +116,14 @@ export const searchEntries: SearchEntry[] = [
   ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: `/marcas/${brand.slug}` })),
   ...catalogLines.map((line) => ({ id: `line-${line.id}`, label: line.name, type: "Línea" as const, detail: `${brands.find((brand) => brand.slug === line.brandSlug)?.name} · ${productFamilies.find((family) => family.slug === line.familySlug)?.name ?? "Catálogo"}`, target: `/marcas/${line.brandSlug}` })),
   ...brands.flatMap((brand) => brand.catalog ? [{ id: `catalog-${brand.slug}`, label: brand.catalog.title, type: "Catálogo" as const, detail: `${brand.name} · PDF oficial`, target: `/marcas/${brand.slug}` }] : []),
-  ...productFamilies.flatMap((family) => family.catalog ? [{ id: `catalog-family-${family.slug}`, label: family.catalog.title, type: "Catálogo" as const, detail: `Catálogo de ${family.name.toLocaleLowerCase("es")} · ${family.catalog.source} · Control de derrames`, target: `/productos/${family.slug}#documentacion` }] : []),
+  ...productFamilies.flatMap((family) => family.catalog ? [{ id: `catalog-family-${family.slug}`, label: family.catalog.title, type: "Catálogo" as const, detail: `${family.catalog.source} · ${family.name}`, target: `/productos/${family.slug}#documentacion` }] : []),
   ...catalogItems.map((item) => ({ id: `catalog-${item.id}`, label: item.name, type: "Catálogo" as const, detail: `${brands.find((brand) => brand.slug === item.brandSlug)?.name} · ${item.kind}`, target: `/marcas/${item.brandSlug}` })),
+  ...featuredProducts.map((product) => ({ id: `product-${product.id}`, label: product.name, type: "Producto" as const, detail: `${product.manufacturer ? `${product.manufacturer} · ` : ""}Estética vehicular`, target: `/productos/${product.familySlug}#${product.id}` })),
 ];
 
 export const getFamily = (slug: string) => productFamilies.find((family) => family.slug === slug);
 export const getBrand = (slug: string) => brands.find((brand) => brand.slug === slug);
 export const brandsForFamily = (slug: string) => brands.filter((brand) => brand.familySlugs.includes(slug));
+export const productsForFamily = (slug: string) => featuredProducts.filter((product) => product.familySlug === slug);
 export const familyUrl = (slug: string) => `/productos/${slug}`;
 export const brandUrl = (slug: string) => `/marcas/${slug}`;
