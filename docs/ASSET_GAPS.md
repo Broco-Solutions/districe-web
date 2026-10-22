@@ -17,5 +17,6 @@
 | Jarama product selection | PARTIAL | Existing client/current assets and jarama.com.ar | Good local cutouts, no new transparent official packshots added | Request official product packshot package if broader coverage is needed |
 | RAN selected products | READY | productosran.com.ar | Five official transparent packshots; Desengrasante has lower native resolution but is adequate at card scale | Keep card-scale use; request a larger master before using it as a hero image |
 | Kit de protección automotor 5 en 1 | PENDING | Client request only | Exact manufacturer, contents and product image are unverified | Replace the typographic placeholder only when José or the supplier provides the exact product reference |
+| Loctite catalogue cover | READY | Client-provided catalogue, page 1 | High quality at family-card scale | Keep as the catalogue visual; product packshots remain inside the PDF |
 | Six-family editorial imagery | READY (editorial) | OpenAI generation, 2026-10-09 | High for category navigation | Replace with client/supplier-approved real photography when a complete coherent set is available |
 | Distribution/operation visuals | READY (editorial) | Generated, marked in provenance | High for web editorial use | Do not describe as real Districe facilities; replace with client operation photos when available |

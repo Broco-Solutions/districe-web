@@ -48,7 +48,7 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
       <div>
         <p className="eyebrow"><span /> {catalog ? "Documentación comercial" : familyBrands.length ? "Marcas y líneas" : "Consulta comercial"}</p>
         <h2>{catalog?.heading ?? (familyBrands.length ? "Una familia, distintas especialidades." : "Encontrá la línea adecuada para tu operación.")}</h2>
-        {catalog ? <section className="family-document" id="documentacion" aria-label={`Documentación comercial de ${family.name}`}>
+        {catalog ? <section className={`family-document family-document-${family.slug}`} id="documentacion" aria-label={`Documentación comercial de ${family.name}`}>
           <div className="family-document-copy">
             <p className="catalog-copy">{catalog.summary}</p>
             {catalog.topics && <ul className="family-document-topics">{catalog.topics.map((topic) => <li key={topic}>{topic}</li>)}</ul>}

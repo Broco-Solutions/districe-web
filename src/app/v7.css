@@ -116,6 +116,7 @@
 .family-document-topics li:nth-child(even){padding-left:.75rem;border-left:1px solid var(--v7-line)}
 .family-document-source{margin:.2rem 0 0;color:#66736e;font-size:.7rem;line-height:1.5}
 .family-document-image{width:100%;height:100%;min-height:22rem;object-fit:cover;background:#fff}
+.family-document-anaerobicos-automotor .family-document-image{object-fit:contain;background:#d7e1e4}
 .family-products{padding-top:1rem;padding-bottom:7rem;scroll-margin-top:6rem}
 .family-products-heading{display:grid;grid-template-columns:1.5fr .5fr;gap:4rem;align-items:end;padding:3.5rem 0 2.5rem;border-top:1px solid var(--v7-line)}
 .family-products-heading h2{max-width:17ch;margin-bottom:1.2rem;color:var(--v7-blue);font-size:clamp(2.8rem,4.6vw,5rem);line-height:.96}

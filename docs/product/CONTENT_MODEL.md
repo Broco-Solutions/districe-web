@@ -23,6 +23,7 @@ La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `esteti
 - Los assets públicos viven en `public/images/` y `public/catalogos/`. Los PDF de Bioepecuén, Jarama, K78, LOCX y Revigal se registran en `Brand.catalog`, que alimenta el CTA compartido de apertura y descarga en cada página de marca.
 - Los documentos que pertenecen a una familia se registran en `ProductFamily.catalog`. El catálogo de Anken se presenta como fuente técnica de Higiene y seguridad, sin sumar a Anken al directorio de seis marcas.
 - Los productos seleccionados para una familia se registran en `featuredProducts` y se consultan con `productsForFamily()`. Los cinco productos RAN verificados y el kit 5 en 1 solicitado se presentan en Estética vehicular; el kit queda sin fabricante hasta contar con evidencia.
+- El catálogo Loctite se registra en `ProductFamily.catalog` para Anaeróbicos automotor. Loctite y LOCX conservan identidades y destinos independientes.
 - Toda ampliación exige fuente y confirmación comercial en el mismo cambio.
 
 ## Reglas

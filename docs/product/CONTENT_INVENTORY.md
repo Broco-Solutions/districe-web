@@ -10,7 +10,7 @@ Fecha de relevamiento: 30-09-2026. Este inventario describe fuentes, no autoriza
 | Aditivos, lubricantes y fluidos | Aditivos: Veslee y LOCX, según confirmación del cliente y fuente oficial de LOCX. |
 | Higiene y seguridad | Documentación comercial: absorbentes industriales y control de derrames. |
 | Repuestos y accesorios | Sin desglose visible en la navegación relevada. |
-| Anaeróbicos automotor | Sin desglose visible en la navegación relevada. |
+| Anaeróbicos automotor | Documentación Loctite: fijación de roscas y piezas cilíndricas, sellado de roscas y formación de juntas mecanizadas. |
 | Cintas y films | Sin desglose visible en la navegación relevada. |
 
 ## Marcas y líneas verificadas en el sitio institucional
@@ -52,6 +52,7 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 - El PDF local de Revigal contiene lavado, renovadores, accesorios de limpieza, lustre y pulido, limpiadores específicos, aromatizantes, lubricantes y productos para emergencias. Entre sus ejemplos figuran Lavacoche Siliconado, Cera Autobrillo y Revy Fresh. La portada combina el logo oficial con una fotografía de un auto rojo; se conserva el tratamiento visual compartido de las páginas de marca y no se usa como miniatura independiente. El PDF documenta la oferta del fabricante, no la disponibilidad de Districe.
 - El PDF local de Anken documenta absorbente mineral granulado; paños, almohadillas y barreras absorbentes; kits para control de derrames; barreras tipo boom, sumideros, bandejas y bermas antiderrame, además de soluciones auxiliares. Se integra en Higiene y seguridad como documentación del fabricante y no incorpora a Anken al directorio de seis marcas.
 - La selección solicitada para Estética vehicular contiene exactamente Arranca motores AM-1, Desengrasante I-10, Niebla lubricante NL-2, Grasa de litio GL-17 y Ya Tapó! SG-9, verificados en Productos RAN, más el Kit de protección automotor 5 en 1. No se encontró una fuente inequívoca para atribuir el kit a RAN ni confirmar su composición exacta; se publica sin fabricante, especificaciones ni imagen de producto.
+- El catálogo Loctite recibido contiene 40 páginas y cubre fijadores de roscas, retenedores de piezas cilíndricas, selladores de roscas, formadores de juntas y otras tecnologías adhesivas industriales. En Anaeróbicos automotor se destacan únicamente las cuatro aplicaciones anaeróbicas respaldadas por las páginas 4 a 11. Loctite se identifica como fuente documental y no ingresa al directorio de marcas.
 - No se identificaron fotografías institucionales, logísticas ni de equipo aptas para confirmar uso en esta iteración.
 - Instagram oficial confirmado: `https://www.instagram.com/accesoriosyrepuestosautomotor?utm_source=qr&stkn=MW9kcWV6MjA2Y3Vraw==`.
 - Cobertura/logística confirmada: “Envíos a todo el país dentro de las 72 hs de recibido el pedido.”

@@ -17,8 +17,10 @@ if (publishedBrandSlugs.length !== 6 || publishedBrandSlugs.some((slug, index) =
 if (publishedFamilySlugs.length !== 6 || publishedFamilySlugs.some((slug, index) => slug !== expectedFamilySlugs[index])) errors.push(`Las familias públicas deben ser exactamente: ${expectedFamilySlugs.join(", ")}.`);
 if (brandBlock.includes('slug: "anken"') || brandBlock.includes('name: "anken"')) errors.push("ANKEN no debe publicarse como marca del directorio.");
 if (brandBlock.includes('slug: "ran"') || brandBlock.includes('name: "ran"')) errors.push("RAN no debe publicarse como marca del directorio.");
+if (brandBlock.includes('slug: "loctite"') || brandBlock.includes('name: "loctite"')) errors.push("Loctite no debe publicarse como marca del directorio.");
 if (existsSync(new URL("../src/app/marcas/anken", import.meta.url))) errors.push("No debe existir la ruta /marcas/anken.");
 if (existsSync(new URL("../src/app/marcas/ran", import.meta.url))) errors.push("No debe existir la ruta /marcas/ran.");
+if (existsSync(new URL("../src/app/marcas/loctite", import.meta.url))) errors.push("No debe existir la ruta /marcas/loctite.");
 
 if (!catalog.includes("familyslug") || !catalog.includes("brandslug") || !catalog.includes("id: `${familyslug}/${brand.slug}/${slug}`")) errors.push("El modelo de líneas no conserva identidad contextual.");
 if (!catalog.includes("detail: `${brands.find")) errors.push("La búsqueda no incluye contexto de marca para líneas.");
@@ -29,6 +31,8 @@ if (!catalog.includes('slug: "revigal"') || !catalog.includes("catalogos/catalog
 if (!catalog.includes('slug: "locx"') || !catalog.includes('name: "locx"')) errors.push("LOCX no está integrada como marca confirmada.");
 if (!catalog.includes("catalogos/catalogo-locx.pdf")) errors.push("LOCX no está integrada con su catálogo oficial.");
 if (!catalog.includes("catalogos/catalogo-anken-higiene-seguridad.pdf") || !catalog.includes('source: "anken"')) errors.push("El catálogo ANKEN no está integrado como documento de Higiene y seguridad.");
+if (!catalog.includes("catalogos/catalogo-loctite-anaerobicos.pdf") || !catalog.includes('source: "loctite"')) errors.push("El catálogo Loctite no está integrado como documento de Anaeróbicos automotor.");
+if (!catalog.includes('searchterms: ["fijadores de roscas", "selladores anaeróbicos"]')) errors.push("La búsqueda de Loctite no incluye los términos técnicos requeridos.");
 if (featuredProductIds.length !== 6 || featuredProductIds.some((id, index) => id !== expectedFeaturedProductIds[index])) errors.push(`Los productos destacados deben ser exactamente: ${expectedFeaturedProductIds.join(", ")}.`);
 if ([...featuredBlock.matchAll(/familyslug: "([^"]+)"/g)].some((match) => match[1] !== "estetica-vehicular")) errors.push("Todos los productos destacados solicitados deben pertenecer a Estética vehicular.");
 const kitBlock = featuredBlock.match(/id: "kit-proteccion-automotor-5-en-1"[\s\S]*?\n  },/)?.[0] ?? "";
@@ -37,6 +41,8 @@ if (!catalog.includes('type: "producto" as const') || !catalog.includes('target:
 for (const asset of ["arranca-motores.webp", "desengrasante-aerosol.webp", "niebla-lubricante.webp", "grasa-litio-aerosol.webp", "ya-tapo.webp", "ran-logo.webp"]) {
   if (!existsSync(new URL(`../public/images/products/ran/${asset}`, import.meta.url))) errors.push(`Falta el asset RAN: ${asset}.`);
 }
+if (!existsSync(new URL("../public/catalogos/catalogo-loctite-anaerobicos.pdf", import.meta.url))) errors.push("Falta el PDF público de Loctite.");
+if (!existsSync(new URL("../public/images/catalogos/loctite-catalogo-portada.webp", import.meta.url))) errors.push("Falta la portada local del catálogo Loctite.");
 if (catalog.includes('slug: "lock"') || catalog.includes('name: "lock"')) errors.push("La identidad provisoria Lock sigue publicada; debe ser LOCX.");
 
 if (errors.length) { console.error(errors.join("\n")); process.exit(1); }
