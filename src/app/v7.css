@@ -107,6 +107,15 @@
 .family-detail .family-brand-list article a{display:grid;grid-template-columns:8rem 1fr 1.5rem;align-items:center;gap:1.5rem;padding:1rem 0;border-top:1px solid var(--v7-line)}
 .family-detail .family-brand-logo{width:8rem;height:3.5rem}
 .family-detail .family-brand-copy small{white-space:normal;font-size:.82rem;line-height:1.6}
+.family-document{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(13rem,.85fr);gap:1.5rem;align-items:stretch;margin:1.8rem 0 2rem;padding:1.25rem;background:#edf0e9;scroll-margin-top:7rem}
+.family-document-copy{display:flex;flex-direction:column;align-items:flex-start;padding:.45rem}
+.family-document-copy>.catalog-copy{margin-top:0}
+.family-document-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;margin:1rem 0!important;padding:0;list-style:none;border-top:1px solid var(--v7-line)}
+.family-document-topics li{padding:.7rem .25rem;border-bottom:1px solid var(--v7-line);font-size:.76rem;font-weight:700;color:var(--v7-blue)}
+.family-document-topics li:nth-child(odd){padding-right:.75rem}
+.family-document-topics li:nth-child(even){padding-left:.75rem;border-left:1px solid var(--v7-line)}
+.family-document-source{margin:.2rem 0 0;color:#66736e;font-size:.7rem;line-height:1.5}
+.family-document-image{width:100%;height:100%;min-height:22rem;object-fit:cover;background:#fff}
 .brand-breadcrumb{padding-top:2.5rem;display:flex;gap:1rem;font-size:.7rem;color:#536271}
 .v7-brand-page{margin:2.5rem auto 5rem;align-items:start}
 .v7-brand-page .brand-image{position:relative;background:#edf0e9!important;border:0;min-height:27rem!important}
@@ -153,6 +162,7 @@
  .products-opening{grid-template-columns:1fr;gap:2rem;padding-top:3rem}.products-opening-image img{height:19rem}.v7-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v7-product-grid .hub-card:first-child,.v7-product-grid .hub-card:last-child{grid-column:auto}
  .family-opening,.family-opening-copy{min-height:33rem}.family-opening-split .family-opening-photo{left:0}.family-opening:after,.family-opening-split:after{background:linear-gradient(90deg,rgba(9,28,49,.92),rgba(9,28,49,.38))}.family-opening-copy{padding:3rem 1.5rem}.family-opening-copy h1{font-size:3.5rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:3.3rem}
  .family-detail{grid-template-columns:1fr;gap:2rem;padding-top:2.5rem}.family-detail>aside{border-bottom:1px solid var(--v7-line);padding-bottom:1.5rem}.family-detail>aside>p:not(.eyebrow){display:none}
+ .family-document{grid-template-columns:1fr}.family-document-image{height:22rem;min-height:0;order:-1}
  .v7-brand-page .brand-image{min-height:19rem!important}.v7-facts{gap:1rem}.v7-facts>div+div{padding-left:1rem}.hero-v3-inner{padding-top:2.5rem;padding-bottom:3rem}.hero-v3-copy{order:0}.hero-v3-showcase{order:1}.hero-v3-copy h1{max-width:16ch;font-size:clamp(3.2rem,7vw,4.3rem)}
 }
 @media(max-width:520px){
@@ -163,6 +173,7 @@
  .contact-opening{padding-top:2rem}.contact-heading h1{font-size:2.65rem}.contact-heading>p:not(.eyebrow){font-size:.95rem}.contact-phones{grid-template-columns:1fr;gap:0}.contact-channels a:not(.social-link){font-size:1.1rem}.contact-channels a.contact-main-email{font-size:1.2rem}
  .products-opening h1{font-size:3rem}.v7-product-grid{grid-template-columns:1fr}.v7-product-grid .hub-card{min-height:22rem}
  .family-opening,.family-opening-copy{min-height:31rem}.family-opening-copy h1{font-size:3rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:2.9rem}.family-detail .family-brand-list article a{grid-template-columns:6rem 1fr 1rem;gap:1rem}.family-detail .family-brand-logo{width:6rem}.family-detail .family-brand-copy small{font-size:.74rem}
+ .family-document{padding:.85rem}.family-document-image{height:18rem}.family-document-topics{grid-template-columns:1fr}.family-document-topics li:nth-child(even){padding-left:.25rem;border-left:0}
  .v7-facts{grid-template-columns:1fr 1fr;padding:2rem 0}.v7-facts>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--v7-line);padding:1.5rem 0 0}.v7-facts strong{font-size:3rem}.v7-facts>div:last-child strong{font-size:2.6rem}
  .hero-v3-copy h1{font-size:3.1rem;max-width:12ch}.hero-v3-media{height:26rem}.hero-v3-story{min-height:13rem}.hero-v3-story h2{font-size:2rem}.hero-v3-showcase{margin-top:1rem}.track-controls{flex-wrap:wrap}
 }

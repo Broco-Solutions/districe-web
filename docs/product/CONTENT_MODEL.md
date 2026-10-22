@@ -8,7 +8,7 @@ El catálogo es estático, tipado y versionado en Git. No requiere base de datos
 
 | Entidad | Identidad | Relación |
 | --- | --- | --- |
-| `ProductFamily` | `slug` | Contiene líneas y marcas a través de sus relaciones. |
+| `ProductFamily` | `slug` | Contiene líneas y marcas a través de sus relaciones; puede tener documentación comercial propia. |
 | `Brand` | `slug` | Puede pertenecer a una o más familias; puede tener líneas y familias de catálogo respaldadas por fuente. |
 | `CatalogLine` | `familySlug/brandSlug/lineSlug` | Pertenece a una marca dentro de una familia. |
 | `CatalogItem` | `brandSlug/id` | Ítem de catálogo sin SKU ni precio cuando la fuente sólo respalda una familia de producto o aroma. |
@@ -20,6 +20,7 @@ La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `esteti
 - `src/data/catalog.ts` contiene familias, marcas, líneas y helpers de URL.
 - El índice de búsqueda se deriva de esas entidades y presenta `marca · familia` para desambiguar líneas homónimas.
 - Los assets públicos viven en `public/images/` y `public/catalogos/`. Los PDF de Bioepecuén, Jarama, K78, LOCX y Revigal se registran en `Brand.catalog`, que alimenta el CTA compartido de apertura y descarga en cada página de marca.
+- Los documentos que pertenecen a una familia se registran en `ProductFamily.catalog`. El catálogo de Anken se presenta como fuente técnica de Higiene y seguridad, sin sumar a Anken al directorio de seis marcas.
 - Toda ampliación exige fuente y confirmación comercial en el mismo cambio.
 
 ## Reglas

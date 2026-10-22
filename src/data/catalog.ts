@@ -1,6 +1,6 @@
-export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink" };
 export type CatalogItem = { id: string; name: string; kind: "familia de producto" | "aroma" };
-export type CatalogDocument = { url: string; title: string; heading: string; summary?: string };
+export type CatalogDocument = { url: string; title: string; heading: string; summary?: string; source?: string; topics?: string[]; image?: { src: string; width: number; height: number; alt: string } };
+export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink"; catalog?: CatalogDocument };
 export type Brand = { slug: string; name: string; description: string; familySlugs: string[]; lines: string[]; catalog?: CatalogDocument; catalogItems?: CatalogItem[] };
 export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea" | "Catálogo"; detail: string; target: string };
 
@@ -10,7 +10,7 @@ export type CatalogLine = { id: string; slug: string; name: string; familySlug: 
 export const productFamilies: ProductFamily[] = [
   { slug: "estetica-vehicular", name: "Estética vehicular", index: "01", description: "Cuidado, terminación y presentación del vehículo.", lines: ["Perfumes", "Limpiadores", "Revividores", "Ceras", "Accesorios para lavado", "Lubricantes", "Aromatizantes", "Renovadores", "Lustre y pulido"], tone: "blue" },
   { slug: "aditivos-lubricantes-fluidos", name: "Aditivos, lubricantes y fluidos", index: "02", description: "Una familia para acompañar el mantenimiento y la operación del vehículo.", lines: ["Aditivos"], tone: "lime" },
-  { slug: "higiene-seguridad", name: "Higiene y seguridad", index: "03", description: "Soluciones para el cuidado del entorno de trabajo y la operación cotidiana.", lines: [], tone: "orange" },
+  { slug: "higiene-seguridad", name: "Higiene y seguridad", index: "03", description: "Soluciones para el cuidado del entorno de trabajo y la operación cotidiana.", lines: [], tone: "orange", catalog: { url: "/catalogos/catalogo-anken-higiene-seguridad.pdf", title: "catálogo de absorbentes industriales", heading: "Absorbentes industriales y control de derrames.", summary: "Soluciones para contener, absorber y limpiar derrames de aceites, combustibles, químicos e hidrocarburos en talleres, industrias y espacios de mantenimiento.", source: "Anken", topics: ["Absorbentes minerales", "Paños y almohadillas", "Barreras y contención", "Kits para derrames"], image: { src: "/images/catalogos/anken-control-derrames.webp", width: 1400, height: 1460, alt: "Kit Anken para control de derrames con absorbente mineral, barreras, paños y elementos de seguridad" } } },
   { slug: "repuestos-accesorios", name: "Repuestos y accesorios", index: "04", description: "Una selección para resolver necesidades del canal automotor profesional.", lines: [], tone: "silver" },
   { slug: "anaerobicos-automotor", name: "Anaeróbicos automotor", index: "05", description: "Una familia específica dentro de la propuesta comercial de Districe.", lines: [], tone: "red" },
   { slug: "cintas-films", name: "Cintas y films", index: "06", description: "Alternativas para la preparación, protección y terminación de cada trabajo.", lines: [], tone: "ink" },
@@ -45,6 +45,7 @@ export const searchEntries: SearchEntry[] = [
   ...brands.map((brand) => ({ id: `brand-${brand.slug}`, label: brand.name, type: "Marca" as const, detail: brand.description, target: `/marcas/${brand.slug}` })),
   ...catalogLines.map((line) => ({ id: `line-${line.id}`, label: line.name, type: "Línea" as const, detail: `${brands.find((brand) => brand.slug === line.brandSlug)?.name} · ${productFamilies.find((family) => family.slug === line.familySlug)?.name ?? "Catálogo"}`, target: `/marcas/${line.brandSlug}` })),
   ...brands.flatMap((brand) => brand.catalog ? [{ id: `catalog-${brand.slug}`, label: brand.catalog.title, type: "Catálogo" as const, detail: `${brand.name} · PDF oficial`, target: `/marcas/${brand.slug}` }] : []),
+  ...productFamilies.flatMap((family) => family.catalog ? [{ id: `catalog-family-${family.slug}`, label: family.catalog.title, type: "Catálogo" as const, detail: `Catálogo de ${family.name.toLocaleLowerCase("es")} · ${family.catalog.source} · Control de derrames`, target: `/productos/${family.slug}#documentacion` }] : []),
   ...catalogItems.map((item) => ({ id: `catalog-${item.id}`, label: item.name, type: "Catálogo" as const, detail: `${brands.find((brand) => brand.slug === item.brandSlug)?.name} · ${item.kind}`, target: `/marcas/${item.brandSlug}` })),
 ];
 

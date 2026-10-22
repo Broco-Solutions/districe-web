@@ -8,7 +8,7 @@
   - Líneas `/productos/[familia]/[linea]` cuando exista contenido suficiente
 - Marcas `/marcas`
   - Marca `/marcas/[marca]`
-- Catálogos: CTA compartido de apertura y descarga dentro de las páginas de Bioepecuén, Jarama, K78, LOCX y Revigal; este último enlaza `/catalogos/catalogo-revigal.pdf`.
+- Catálogos: CTA compartido de apertura y descarga dentro de las páginas de Bioepecuén, Jarama, K78, LOCX y Revigal. Higiene y seguridad incorpora además documentación comercial de Anken en su propia página de familia, sin publicarla como marca.
 - Nosotros `/nosotros`
 - Contacto / Solicitar cotización `/contacto`
 

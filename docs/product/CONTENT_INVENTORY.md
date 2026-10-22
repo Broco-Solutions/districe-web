@@ -8,7 +8,7 @@ Fecha de relevamiento: 30-09-2026. Este inventario describe fuentes, no autoriza
 | --- | --- |
 | Estética vehicular | K78: perfumes, limpiadores, revividores, ceras, accesorios para lavado. Jarama: perfumes, limpiadores, revividores, ceras, lubricantes. Revigal: productos para lavado, aromatizantes, renovadores, lustre y pulido. |
 | Aditivos, lubricantes y fluidos | Aditivos: Veslee y LOCX, según confirmación del cliente y fuente oficial de LOCX. |
-| Higiene y seguridad | Sin desglose visible en la navegación relevada. |
+| Higiene y seguridad | Documentación comercial: absorbentes industriales y control de derrames. |
 | Repuestos y accesorios | Sin desglose visible en la navegación relevada. |
 | Anaeróbicos automotor | Sin desglose visible en la navegación relevada. |
 | Cintas y films | Sin desglose visible en la navegación relevada. |
@@ -50,6 +50,7 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 - El cotizador histórico local conserva logo Districe y algunos logos de marcas; se preservó sin integrarlo a la nueva UI.
 - Bioepecuén está confirmado dentro de Estética vehicular; su catálogo local contiene difusores de auto, display expositor de 20 unidades y siete aromas, sin SKU ni precios.
 - El PDF local de Revigal contiene lavado, renovadores, accesorios de limpieza, lustre y pulido, limpiadores específicos, aromatizantes, lubricantes y productos para emergencias. Entre sus ejemplos figuran Lavacoche Siliconado, Cera Autobrillo y Revy Fresh. La portada combina el logo oficial con una fotografía de un auto rojo; se conserva el tratamiento visual compartido de las páginas de marca y no se usa como miniatura independiente. El PDF documenta la oferta del fabricante, no la disponibilidad de Districe.
+- El PDF local de Anken documenta absorbente mineral granulado; paños, almohadillas y barreras absorbentes; kits para control de derrames; barreras tipo boom, sumideros, bandejas y bermas antiderrame, además de soluciones auxiliares. Se integra en Higiene y seguridad como documentación del fabricante y no incorpora a Anken al directorio de seis marcas.
 - No se identificaron fotografías institucionales, logísticas ni de equipo aptas para confirmar uso en esta iteración.
 - Instagram oficial confirmado: `https://www.instagram.com/accesoriosyrepuestosautomotor?utm_source=qr&stkn=MW9kcWV6MjA2Y3Vraw==`.
 - Cobertura/logística confirmada: “Envíos a todo el país dentro de las 72 hs de recibido el pedido.”
