@@ -33,3 +33,5 @@ Downloaded on 2026-10-09. External material is sourced only from the official si
 | `public/images/families/editorial/cintas-films.webp` | GENERATED | family editorial image | OpenAI image generation, 2026-10-09 | Generated | Home families, products hub and Cintas family page | Resized/cropped to 1536×1024; WebP quality 82 |
 
 The generated images are editorial representations only. They are documented here and are not identified in site copy as Districe facilities.
+
+Los PDF publicados en `public/catalogos/` son versiones comerciales de los originales suministrados. Se eliminaron teléfonos, correos, sitios web, redes sociales, direcciones comerciales y códigos QR del fabricante mediante redacción permanente; se conservaron la autoría, las marcas, la información técnica y las atribuciones legales. Los originales intactos se resguardan fuera del repositorio público.
