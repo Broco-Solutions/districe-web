@@ -19,7 +19,7 @@ La línea no es global. Por ejemplo, `estetica-vehicular/k78/perfumes` y `esteti
 
 - `src/data/catalog.ts` contiene familias, marcas, líneas y helpers de URL.
 - El índice de búsqueda se deriva de esas entidades y presenta `marca · familia` para desambiguar líneas homónimas.
-- Los assets públicos viven en `public/images/` y `public/catalogos/`; el PDF de Bioepecuén se sirve como `/catalogos/bioepecuen-difusores-auto.pdf`.
+- Los assets públicos viven en `public/images/` y `public/catalogos/`. Los PDF de Bioepecuén, Jarama, K78, LOCX y Revigal se registran en `Brand.catalog`, que alimenta el CTA compartido de apertura y descarga en cada página de marca.
 - Toda ampliación exige fuente y confirmación comercial en el mismo cambio.
 
 ## Reglas

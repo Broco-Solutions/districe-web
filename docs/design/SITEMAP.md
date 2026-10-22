@@ -8,7 +8,7 @@
   - Líneas `/productos/[familia]/[linea]` cuando exista contenido suficiente
 - Marcas `/marcas`
   - Marca `/marcas/[marca]`
-- Catálogos: CTA dentro de las páginas de marca cuando existe un PDF validado; Bioepecuén enlaza `/catalogos/bioepecuen-difusores-auto.pdf`.
+- Catálogos: CTA compartido de apertura y descarga dentro de las páginas de Bioepecuén, Jarama, K78, LOCX y Revigal; este último enlaza `/catalogos/catalogo-revigal.pdf`.
 - Nosotros `/nosotros`
 - Contacto / Solicitar cotización `/contacto`
 
