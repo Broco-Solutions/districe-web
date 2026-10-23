@@ -37,6 +37,8 @@ if (featuredProductIds.length !== 6 || featuredProductIds.some((id, index) => id
 if ([...featuredBlock.matchAll(/familyslug: "([^"]+)"/g)].some((match) => match[1] !== "estetica-vehicular")) errors.push("Todos los productos destacados solicitados deben pertenecer a Estética vehicular.");
 const kitBlock = featuredBlock.match(/id: "kit-proteccion-automotor-5-en-1"[\s\S]*?\n  },/)?.[0] ?? "";
 if ((featuredBlock.match(/manufacturer: "ran"/g) ?? []).length !== 5 || kitBlock.includes("manufacturer:")) errors.push("RAN debe atribuirse sólo a los cinco productos verificados; el kit 5 en 1 debe quedar sin fabricante.");
+if (!catalog.includes("kit-proteccion-automotor-5-en-1.webp") || !existsSync(new URL("../public/images/products/proteccion/kit-proteccion-automotor-5-en-1.webp", import.meta.url))) errors.push("Falta la fotografía verificada del kit de protección automotor 5 en 1.");
+if (!catalog.includes("protecteditems") || !catalog.includes("guvalormi") || !catalog.includes("districe.com.ar/guvalormi")) errors.push("El kit 5 en 1 debe conservar sus elementos protegidos y fuentes documentales verificables.");
 if (!catalog.includes('type: "producto" as const') || !catalog.includes('target: `/productos/${product.familyslug}#${product.id}`')) errors.push("La búsqueda no integra los productos destacados con su destino de familia.");
 for (const asset of ["arranca-motores.webp", "desengrasante-aerosol.webp", "niebla-lubricante.webp", "grasa-litio-aerosol.webp", "ya-tapo.webp", "ran-logo.webp"]) {
   if (!existsSync(new URL(`../public/images/products/ran/${asset}`, import.meta.url))) errors.push(`Falta el asset RAN: ${asset}.`);

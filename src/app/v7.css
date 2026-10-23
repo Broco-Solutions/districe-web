@@ -145,6 +145,18 @@
 .featured-product-link span{transition:transform .2s ease}
 .featured-product-link:hover span{transform:translate(3px,-3px)}
 .featured-product-link:focus-visible{outline:3px solid #2263c3;outline-offset:5px}
+.service-protection{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);margin-top:3rem;border:1px solid var(--v7-line);background:#eef1ec;scroll-margin-top:7rem}
+.service-protection-media{position:relative;min-height:28rem;overflow:hidden;background:#d9dfdc}
+.service-protection-media img{display:block;width:100%;height:100%;object-fit:cover}
+.service-protection-copy{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(2rem,4vw,4rem)}
+.service-protection-copy .eyebrow{margin:0 0 1rem}
+.service-protection-copy h3{max-width:12ch;margin:0 0 1.3rem;color:var(--v7-blue);font-size:clamp(2.4rem,4vw,4.4rem);line-height:.98;letter-spacing:-.055em}
+.service-protection-copy>p:not(.eyebrow){max-width:38rem;margin:0;color:#536271;line-height:1.7}
+.service-protection-items{width:100%;margin:2rem 0 2.4rem;border-top:1px solid var(--v7-line)}
+.service-protection-items strong{display:block;margin-top:.8rem;color:#526b66;font-size:.62rem;letter-spacing:.11em;text-transform:uppercase}
+.service-protection-items ul{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 0!important;padding:0;list-style:none}
+.service-protection-items li{padding:.42rem .65rem;border:1px solid #bac6be;color:#39534a;font-size:.68rem;font-weight:700}
+.service-protection-copy .button{margin-top:auto}
 .brand-breadcrumb{padding-top:2.5rem;display:flex;gap:1rem;font-size:.7rem;color:#536271}
 .v7-brand-page{margin:2.5rem auto 5rem;align-items:start}
 .v7-brand-page .brand-image{position:relative;background:#edf0e9!important;border:0;min-height:27rem!important}
@@ -193,6 +205,7 @@
  .family-detail{grid-template-columns:1fr;gap:2rem;padding-top:2.5rem}.family-detail>aside{border-bottom:1px solid var(--v7-line);padding-bottom:1.5rem}.family-detail>aside>p:not(.eyebrow){display:none}
  .family-document{grid-template-columns:1fr}.family-document-image{height:22rem;min-height:0;order:-1}
  .family-products{padding-bottom:5rem}.family-products-heading{grid-template-columns:1fr .35fr;gap:2rem;padding-top:2.5rem}.family-products-heading h2{font-size:clamp(2.6rem,7vw,4rem)}.featured-product-media{height:22rem}
+ .service-protection{grid-template-columns:1fr;margin-top:2rem}.service-protection-media{min-height:24rem}.service-protection-copy{padding:2rem}
  .v7-brand-page .brand-image{min-height:19rem!important}.v7-facts{gap:1rem}.v7-facts>div+div{padding-left:1rem}.hero-v3-inner{padding-top:2.5rem;padding-bottom:3rem}.hero-v3-copy{order:0}.hero-v3-showcase{order:1}.hero-v3-copy h1{max-width:16ch;font-size:clamp(3.2rem,7vw,4.3rem)}
 }
 @media(max-width:520px){
@@ -205,6 +218,7 @@
  .family-opening,.family-opening-copy{min-height:31rem}.family-opening-copy h1{font-size:3rem}.family-opening-aditivos-lubricantes-fluidos .family-opening-copy h1{font-size:2.9rem}.family-detail .family-brand-list article a{grid-template-columns:6rem 1fr 1rem;gap:1rem}.family-detail .family-brand-logo{width:6rem}.family-detail .family-brand-copy small{font-size:.74rem}
  .family-document{padding:.85rem}.family-document-image{height:18rem}.family-document-topics{grid-template-columns:1fr}.family-document-topics li:nth-child(even){padding-left:.25rem;border-left:0}
  .family-products-heading{grid-template-columns:1fr}.family-products-heading figure{justify-self:start;width:9rem;text-align:left}.featured-product-grid{grid-template-columns:1fr}.featured-product-media{height:21rem}.featured-product-copy h3,.featured-product-copy>p:not(:first-child){min-height:0}
+ .service-protection-media{min-height:19rem}.service-protection-copy{padding:1.5rem}.service-protection-copy h3{font-size:2.6rem}.service-protection-items{margin:1.5rem 0 2rem}
  .v7-facts{grid-template-columns:1fr 1fr;padding:2rem 0}.v7-facts>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--v7-line);padding:1.5rem 0 0}.v7-facts strong{font-size:3rem}.v7-facts>div:last-child strong{font-size:2.6rem}
  .hero-v3-copy h1{font-size:3.1rem;max-width:12ch}.hero-v3-media{height:26rem}.hero-v3-story{min-height:13rem}.hero-v3-story h2{font-size:2rem}.hero-v3-showcase{margin-top:1rem}.track-controls{flex-wrap:wrap}
 }

@@ -23,6 +23,8 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
 
   const familyBrands = brandsForFamily(family.slug);
   const familyProducts = productsForFamily(family.slug);
+  const ranProducts = familyProducts.filter((product) => product.manufacturer === "RAN");
+  const serviceProtectionProducts = familyProducts.filter((product) => product.id === "kit-proteccion-automotor-5-en-1");
   const visual = familyAssets[family.slug];
   const catalog = family.catalog;
 
@@ -71,23 +73,23 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
     {familyProducts.length > 0 && <section className="family-products section-shell" id="productos-destacados" aria-labelledby="featured-products-title">
       <header className="family-products-heading">
         <div>
-          <p className="eyebrow"><span /> Selección comercial</p>
-          <h2 id="featured-products-title">Productos destacados<br /><i>para el cuidado vehicular.</i></h2>
-          <p>Una selección puntual solicitada por Districe. Consultanos por disponibilidad y alcance comercial.</p>
+          <p className="eyebrow"><span /> Productos RAN</p>
+          <h2 id="featured-products-title">Soluciones RAN<br /><i>para el cuidado vehicular.</i></h2>
+          <p>Una selección de productos RAN para acompañar las tareas de cuidado y mantenimiento vehicular.</p>
         </div>
         <figure>
           <Image src="/images/products/ran/ran-logo.webp" width={480} height={238} alt="RAN" />
-          <figcaption>Fabricante verificado de cinco productos de esta selección.</figcaption>
+          <figcaption>Fabricante verificado de los cinco productos de esta selección.</figcaption>
         </figure>
       </header>
       <div className="featured-product-grid">
-        {familyProducts.map((product, index) => <article className="featured-product-card" id={product.id} key={product.id}>
-          <div className={`featured-product-media${product.image ? "" : " featured-product-media-pending"}`}>
+        {ranProducts.map((product, index) => <article className="featured-product-card" id={product.id} key={product.id}>
+          <div className="featured-product-media">
             <span>{String(index + 1).padStart(2, "0")}</span>
-            {product.image ? <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 520px) 54vw, (max-width: 1000px) 26vw, 220px" alt={product.image.alt} /> : <div aria-label="Imagen del producto pendiente de verificación"><b>5<small>/1</small></b><span>Imagen en verificación</span></div>}
+            {product.image && <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 520px) 54vw, (max-width: 1000px) 26vw, 220px" alt={product.image.alt} />}
           </div>
           <div className="featured-product-copy">
-            <p>{product.manufacturer ? `Fabricado por ${product.manufacturer}` : "Fabricante pendiente de confirmación"}</p>
+            <p>Fabricado por {product.manufacturer}</p>
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             {product.technicalData && <ul>{product.technicalData.map((datum) => <li key={datum}>{datum}</li>)}</ul>}
@@ -95,6 +97,21 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
           </div>
         </article>)}
       </div>
+      {serviceProtectionProducts.map((product) => <section className="service-protection" id={product.id} key={product.id} aria-labelledby={`${product.id}-title`}>
+        <div className="service-protection-media">
+          {product.image && <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 800px) calc(100vw - 3rem), 50vw" alt={product.image.alt} />}
+        </div>
+        <div className="service-protection-copy">
+          <p className="eyebrow"><span /> Protección interior durante el servicio</p>
+          <h3 id={`${product.id}-title`}>{product.name}</h3>
+          <p>{product.description}</p>
+          {product.protectedItems && <div className="service-protection-items" aria-label="Elementos protegidos">
+            <strong>Protege:</strong>
+            <ul>{product.protectedItems.map((item) => <li key={item}>{item}</li>)}</ul>
+          </div>}
+          <Link className="button" href="/contacto" aria-label={`Consultar disponibilidad de ${product.name}`}>Consultar disponibilidad ↗</Link>
+        </div>
+      </section>)}
     </section>}
   </PageShell>;
 }

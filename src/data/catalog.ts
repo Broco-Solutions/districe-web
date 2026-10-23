@@ -2,7 +2,7 @@ export type CatalogItem = { id: string; name: string; kind: "familia de producto
 export type CatalogDocument = { url: string; title: string; heading: string; summary?: string; source?: string; topics?: string[]; searchTerms?: string[]; image?: { src: string; width: number; height: number; alt: string } };
 export type ProductFamily = { slug: string; name: string; index: string; description: string; lines: string[]; tone: "blue" | "lime" | "orange" | "silver" | "red" | "ink"; catalog?: CatalogDocument };
 export type Brand = { slug: string; name: string; description: string; familySlugs: string[]; lines: string[]; catalog?: CatalogDocument; catalogItems?: CatalogItem[] };
-export type ProductSource = { label: string };
+export type ProductSource = { label: string; urls?: string[] };
 export type FeaturedProduct = {
   id: string;
   name: string;
@@ -12,6 +12,7 @@ export type FeaturedProduct = {
   image?: { src: string; width: number; height: number; alt: string };
   source: ProductSource;
   technicalData?: string[];
+  protectedItems?: string[];
 };
 export type SearchEntry = { id: string; label: string; type: "Familia" | "Marca" | "Línea" | "Catálogo" | "Producto"; detail: string; target: string };
 
@@ -86,8 +87,13 @@ export const featuredProducts: FeaturedProduct[] = [
     id: "kit-proteccion-automotor-5-en-1",
     name: "Kit de protección automotor 5 en 1",
     familySlug: "estetica-vehicular",
-    description: "Solución solicitada para proteger el vehículo durante tareas de servicio y mantenimiento.",
-    source: { label: "Selección comercial solicitada por Districe" },
+    description: "Kit descartable para proteger el interior del vehículo durante tareas de mantenimiento y reparación. Ayuda a evitar que la suciedad y la grasa entren en contacto con las superficies interiores.",
+    image: { src: "/images/products/proteccion/kit-proteccion-automotor-5-en-1.webp", width: 974, height: 730, alt: "Interior de vehículo protegido durante un servicio con funda de asiento, volante, palanca, freno de mano y alfombra descartables" },
+    source: {
+      label: "Fuentes documentales verificadas: Districe y Guvalormi",
+      urls: ["https://www.districe.com.ar/guvalormi/", "https://guvalormi.com/kit-de-servicio-automotriz-5-en-1", "https://guvalormi.com/img/post/1bd_5_en_1.jpg"],
+    },
+    protectedItems: ["Asiento", "Volante", "Palanca de cambios", "Freno de mano", "Alfombra / piso"],
   },
   {
     id: "ya-tapo",
