@@ -157,6 +157,72 @@
 .service-protection-items ul{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 0!important;padding:0;list-style:none}
 .service-protection-items li{padding:.42rem .65rem;border:1px solid #bac6be;color:#39534a;font-size:.68rem;font-weight:700}
 .service-protection-copy .button{margin-top:auto}
+.veslee-products{padding-top:1rem;padding-bottom:7rem;scroll-margin-top:6rem}
+.veslee-products-heading{display:grid;grid-template-columns:1.45fr .55fr;gap:4rem;align-items:end;padding:3.5rem 0 2.5rem;border-top:1px solid var(--v7-line)}
+.veslee-products-heading h2{max-width:17ch;margin:0 0 1.2rem;color:var(--v7-blue);font-size:clamp(2.8rem,4.6vw,5rem);line-height:.96;letter-spacing:-.055em}
+.veslee-products-heading h2 i{font-family:var(--font-serif);font-weight:400}
+.veslee-products-heading>div>p:last-child{max-width:43rem;margin:0;color:#536271;line-height:1.7}
+.veslee-products-heading figure{justify-self:end;display:flex;min-height:8rem;width:min(16rem,100%);flex-direction:column;justify-content:center;margin:0;padding:1.25rem 1.5rem;background:#e7ece5}
+.veslee-products-heading figure img{width:100%;height:auto;max-height:4rem;object-fit:contain;mix-blend-mode:multiply}
+.veslee-products-heading figcaption{margin-top:.7rem;color:#68746f;font-size:.65rem;line-height:1.45}
+.veslee-product-groups{display:grid;gap:3rem}
+.veslee-product-group>h3{margin:0 0 1rem;color:#49655c;font-size:.67rem;letter-spacing:.13em;text-transform:uppercase}
+.veslee-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid var(--v7-line);background:var(--v7-line)}
+.veslee-product-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.veslee-product-card{display:flex;min-width:0;flex-direction:column;background:#fbfcf8;scroll-margin-top:7rem;transition:transform .25s var(--v7-ease),box-shadow .25s var(--v7-ease)}
+.veslee-product-card:hover{position:relative;z-index:1;transform:translateY(-4px);box-shadow:0 .85rem 1.8rem rgba(21,39,49,.12)}
+.veslee-product-media{display:grid;height:23rem;place-items:center;overflow:hidden;padding:1.5rem;background:radial-gradient(circle at 50% 24%,#fff 0,#f5f7f2 48%,#e7ece5 100%)}
+.veslee-product-media img{width:auto;height:auto;max-width:88%;max-height:20rem;object-fit:contain;filter:drop-shadow(0 1rem .9rem rgba(23,38,45,.16));transition:transform .35s var(--v7-ease)}
+.veslee-product-card:hover .veslee-product-media img{transform:translateY(-4px) scale(1.015)}
+.veslee-product-copy{display:flex;flex:1;flex-direction:column;padding:1.45rem 1.5rem 1.35rem}
+.veslee-product-copy>p:first-child{margin:0 0 .7rem;color:#49655c;font-size:.61rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.veslee-product-copy h4{min-height:2.25em;margin:0 0 .8rem;color:var(--v7-blue);font-size:1.45rem;line-height:1.1;letter-spacing:-.04em}
+.veslee-product-copy>p:not(:first-child){min-height:4.7em;margin:0;color:#5b6864;font-size:.78rem;line-height:1.55}
+.veslee-product-copy ul{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 0!important;padding:0;list-style:none}
+.veslee-product-copy li{padding:.33rem .5rem;border:1px solid #cbd4ce;color:#435650;font-size:.61rem;font-weight:700}
+.veslee-product-link{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:1.35rem;color:var(--v7-blue);font-size:.73rem;font-weight:700}
+.veslee-product-link span{transition:transform .2s ease}
+.veslee-product-link:hover span{transform:translate(3px,-3px)}
+.veslee-product-link:focus-visible{outline:3px solid #2263c3;outline-offset:5px}
+.parts-products{padding-top:1rem;padding-bottom:7rem;scroll-margin-top:6rem}
+.manufacturer-section{padding:3.5rem 0 4rem;border-top:1px solid var(--v7-line);scroll-margin-top:7rem}
+.manufacturer-section+.manufacturer-section{padding-top:5rem}
+.manufacturer-section-heading{display:grid;grid-template-columns:1.35fr .65fr;gap:4rem;align-items:end;margin-bottom:2.4rem}
+.manufacturer-section-heading h2{max-width:16ch;margin:.7rem 0 1.15rem;color:var(--v7-blue);font-size:clamp(2.8rem,4.6vw,5rem);line-height:.96;letter-spacing:-.055em}
+.manufacturer-section-heading h2 i{font-family:var(--font-serif);font-weight:400}
+.manufacturer-section-heading>div>p:last-child{max-width:40rem;margin:0;color:#536271;line-height:1.7}
+.manufacturer-section-note{justify-self:end;max-width:25rem;margin:0;padding:1rem 0 0;border-top:2px solid var(--v7-blue);color:#536271;font-size:.78rem;line-height:1.65}
+.manufacturer-wordmark{width:max-content;margin:0;font-family:Arial,sans-serif;font-size:1.55rem!important;font-weight:800;letter-spacing:-.08em!important;line-height:1!important}
+.manufacturer-wordmark-philips{color:#005bab}
+.manufacturer-wordmark-hella{padding:.22rem .55rem .27rem;border-radius:999px;background:#ffd400;color:#0d3c7a;font-size:1.15rem!important;letter-spacing:-.05em!important}
+.philips-product-group+ .philips-product-group{margin-top:2.5rem}
+.philips-product-group>h3{margin:0 0 1rem;color:#49655c;font-size:.67rem;letter-spacing:.13em;text-transform:uppercase}
+.philips-headlight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;border:1px solid #b7c5d3;background:#b7c5d3}
+.philips-headlight-card{min-width:0;padding:1.25rem;background:#f9fbfc;scroll-margin-top:7rem;transition:transform .25s var(--v7-ease),box-shadow .25s var(--v7-ease)}
+.philips-headlight-card:hover{position:relative;z-index:1;transform:translateY(-4px);box-shadow:0 .85rem 1.8rem rgba(21,39,49,.12)}
+.philips-headlight-card>div{display:grid;height:15rem;place-items:center;background:radial-gradient(circle at 50% 36%,#fff 0,#eff4f8 72%,#e4edf3 100%)}
+.philips-headlight-card img{width:auto;height:auto;max-width:86%;max-height:13rem;object-fit:contain;filter:drop-shadow(0 .7rem .6rem rgba(23,38,45,.13))}
+.philips-headlight-card h4{margin:1rem 0 .7rem;color:var(--v7-blue);font-size:2rem;line-height:1;letter-spacing:-.06em}
+.philips-headlight-card ul,.philips-signal-card ul,.hella-product-copy ul{display:flex;flex-wrap:wrap;gap:.4rem;margin:0!important;padding:0;list-style:none}
+.philips-headlight-card li,.philips-signal-card li{padding:.3rem .45rem;border:1px solid #c4d1dd;color:#35526f;font-size:.6rem;font-weight:700}
+.philips-signal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border:1px solid #c8d3dd;background:#c8d3dd}
+.philips-signal-card{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:.9rem;align-items:center;min-width:0;padding:.9rem;background:#fbfcfa;scroll-margin-top:7rem;transition:background .2s ease}
+.philips-signal-card:hover{background:#f3f8fb}
+.philips-signal-card img{width:100%;height:5.7rem;object-fit:contain;filter:drop-shadow(0 .45rem .45rem rgba(23,38,45,.12))}
+.philips-signal-card h4{margin:0 0 .55rem;color:var(--v7-blue);font-size:1.35rem;line-height:1;letter-spacing:-.04em}
+.manufacturer-section-philips>.button{margin-top:1.6rem}
+.hella-product-list{display:grid;gap:1.5rem}
+.hella-product-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:28rem;background:#eef2f2;scroll-margin-top:7rem}
+.hella-product-media{display:grid;place-items:center;overflow:hidden;padding:2rem;background:#e2ecef}
+.hella-product-media img{width:100%;height:100%;max-height:30rem;object-fit:contain;transition:transform .4s var(--v7-ease)}
+.hella-product-card:hover .hella-product-media img{transform:scale(1.025)}
+.hella-product-copy{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(2rem,4vw,4rem)}
+.hella-product-copy>p:first-child{margin:0 0 .9rem;color:#49655c;font-size:.61rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.hella-product-copy h3{max-width:13ch;margin:0 0 1.1rem;color:var(--v7-blue);font-size:clamp(2.2rem,3.5vw,3.6rem);line-height:.98;letter-spacing:-.055em}
+.hella-product-copy>p:not(:first-child){max-width:32rem;margin:0;color:#536271;line-height:1.65}
+.hella-product-copy ul{margin:1.5rem 0 2rem!important}
+.hella-product-copy li{padding:.4rem .6rem;border:1px solid #b9c9c3;color:#39534a;font-size:.65rem;font-weight:700}
+.hella-product-copy .button{margin-top:auto}
 .brand-breadcrumb{padding-top:2.5rem;display:flex;gap:1rem;font-size:.7rem;color:#536271}
 .v7-brand-page{margin:2.5rem auto 5rem;align-items:start}
 .v7-brand-page .brand-image{position:relative;background:#edf0e9!important;border:0;min-height:27rem!important}
@@ -165,6 +231,9 @@
 .v7-brand-page .brand-image .brand-logo-asset-veslee{max-width:60%!important}
 .v7-brand-page h2{margin-top:1rem;color:var(--v7-blue);line-height:1.07;letter-spacing:-.045em;font-size:clamp(2rem,3.5vw,3.5rem)}
 .v7-brand-page ul{margin:1.5rem 0}
+.veslee-brand-callout{display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;margin:1.5rem 0;padding:1.15rem 1.25rem;border-left:3px solid #7a9c38;background:#edf2e9;color:#526b66;font-size:.78rem;line-height:1.5}
+.veslee-brand-callout b{color:var(--v7-blue);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+.veslee-brand-callout a{color:var(--v7-blue);font-weight:700}
 .v7-facts{display:grid;grid-template-columns:1fr 1fr 1.5fr;padding:2.5rem 0;gap:2rem;border-bottom:1px solid var(--v7-line)}
 .v7-facts>div+div{border-left:1px solid var(--v7-line);padding-left:2rem}
 .v7-facts strong{display:block;font-size:clamp(4rem,7vw,7rem);color:var(--v7-blue);letter-spacing:-.075em;line-height:.98}
@@ -192,7 +261,7 @@
 .brand-card:focus-visible,.journey-index a:focus-visible,.contact-channels a:focus-visible,.motion-toggle:focus-visible{outline:3px solid #2263c3;outline-offset:5px}
 [id]{scroll-margin-top:7rem}
 @media(min-width:801px){.hero-v3-inner{grid-template-columns:1.1fr 1fr}.hero-v3-media{height:31rem}.hero-v3-story h2{font-size:2.25rem}}
-@media(max-width:1100px){.brands-v7{gap:2rem;grid-template-columns:.8fr 1.4fr}.brand-card{padding:1.2rem}.company-opening{gap:2rem}.company-journey{gap:4rem}.contact-opening{gap:3rem}.family-detail{gap:3rem}.brand-card-meta{font-size:.55rem}.hero-v3-copy h1{font-size:clamp(3.1rem,5.4vw,5rem)}.featured-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:1100px){.brands-v7{gap:2rem;grid-template-columns:.8fr 1.4fr}.brand-card{padding:1.2rem}.company-opening{gap:2rem}.company-journey{gap:4rem}.contact-opening{gap:3rem}.family-detail{gap:3rem}.brand-card-meta{font-size:.55rem}.hero-v3-copy h1{font-size:clamp(3.1rem,5.4vw,5rem)}.featured-product-grid,.veslee-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.veslee-product-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.philips-headlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.philips-signal-card{grid-template-columns:5.5rem minmax(0,1fr)}}
 @media(max-width:800px){
  .editorial-intro{padding-top:3rem;padding-bottom:2rem}.editorial-intro>div{grid-template-columns:1fr;gap:1rem}.editorial-intro>div>p{max-width:36rem}
  .brand-collection{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-directory{padding-bottom:4rem}
@@ -206,6 +275,8 @@
  .family-document{grid-template-columns:1fr}.family-document-image{height:22rem;min-height:0;order:-1}
  .family-products{padding-bottom:5rem}.family-products-heading{grid-template-columns:1fr .35fr;gap:2rem;padding-top:2.5rem}.family-products-heading h2{font-size:clamp(2.6rem,7vw,4rem)}.featured-product-media{height:22rem}
  .service-protection{grid-template-columns:1fr;margin-top:2rem}.service-protection-media{min-height:24rem}.service-protection-copy{padding:2rem}
+ .veslee-products{padding-bottom:5rem}.veslee-products-heading{grid-template-columns:1fr .35fr;gap:2rem;padding-top:2.5rem}.veslee-products-heading h2{font-size:clamp(2.6rem,7vw,4rem)}.veslee-product-media{height:22rem}
+ .parts-products{padding-bottom:5rem}.manufacturer-section{padding-top:2.5rem;padding-bottom:3.5rem}.manufacturer-section+.manufacturer-section{padding-top:4rem}.manufacturer-section-heading{grid-template-columns:1fr .45fr;gap:2rem}.manufacturer-section-heading h2{font-size:clamp(2.6rem,7vw,4rem)}.philips-signal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hella-product-card{grid-template-columns:1fr}.hella-product-media{min-height:24rem}.hella-product-copy{padding:2rem}
  .v7-brand-page .brand-image{min-height:19rem!important}.v7-facts{gap:1rem}.v7-facts>div+div{padding-left:1rem}.hero-v3-inner{padding-top:2.5rem;padding-bottom:3rem}.hero-v3-copy{order:0}.hero-v3-showcase{order:1}.hero-v3-copy h1{max-width:16ch;font-size:clamp(3.2rem,7vw,4.3rem)}
 }
 @media(max-width:520px){
@@ -219,7 +290,9 @@
  .family-document{padding:.85rem}.family-document-image{height:18rem}.family-document-topics{grid-template-columns:1fr}.family-document-topics li:nth-child(even){padding-left:.25rem;border-left:0}
  .family-products-heading{grid-template-columns:1fr}.family-products-heading figure{justify-self:start;width:9rem;text-align:left}.featured-product-grid{grid-template-columns:1fr}.featured-product-media{height:21rem}.featured-product-copy h3,.featured-product-copy>p:not(:first-child){min-height:0}
  .service-protection-media{min-height:19rem}.service-protection-copy{padding:1.5rem}.service-protection-copy h3{font-size:2.6rem}.service-protection-items{margin:1.5rem 0 2rem}
+ .veslee-products-heading{grid-template-columns:1fr}.veslee-products-heading figure{justify-self:start;width:11rem}.veslee-product-groups{gap:2.25rem}.veslee-product-grid{grid-template-columns:1fr}.veslee-product-media{height:21rem}.veslee-product-copy h4,.veslee-product-copy>p:not(:first-child){min-height:0}
+ .manufacturer-section-heading{grid-template-columns:1fr}.manufacturer-section-note{justify-self:start;max-width:35rem}.philips-headlight-grid{grid-template-columns:1fr}.philips-headlight-card>div{height:17rem}.philips-signal-card{grid-template-columns:5.7rem minmax(0,1fr)}.hella-product-media{min-height:19rem}.hella-product-copy{padding:1.5rem}.hella-product-copy h3{font-size:2.6rem}
  .v7-facts{grid-template-columns:1fr 1fr;padding:2rem 0}.v7-facts>div:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--v7-line);padding:1.5rem 0 0}.v7-facts strong{font-size:3rem}.v7-facts>div:last-child strong{font-size:2.6rem}
  .hero-v3-copy h1{font-size:3.1rem;max-width:12ch}.hero-v3-media{height:26rem}.hero-v3-story{min-height:13rem}.hero-v3-story h2{font-size:2rem}.hero-v3-showcase{margin-top:1rem}.track-controls{flex-wrap:wrap}
 }
-@media(prefers-reduced-motion:reduce){.editorial-route h1,.hero-v3-copy h1{animation:none}.brand-card,.brand-logo-asset,.brand-card-arrow,.journey-index nav a,.journey-index nav i,.button svg,.text-link svg,.featured-product-link span{transition:none!important}.hero-v3-frame{transform:none!important}.brands-v7-intro,.journey-index{position:static}html{scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){.editorial-route h1,.hero-v3-copy h1{animation:none}.brand-card,.brand-logo-asset,.brand-card-arrow,.journey-index nav a,.journey-index nav i,.button svg,.text-link svg,.featured-product-link span,.veslee-product-card,.veslee-product-media img,.veslee-product-link span{transition:none!important}.hero-v3-frame{transform:none!important}.brands-v7-intro,.journey-index{position:static}html{scroll-behavior:auto!important}}

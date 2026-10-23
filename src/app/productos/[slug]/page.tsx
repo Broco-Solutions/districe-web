@@ -25,6 +25,13 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
   const familyProducts = productsForFamily(family.slug);
   const ranProducts = familyProducts.filter((product) => product.manufacturer === "RAN");
   const serviceProtectionProducts = familyProducts.filter((product) => product.id === "kit-proteccion-automotor-5-en-1");
+  const vesleeProducts = familyProducts.filter((product) => product.manufacturer === "Veslee");
+  const philipsProducts = familyProducts.filter((product) => product.manufacturer === "Philips");
+  const hellaProducts = familyProducts.filter((product) => product.manufacturer === "HELLA");
+  const vesleeGroups = ["Combustible e inyección", "Lubricación y protección", "Limpieza técnica", "Cuidado y visibilidad"] as const;
+  const philipsHeadlightProducts = philipsProducts.filter((product) => product.displayGroup === "Faros delanteros");
+  const philipsSignalProducts = philipsProducts.filter((product) => product.displayGroup === "Señalización e interior");
+  const firstProductSection = ranProducts.length || serviceProtectionProducts.length ? "#productos-destacados" : vesleeProducts.length ? "#productos-veslee" : philipsProducts.length || hellaProducts.length ? "#productos-repuestos" : "#lineas";
   const visual = familyAssets[family.slug];
   const catalog = family.catalog;
 
@@ -37,7 +44,7 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
         <Link className="eyebrow" href="/productos">Productos / Familia {family.index}</Link>
         <h1>{family.name}</h1>
         <p>{family.description}</p>
-        <a className="text-link" href={familyProducts.length ? "#productos-destacados" : "#lineas"}>Explorar esta familia ↓</a>
+        <a className="text-link" href={familyProducts.length ? firstProductSection : "#lineas"}>Explorar esta familia ↓</a>
       </div>
     </section>
 
@@ -70,7 +77,7 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
       </div>
     </section>
 
-    {familyProducts.length > 0 && <section className="family-products section-shell" id="productos-destacados" aria-labelledby="featured-products-title">
+    {(ranProducts.length > 0 || serviceProtectionProducts.length > 0) && <section className="family-products section-shell" id="productos-destacados" aria-labelledby="featured-products-title">
       <header className="family-products-heading">
         <div>
           <p className="eyebrow"><span /> Productos RAN</p>
@@ -112,6 +119,97 @@ export default async function FamilyPage({ params }: { params: Promise<{ slug: s
           <Link className="button" href="/contacto" aria-label={`Consultar disponibilidad de ${product.name}`}>Consultar disponibilidad ↗</Link>
         </div>
       </section>)}
+    </section>}
+
+    {vesleeProducts.length > 0 && <section className="veslee-products section-shell" id="productos-veslee" aria-labelledby="veslee-products-title">
+      <header className="veslee-products-heading">
+        <div>
+          <p className="eyebrow"><span /> Productos Veslee</p>
+          <h2 id="veslee-products-title">Una selección para el<br /><i>mantenimiento preciso.</i></h2>
+          <p>Nueve soluciones Veslee para consultas comerciales: combustible, lubricación, limpieza técnica y cuidado del vehículo.</p>
+        </div>
+        <figure>
+          <BrandLogo slug="veslee" decorative sizes="(max-width: 700px) 180px, 240px" />
+          <figcaption>Consultá disponibilidad y la referencia adecuada con Districe.</figcaption>
+        </figure>
+      </header>
+      <div className="veslee-product-groups">
+        {vesleeGroups.map((group) => {
+          const products = vesleeProducts.filter((product) => product.displayGroup === group);
+          return products.length > 0 && <section className="veslee-product-group" key={group} aria-labelledby={`veslee-${group.toLowerCase().replace(/[^a-záéíóúñ]+/g, "-")}`}>
+            <h3 id={`veslee-${group.toLowerCase().replace(/[^a-záéíóúñ]+/g, "-")}`}>{group}</h3>
+            <div className={`veslee-product-grid veslee-product-grid-${products.length}`}>
+              {products.map((product) => <article className="veslee-product-card" id={product.id} key={product.id}>
+                <div className="veslee-product-media">
+                  {product.image && <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 680px) 86vw, (max-width: 1100px) 42vw, 27vw" alt={product.image.alt} />}
+                </div>
+                <div className="veslee-product-copy">
+                  <p>Veslee</p>
+                  <h4>{product.name}</h4>
+                  <p>{product.description}</p>
+                  {(product.code || product.presentation || product.technicalData) && <ul>
+                    {product.code && <li>Código {product.code}</li>}
+                    {product.presentation && <li>{product.presentation}</li>}
+                    {product.technicalData?.map((datum) => <li key={datum}>{datum}</li>)}
+                  </ul>}
+                  <Link className="veslee-product-link" href="/contacto" aria-label={`Consultar disponibilidad de ${product.name}`}>Consultar disponibilidad <span aria-hidden="true">↗</span></Link>
+                </div>
+              </article>)}
+            </div>
+          </section>;
+        })}
+      </div>
+    </section>}
+
+    {(philipsProducts.length > 0 || hellaProducts.length > 0) && <section className="parts-products section-shell" id="productos-repuestos" aria-label="Selección de repuestos y accesorios">
+      {philipsProducts.length > 0 && <section className="manufacturer-section manufacturer-section-philips" id="iluminacion-philips" aria-labelledby="philips-products-title">
+        <header className="manufacturer-section-heading">
+          <div>
+            <p className="manufacturer-wordmark manufacturer-wordmark-philips">PHILIPS</p>
+            <p className="eyebrow"><span /> Iluminación automotor</p>
+            <h2 id="philips-products-title">Lámparas para<br /><i>cada señal.</i></h2>
+            <p>Una selección de lámparas Philips para faros delanteros, señalización e iluminación interior.</p>
+          </div>
+          <p className="manufacturer-section-note">Las especificaciones corresponden a cada referencia; consultanos para confirmar la aplicación adecuada.</p>
+        </header>
+        <section className="philips-product-group" aria-labelledby="philips-headlights-title">
+          <h3 id="philips-headlights-title">Faros delanteros</h3>
+          <div className="philips-headlight-grid">
+            {philipsHeadlightProducts.map((product) => <article className="philips-headlight-card" id={product.id} key={product.id}>
+              <div>{product.image && <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 680px) 76vw, (max-width: 1100px) 40vw, 22vw" alt={product.image.alt} />}</div>
+              <h4>{product.name}</h4>
+              <ul>{product.technicalData?.map((datum) => <li key={datum}>{datum}</li>)}</ul>
+            </article>)}
+          </div>
+        </section>
+        <section className="philips-product-group" aria-labelledby="philips-signal-title">
+          <h3 id="philips-signal-title">Señalización e interior</h3>
+          <div className="philips-signal-grid">
+            {philipsSignalProducts.map((product) => <article className="philips-signal-card" id={product.id} key={product.id}>
+              {product.image && <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 680px) 34vw, (max-width: 1100px) 25vw, 15vw" alt={product.image.alt} />}
+              <div><h4>{product.name}</h4><ul>{product.technicalData?.map((datum) => <li key={datum}>{datum}</li>)}</ul></div>
+            </article>)}
+          </div>
+        </section>
+        <Link className="button" href="/contacto">Consultar disponibilidad <span aria-hidden="true">↗</span></Link>
+      </section>}
+
+      {hellaProducts.length > 0 && <section className="manufacturer-section manufacturer-section-hella" id="escobillas-hella" aria-labelledby="hella-products-title">
+        <header className="manufacturer-section-heading">
+          <div>
+            <p className="manufacturer-wordmark manufacturer-wordmark-hella">HELLA</p>
+            <p className="eyebrow"><span /> Visibilidad y limpieza</p>
+            <h2 id="hella-products-title">Escobillas para<br /><i>ver con claridad.</i></h2>
+          </div>
+          <p className="manufacturer-section-note">Dos líneas de escobillas HELLA para consultas comerciales según el sistema de montaje requerido.</p>
+        </header>
+        <div className="hella-product-list">
+          {hellaProducts.map((product) => <article className="hella-product-card" id={product.id} key={product.id}>
+            <div className="hella-product-media">{product.image && <Image src={product.image.src} width={product.image.width} height={product.image.height} sizes="(max-width: 800px) calc(100vw - 3rem), 44vw" alt={product.image.alt} />}</div>
+            <div className="hella-product-copy"><p>HELLA · Escobillas limpiaparabrisas</p><h3>{product.name}</h3><p>{product.description}</p><ul>{product.technicalData?.map((datum) => <li key={datum}>{datum}</li>)}</ul><Link className="button" href="/contacto" aria-label={`Consultar disponibilidad de ${product.name}`}>Consultar disponibilidad <span aria-hidden="true">↗</span></Link></div>
+          </article>)}
+        </div>
+      </section>}
     </section>}
   </PageShell>;
 }

@@ -9,7 +9,7 @@ Fecha de relevamiento: 30-09-2026. Este inventario describe fuentes, no autoriza
 | Estética vehicular | K78: perfumes, limpiadores, revividores, ceras, accesorios para lavado. Jarama: perfumes, limpiadores, revividores, ceras, lubricantes. Revigal: productos para lavado, aromatizantes, renovadores, lustre y pulido. Selección puntual: cinco productos RAN y kit de protección automotor 5 en 1. |
 | Aditivos, lubricantes y fluidos | Aditivos: Veslee y LOCX, según confirmación del cliente y fuente oficial de LOCX. |
 | Higiene y seguridad | Documentación comercial: absorbentes industriales y control de derrames. |
-| Repuestos y accesorios | Sin desglose visible en la navegación relevada. |
+| Repuestos y accesorios | Iluminación automotor Philips (H1, H3, H4, H7, P21/5W, P25, T4W, R10W, W5W y C5W) y escobillas limpiaparabrisas HELLA CleanTech y Estándar. |
 | Anaeróbicos automotor | Documentación Loctite: fijación de roscas y piezas cilíndricas, sellado de roscas y formación de juntas mecanizadas. |
 | Cintas y films | Sin desglose visible en la navegación relevada. |
 
@@ -57,6 +57,8 @@ Las marcas de la tabla son candidatas a publicación; la titularidad, vigencia c
 - Instagram oficial confirmado: `https://www.instagram.com/accesoriosyrepuestosautomotor?utm_source=qr&stkn=MW9kcWV6MjA2Y3Vraw==`.
 - Cobertura/logística confirmada: “Envíos a todo el país dentro de las 72 hs de recibido el pedido.”
 - LOCX está verificada como marca registrada de Servex Argentina S.R.L. y se publica dentro de Aditivos.
+- La selección Philips se recupera de la página histórica de Districe `https://www.districe.com.ar/lamparas-philips/`; H1, H3, H4, H7, P21/5W, P25 y R10W se contrastaron con Philips Automotive. Las imágenes locales conservan las referencias históricas y se optimizaron a WebP. La página histórica menciona packs de 10, pero esa modalidad no se publica como disponibilidad actual.
+- Las líneas HELLA CleanTech y Estándar se recuperan de `https://www.districe.com.ar/hella/` y se complementan con las páginas oficiales de CleanTech 3.0 y Metal Wiper. Sus assets locales son imágenes oficiales de producto optimizadas a WebP.
 
 ## Exclusiones comerciales
 
